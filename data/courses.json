@@ -1,247 +1,362 @@
 {
   "courses": [
     {
-      "id": "computing-foundations",
-      "title": "Computing Foundations",
-      "subtitle": "From bits to programs, without the noise.",
-      "description": "A compact studio on how computers actually work. Watch a short lecture, sit with a reading, then prove the idea with a quiz. Drop in your own JSON later — this course is here so the room is already usable.",
+      "id": "oss-mentorships",
+      "title": "Mastering Open Source: GSoC, LFX & Outreachy Masterclass",
+      "subtitle": "From first commit to a mentorship application.",
+      "description": "A 4-week path from Git fundamentals and merge conflicts to landing PRs and applying to GSoC, LFX Mentorship, and Outreachy. Original bootcamp links that 404 are replaced with working public lectures that cover the same skills.",
       "level": "Beginner",
-      "hours": "3.5 hr",
-      "accent": "#194cd1",
-      "tags": ["Systems", "Video", "Quiz"],
+      "hours": "4 weeks",
+      "accent": "#00f0ff",
+      "tags": ["Git", "GitHub", "GSoC", "LFX", "Outreachy"],
       "instructor": {
         "name": "Mirai Faculty",
-        "title": "Computer Science"
+        "title": "Open Source"
       },
       "modules": [
         {
-          "id": "cf-m1",
-          "title": "The machine",
-          "summary": "What a computer is doing when it appears to think.",
+          "id": "module_1",
+          "title": "Week 1: Git & GitHub Basics, Finding Repos & First PR",
+          "summary": "Repos, forks, branches, issues, and your first pull request.",
           "lessons": [
             {
-              "id": "cf-early-computing",
-              "title": "Early Computing",
+              "id": "l1_1",
+              "title": "Day 1: Open Source Contributions | BootCamp",
               "type": "video",
-              "duration": "11 min",
-              "description": "A brisk tour of how we got from mechanical calculators to stored programs.",
-              "url": "https://www.youtube.com/watch?v=O5nskjZ_GoI"
+              "duration": "1 hr 16 min",
+              "description": "Fundamentals of open-source workflows: repos, forks, and how first-time contributors actually ship a change. Replaces an unavailable original BootCamp upload.",
+              "url": "https://www.youtube.com/watch?v=yzeVMecydCE"
             },
             {
-              "id": "cf-electronic-computing",
-              "title": "Electronic Computing",
+              "id": "l1_2",
+              "title": "Day 2: Git Branches and Pull Requests | Open Source Bootcamp",
               "type": "video",
-              "duration": "11 min",
-              "description": "Tubes, transistors, and why switching so fast changed everything.",
-              "url": "https://www.youtube.com/watch?v=LN0ucKNXQAo"
+              "duration": "1 hr 10 min",
+              "description": "Branching, isolated work, pull requests, and how collaboration actually happens on GitHub.",
+              "url": "https://www.youtube.com/watch?v=Uszj_k0DGsg"
             },
             {
-              "id": "cf-reading-notes",
-              "title": "Studio reading: a sample paper",
+              "id": "l1_3",
+              "title": "How to Find GitHub Repos to Contribute To",
+              "type": "video",
+              "duration": "2 min",
+              "description": "Use GitHub search, topics, and the good-first-issue label to find active projects instead of guessing.",
+              "url": "https://www.youtube.com/watch?v=BwTpsf11DMU"
+            },
+            {
+              "id": "l1_4",
+              "title": "How to Find Good First Issues in Open Source?",
+              "type": "video",
+              "duration": "12 min",
+              "description": "Beginner-friendly labels, maintainer channels, and aggregators so you are not staring at a 1,700-issue backlog.",
+              "url": "https://www.youtube.com/watch?v=ZIkkPzTuOXw"
+            },
+            {
+              "id": "l1_pdf",
+              "title": "Git Cheat Sheet & PR Workflow Handbook",
               "type": "pdf",
               "duration": "20 min",
-              "description": "Practice the PDF viewer with a public research PDF. Replace this URL with your own notes.",
-              "url": "https://arxiv.org/pdf/1706.03762"
-            }
-          ]
-        },
-        {
-          "id": "cf-m2",
-          "title": "Check the work",
-          "summary": "A short quiz with answers so you can see scoring and review.",
-          "lessons": [
-            {
-              "id": "cf-quiz-1",
-              "title": "Foundations check",
-              "type": "quiz",
-              "duration": "8 min",
-              "description": "Graded. Answers are included in the JSON so students get instant results.",
-              "quiz": {
-                "passingScore": 70,
-                "questions": [
-                  {
-                    "id": "q1",
-                    "prompt": "A stored-program computer keeps both data and instructions in memory. Why does that matter?",
-                    "type": "single",
-                    "options": [
-                      { "id": "a", "text": "It lets the machine rewrite its own instructions and run different software without rewiring." },
-                      { "id": "b", "text": "It means the computer can only run one program, burned into hardware." },
-                      { "id": "c", "text": "It removes the need for memory entirely." },
-                      { "id": "d", "text": "It is only useful for graphics cards." }
-                    ],
-                    "correctOptionIds": ["a"],
-                    "explanation": "The stored-program idea is why software exists as a separate thing from the machine."
-                  },
-                  {
-                    "id": "q2",
-                    "prompt": "Which pair best describes the leap from mechanical to electronic computing?",
-                    "type": "single",
-                    "options": [
-                      { "id": "a", "text": "Bigger gears, slower clocks." },
-                      { "id": "b", "text": "Switches that could flip millions of times a second." },
-                      { "id": "c", "text": "Paper tape as the only storage." },
-                      { "id": "d", "text": "Human computers remaining faster than machines." }
-                    ],
-                    "correctOptionIds": ["b"],
-                    "explanation": "Electronics made switching cheap and fast. Speed is the whole plot."
-                  },
-                  {
-                    "id": "q3",
-                    "prompt": "Select every statement that is true of a typical CPU.",
-                    "type": "multiple",
-                    "options": [
-                      { "id": "a", "text": "It fetches instructions from memory." },
-                      { "id": "b", "text": "It executes those instructions in a cycle." },
-                      { "id": "c", "text": "It is mainly a display for the operating system." },
-                      { "id": "d", "text": "It uses registers as tiny, fast scratch space." }
-                    ],
-                    "correctOptionIds": ["a", "b", "d"],
-                    "explanation": "Fetch, decode, execute — with registers as the desk, not the warehouse."
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "genai-literacy",
-      "title": "Generative AI Literacy",
-      "subtitle": "Watch the lecture. Read the paper. Then write what you know.",
-      "description": "A student path through large language models: what they are, how attention works, and how to think about them without the marketing fog. One quiz here has no answer key — the same shape your JSON can use until results are ready.",
-      "level": "Intermediate",
-      "hours": "4 hr",
-      "accent": "#00f0ff",
-      "tags": ["GenAI", "PDF", "Quiz"],
-      "instructor": {
-        "name": "Mirai Faculty",
-        "title": "Applied AI"
-      },
-      "modules": [
-        {
-          "id": "gai-m1",
-          "title": "What the model is",
-          "summary": "A long lecture and a visual follow-up.",
-          "lessons": [
-            {
-              "id": "gai-intro-llms",
-              "title": "Intro to Large Language Models",
-              "type": "video",
-              "duration": "59 min",
-              "description": "Andrej Karpathy’s tour of how LLMs are trained, sampled, and used.",
-              "url": "https://www.youtube.com/watch?v=zjkBMFhNj_g"
+              "description": "GitHub’s education cheat sheet: status, branch, commit, remotes, and the commands you will use on every PR.",
+              "url": "https://education.github.com/git-cheat-sheet-education.pdf"
             },
             {
-              "id": "gai-gpt-visual",
-              "title": "But what is a GPT?",
-              "type": "video",
-              "duration": "27 min",
-              "description": "3Blue1Brown on transformers, attention, and residual streams — the picture that makes the paper readable.",
-              "url": "https://www.youtube.com/watch?v=wjZofJX0v4M"
-            }
-          ]
-        },
-        {
-          "id": "gai-m2",
-          "title": "The paper on the desk",
-          "summary": "Read the original attention paper in the PDF stage.",
-          "lessons": [
-            {
-              "id": "gai-attention-paper",
-              "title": "Attention Is All You Need",
-              "type": "pdf",
-              "duration": "45 min",
-              "description": "The 2017 transformer paper. Skim architecture and attention; you do not need every proof.",
-              "url": "https://arxiv.org/pdf/1706.03762"
-            }
-          ]
-        },
-        {
-          "id": "gai-m3",
-          "title": "Prove it on paper",
-          "summary": "One practice quiz without an answer key, then a graded check.",
-          "lessons": [
-            {
-              "id": "gai-practice",
-              "title": "Practice — no answer key",
-              "type": "quiz",
-              "duration": "6 min",
-              "description": "Submitted locally. There are no correctOptionIds, so this is how your JSON can ship before results exist.",
-              "quiz": {
-                "questions": [
-                  {
-                    "id": "p1",
-                    "prompt": "In one sentence, what is an LLM predicting when it writes the next token?",
-                    "type": "single",
-                    "options": [
-                      { "id": "a", "text": "The most likely next piece of text given the context so far." },
-                      { "id": "b", "text": "A guaranteed true fact from a database." },
-                      { "id": "c", "text": "The user’s private files." },
-                      { "id": "d", "text": "A compiled computer program." }
-                    ]
-                  },
-                  {
-                    "id": "p2",
-                    "prompt": "Which habit is safest when you use a model for coursework?",
-                    "type": "single",
-                    "options": [
-                      { "id": "a", "text": "Paste the output as-is; models do not err." },
-                      { "id": "b", "text": "Treat it as a draft partner, then verify against sources you trust." },
-                      { "id": "c", "text": "Ask it to invent citations if you are short on time." },
-                      { "id": "d", "text": "Disable your own judgment because the model is larger than you." }
-                    ]
-                  }
-                ]
-              }
-            },
-            {
-              "id": "gai-graded",
-              "title": "Literacy check",
+              "id": "l1_quiz",
+              "title": "Week 1 Assessment: Git & Contribution Basics",
               "type": "quiz",
               "duration": "10 min",
-              "description": "Graded. Instant review when the JSON includes results.",
+              "description": "Branching, issue linking, and how you actually find a first issue.",
               "quiz": {
                 "passingScore": 70,
                 "questions": [
                   {
-                    "id": "g1",
-                    "prompt": "Self-attention lets each token:",
+                    "id": "w1_q1",
+                    "prompt": "Which command creates a new feature branch and switches to it in one step?",
                     "type": "single",
                     "options": [
-                      { "id": "a", "text": "Look only at the previous token, like a Markov chain." },
-                      { "id": "b", "text": "Weight other tokens in the context when building its representation." },
-                      { "id": "c", "text": "Skip memory and jump straight to the file system." },
-                      { "id": "d", "text": "Guarantee factual accuracy." }
+                      { "id": "a", "text": "git branch fix/issue-10" },
+                      { "id": "b", "text": "git checkout -b fix/issue-10" },
+                      { "id": "c", "text": "git commit -m 'fix issue'" },
+                      { "id": "d", "text": "git push origin main" }
                     ],
                     "correctOptionIds": ["b"],
-                    "explanation": "Attention is a weighted look at the context, not a truth oracle."
+                    "explanation": "`git checkout -b fix/issue-10` (or `git switch -c`) creates the branch and checks it out. `git branch` only creates it; you would still need to switch."
                   },
                   {
-                    "id": "g2",
-                    "prompt": "Pretraining a language model is closest to:",
+                    "id": "w1_q2",
+                    "prompt": "In a pull request body, how do you link the work to GitHub issue 42 so the issue can close when the PR merges?",
                     "type": "single",
                     "options": [
-                      { "id": "a", "text": "Teaching it one company handbook." },
-                      { "id": "b", "text": "Next-token prediction on a very large text corpus." },
-                      { "id": "c", "text": "Labeling every sentence as true or false." },
-                      { "id": "d", "text": "Compressing images with JPEG." }
+                      { "id": "a", "text": "Write the issue number only: 42" },
+                      { "id": "b", "text": "Use a closing keyword: Fixes #42" },
+                      { "id": "c", "text": "Tag @github" },
+                      { "id": "d", "text": "Put the issue URL in a commit that never gets pushed" }
                     ],
                     "correctOptionIds": ["b"],
-                    "explanation": "Scale plus next-token prediction is the pretraining recipe."
+                    "explanation": "`Fixes #42`, `Closes #42`, or `Resolves #42` links the PR to the issue and can auto-close it on merge."
                   },
                   {
-                    "id": "g3",
-                    "prompt": "Pick the claims that hold.",
+                    "id": "w1_q3",
+                    "prompt": "You want beginner issues in Python on GitHub. Which search is the most useful starting point?",
+                    "type": "single",
+                    "options": [
+                      { "id": "a", "text": "stars:>100000 is:closed" },
+                      { "id": "b", "text": "language:python label:\"good first issue\" state:open" },
+                      { "id": "c", "text": "filename:password.txt" },
+                      { "id": "d", "text": "org:ghost" }
+                    ],
+                    "correctOptionIds": ["b"],
+                    "explanation": "Filter by language plus a newcomer label and open state. Huge starred + closed searches hide the work you can actually take."
+                  },
+                  {
+                    "id": "w1_q4",
+                    "prompt": "Select every habit that belongs in a first contribution.",
                     "type": "multiple",
                     "options": [
-                      { "id": "a", "text": "A fluent answer can still be wrong." },
-                      { "id": "b", "text": "Temperature changes how sharply the model samples." },
-                      { "id": "c", "text": "Models always cite real papers." },
-                      { "id": "d", "text": "Context windows limit how much you can stuff into one prompt." }
+                      { "id": "a", "text": "Read README and CONTRIBUTING before writing code." },
+                      { "id": "b", "text": "Work on a branch, not on upstream main." },
+                      { "id": "c", "text": "Force-push to the project's main branch." },
+                      { "id": "d", "text": "Comment on the issue before (or as) you start, if the project asks you to." }
                     ],
                     "correctOptionIds": ["a", "b", "d"],
-                    "explanation": "Fluency ≠ truth. Sampling is tunable. Context is finite. Citations are often invented."
+                    "explanation": "Read the room, branch off main, talk to maintainers. Never force-push someone else's default branch."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "module_2",
+          "title": "Week 2: Merge Conflicts, Rebase & Clean History",
+          "summary": "What happens when two people edit the same lines — and how to ship anyway.",
+          "lessons": [
+            {
+              "id": "l2_1",
+              "title": "Git Branches, Merge, and Rebase",
+              "type": "video",
+              "duration": "31 min",
+              "description": "Create, compare, merge, and rebase branches so your feature work can land on main without a mess.",
+              "url": "https://www.youtube.com/watch?v=e2IbNHi4uCI"
+            },
+            {
+              "id": "l2_2",
+              "title": "Git & GitHub Crash Course (conflicts live in the merge story)",
+              "type": "video",
+              "duration": "1 hr",
+              "description": "A compact 2026 walkthrough of add, commit, branch, and the commands you will rerun when a merge turns red.",
+              "url": "https://www.youtube.com/watch?v=mAFoROnOfHs"
+            },
+            {
+              "id": "l2_pdf",
+              "title": "GitHub Git Cheat Sheet",
+              "type": "pdf",
+              "duration": "15 min",
+              "description": "Keep this open while you resolve conflicts: fetch, merge, rebase, stash, and log.",
+              "url": "https://training.github.com/downloads/github-git-cheat-sheet.pdf"
+            },
+            {
+              "id": "l2_quiz",
+              "title": "Week 2 Assessment: Conflicts & History",
+              "type": "quiz",
+              "duration": "8 min",
+              "description": "Conflict markers, rebase vs merge, and what not to rewrite.",
+              "quiz": {
+                "passingScore": 70,
+                "questions": [
+                  {
+                    "id": "w2_q1",
+                    "prompt": "You open a file after a failed merge and see <<<<<<<, =======, and >>>>>>>. What should you do?",
+                    "type": "single",
+                    "options": [
+                      { "id": "a", "text": "Commit immediately; Git already picked a winner." },
+                      { "id": "b", "text": "Edit the file to the intended result, delete the markers, then add and commit." },
+                      { "id": "c", "text": "Delete the repository and clone again." },
+                      { "id": "d", "text": "Run git push --force on main." }
+                    ],
+                    "correctOptionIds": ["b"],
+                    "explanation": "Conflict markers are a pause, not a result. You choose the code, remove the markers, then stage and commit the resolution."
+                  },
+                  {
+                    "id": "w2_q2",
+                    "prompt": "When is `git rebase` a reasonable tool on your own feature branch?",
+                    "type": "single",
+                    "options": [
+                      { "id": "a", "text": "To replay your commits on top of latest main before you open a PR." },
+                      { "id": "b", "text": "To rewrite commits already on the shared main branch." },
+                      { "id": "c", "text": "To delete GitHub issues." },
+                      { "id": "d", "text": "To skip code review." }
+                    ],
+                    "correctOptionIds": ["a"],
+                    "explanation": "Rebase your unpushed (or solo) feature branch onto updated main. Do not rebase public history others already pulled."
+                  },
+                  {
+                    "id": "w2_q3",
+                    "prompt": "Select the true statements.",
+                    "type": "multiple",
+                    "options": [
+                      { "id": "a", "text": "git fetch updates your remote-tracking branches without merging." },
+                      { "id": "b", "text": "A merge commit records that two histories were joined." },
+                      { "id": "c", "text": "git push --force on origin/main is standard for first-time contributors." },
+                      { "id": "d", "text": "Small, focused commits are easier to review than one giant dump." }
+                    ],
+                    "correctOptionIds": ["a", "b", "d"],
+                    "explanation": "Fetch is safe. Merge commits are a record. Force-pushing main is how you become unwelcome. Small diffs review faster."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "module_3",
+          "title": "Week 3: Landing PRs",
+          "summary": "From local branch to a merged pull request maintainers will actually review.",
+          "lessons": [
+            {
+              "id": "l3_1",
+              "title": "Step-by-step: contribute to open source",
+              "type": "video",
+              "duration": "20 min",
+              "description": "Fork, clone, branch, commit, push, and open the PR — the full loop with the habits maintainers expect.",
+              "url": "https://www.youtube.com/watch?v=yJRvCG5UhD0"
+            },
+            {
+              "id": "l3_2",
+              "title": "Git and GitHub for Beginners — the PR in context",
+              "type": "video",
+              "duration": "1 hr 8 min",
+              "description": "A full beginner crash course so the GitHub UI for compare & pull request is not a mystery.",
+              "url": "https://www.youtube.com/watch?v=RGOj5yH7evk"
+            },
+            {
+              "id": "l3_quiz",
+              "title": "Week 3 Assessment: Pull Requests",
+              "type": "quiz",
+              "duration": "8 min",
+              "description": "What a reviewable PR looks like.",
+              "quiz": {
+                "passingScore": 70,
+                "questions": [
+                  {
+                    "id": "w3_q1",
+                    "prompt": "A reviewable first PR usually is:",
+                    "type": "single",
+                    "options": [
+                      { "id": "a", "text": "A rewrite of the entire codebase." },
+                      { "id": "b", "text": "Small, tested, and described, with the related issue linked." },
+                      { "id": "c", "text": "Pushed straight to upstream main." },
+                      { "id": "d", "text": "Opened without a description so reviewers 'see the code'." }
+                    ],
+                    "correctOptionIds": ["b"],
+                    "explanation": "Maintainers merge small, explained changes. Giant surprise rewrites stall."
+                  },
+                  {
+                    "id": "w3_q2",
+                    "prompt": "CI on your PR is red. Best next move?",
+                    "type": "single",
+                    "options": [
+                      { "id": "a", "text": "Ask for merge anyway; CI is optional." },
+                      { "id": "b", "text": "Read the failing job, fix it on your branch, and push a follow-up commit." },
+                      { "id": "c", "text": "Close the repo." },
+                      { "id": "d", "text": "Open five more PRs to distract from it." }
+                    ],
+                    "correctOptionIds": ["b"],
+                    "explanation": "Green checks are part of the contribution. Fix the branch; don't argue with the required workflow."
+                  },
+                  {
+                    "id": "w3_q3",
+                    "prompt": "Select every true statement about review.",
+                    "type": "multiple",
+                    "options": [
+                      { "id": "a", "text": "Review comments are normal; reply and/or push fixes." },
+                      { "id": "b", "text": "You should discuss scope on the issue if the fix grows." },
+                      { "id": "c", "text": "Changing files the issue never mentioned, silently, is a gift." },
+                      { "id": "d", "text": "A polite, specific PR description saves a round of questions." }
+                    ],
+                    "correctOptionIds": ["a", "b", "d"],
+                    "explanation": "Review is collaboration. Stay on scope unless you agree otherwise. Write like a teammate."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "module_4",
+          "title": "Week 4: GSoC, LFX & Outreachy",
+          "summary": "How the big mentorships differ — and how prior PRs make the application real.",
+          "lessons": [
+            {
+              "id": "l4_1",
+              "title": "Google Summer of Code: roadmap",
+              "type": "video",
+              "duration": "45 min",
+              "description": "Eligibility, org lists, proposals, and why you contribute to the org before the form opens.",
+              "url": "https://www.youtube.com/watch?v=HA1nJ3rn4Cc"
+            },
+            {
+              "id": "l4_2",
+              "title": "LFX Mentorship",
+              "type": "video",
+              "duration": "20 min",
+              "description": "Linux Foundation mentorships: terms, CNCF/kernel-adjacent projects, and how they sit next to GSoC.",
+              "url": "https://www.youtube.com/watch?v=o0V7Z6UQMBY"
+            },
+            {
+              "id": "l4_3",
+              "title": "Outreachy: initial application",
+              "type": "video",
+              "duration": "15 min",
+              "description": "How the Outreachy initial application is structured and what the contribution period is for.",
+              "url": "https://www.youtube.com/watch?v=lRegecT11k0"
+            },
+            {
+              "id": "l4_quiz",
+              "title": "Week 4 Assessment: Mentorship programs",
+              "type": "quiz",
+              "duration": "10 min",
+              "description": "Pick the right program for the right person — and the work that has to happen first.",
+              "quiz": {
+                "passingScore": 70,
+                "questions": [
+                  {
+                    "id": "w4_q1",
+                    "prompt": "The strongest GSoC / LFX / Outreachy application usually includes:",
+                    "type": "single",
+                    "options": [
+                      { "id": "a", "text": "Zero prior PRs and a very long essay." },
+                      { "id": "b", "text": "Merged (or at least serious) contributions to the org, plus a specific proposal." },
+                      { "id": "c", "text": "A promise to learn the language after selection only." },
+                      { "id": "d", "text": "Copy-pasting last year's winning proposal unchanged." }
+                    ],
+                    "correctOptionIds": ["b"],
+                    "explanation": "Mentors pick people they have already seen in the issue tracker. Proof of work beats a generic essay."
+                  },
+                  {
+                    "id": "w4_q2",
+                    "prompt": "Which pairing is most accurate?",
+                    "type": "single",
+                    "options": [
+                      { "id": "a", "text": "Outreachy is only for people who already completed GSoC." },
+                      { "id": "b", "text": "LFX Mentorship is run around Linux Foundation / CNCF-style projects in seasonal terms." },
+                      { "id": "c", "text": "GSoC still requires you to be enrolled in a university." },
+                      { "id": "d", "text": "All three programs merge your PRs without a mentor." }
+                    ],
+                    "correctOptionIds": ["b"],
+                    "explanation": "LFX is the LF/CNCF mentorship board. GSoC has not required student status since 2022. Outreachy has its own eligibility (underrepresented in tech) and a contribution phase. Always read the current year's rules."
+                  },
+                  {
+                    "id": "w4_q3",
+                    "prompt": "Select every true statement.",
+                    "type": "multiple",
+                    "options": [
+                      { "id": "a", "text": "Read this year's official timeline; dates move." },
+                      { "id": "b", "text": "Pick 1–2 orgs and show up in their chat/issues early." },
+                      { "id": "c", "text": "You can skip CONTRIBUTING.md if the stipend is large." },
+                      { "id": "d", "text": "A proposal should name a project, a mentor-facing plan, and a realistic schedule." }
+                    ],
+                    "correctOptionIds": ["a", "b", "d"],
+                    "explanation": "Timelines change. Depth beats spraying 20 orgs. Proposals are project plans, not vibes. Process docs still apply."
                   }
                 ]
               }

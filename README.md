@@ -26,11 +26,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Content (`data/courses.json`)
 
-Replace the sample file with yours. The loader accepts:
-
-- `{ "courses": [ ... ] }`
-- a single course object
-- an array of courses
+Replace the sample file with yours. The loader also accepts a single course object, `type: "youtube"` as video, quiz `question` / string `options` / numeric `correctAnswer`, and HTML entities like `&amp;`.
 
 Each lesson is one of:
 
