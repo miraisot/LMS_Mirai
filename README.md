@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Student LMS
 
-## Getting Started
+A student portal for [Mirai School of Technology](https://miraisot.com/). Courses come from a JSON file. Lectures become YouTube embeds, readings open as PDFs, and quizzes run in the browser. Branding comes from `.env`. Progress is stored in `localStorage` so this can grow into a backend later.
 
-First, run the development server:
+The visual system matches miraisot.com: Outfit type, dark navy surfaces, cyan-to-blue heading gradients, and teal CTA buttons.
+
+## Run
 
 ```bash
+npm install
+cp .env.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Branding (`.env.local`)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Variable | What it does |
+| --- | --- |
+| `NEXT_PUBLIC_LMS_NAME` | Portal name in the header and tab |
+| `NEXT_PUBLIC_LMS_TAGLINE` | Short line on the library page |
+| `NEXT_PUBLIC_INSTITUTION` | Campus / org line under the name |
+| `NEXT_PUBLIC_STUDENT_NAME` | Greeting chip |
+| `NEXT_PUBLIC_LMS_LOGO` | Optional logo URL |
 
-## Learn More
+## Content (`data/courses.json`)
 
-To learn more about Next.js, take a look at the following resources:
+Replace the sample file with yours. The loader accepts:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `{ "courses": [ ... ] }`
+- a single course object
+- an array of courses
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Each lesson is one of:
 
-## Deploy on Vercel
+```json
+{ "id": "l1", "title": "Lecture", "type": "video", "url": "https://www.youtube.com/watch?v=..." }
+{ "id": "l2", "title": "Notes", "type": "pdf", "url": "https://example.com/notes.pdf" }
+{
+  "id": "l3",
+  "title": "Check",
+  "type": "quiz",
+  "quiz": {
+    "passingScore": 70,
+    "questions": [
+      {
+        "id": "q1",
+        "prompt": "…",
+        "type": "single",
+        "options": [
+          { "id": "a", "text": "…" },
+          { "id": "b", "text": "…" }
+        ],
+        "correctOptionIds": ["b"],
+        "explanation": "Optional."
+      }
+    ]
+  }
+}
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Leave `correctOptionIds` off until you have results. Students can still submit; the quiz is saved as practice instead of being auto-graded.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+YouTube watch, short, embed, and `youtu.be` links all convert to an iframe. PDFs that block embedding can be opened in a new tab or through the built-in Google viewer toggle.
