@@ -1,14 +1,14 @@
 {
   "courses": [
     {
-      "id": "oss-mentorships",
-      "title": "Mastering Open Source: GSoC, LFX & Outreachy Masterclass",
-      "subtitle": "From first commit to a mentorship application.",
-      "description": "A 4-week path from Git fundamentals and merge conflicts to landing PRs and applying to GSoC, LFX Mentorship, and Outreachy. Original bootcamp links that 404 are replaced with working public lectures that cover the same skills.",
+      "id": "open-source",
+      "title": "Open Source Contribution Basics: Git, GitHub & Pull Requests",
+      "subtitle": "From first commit to a merged pull request.",
+      "description": "A 3-week path from Git fundamentals and merge conflicts to landing PRs that maintainers actually review and merge. Original bootcamp links that 404 are replaced with working public lectures that cover the same skills.",
       "level": "Beginner",
-      "hours": "4 weeks",
+      "hours": "3 weeks",
       "accent": "#00f0ff",
-      "tags": ["Git", "GitHub", "GSoC", "LFX", "Outreachy"],
+      "tags": ["Git", "GitHub", "Pull Requests", "Open Source"],
       "instructor": {
         "name": "Mirai Faculty",
         "title": "Open Source"
@@ -280,14 +280,30 @@
               }
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "gsoc",
+      "title": "GSoC, LFX & Outreachy: Mentorship Roadmap",
+      "subtitle": "Turn open-source contributions into a paid mentorship.",
+      "description": "How Google Summer of Code, LFX Mentorship, and Outreachy differ, what each program expects, and how the PRs you already have shape a real application.",
+      "level": "Intermediate",
+      "hours": "1 week",
+      "accent": "#a78bfa",
+      "tags": ["GSoC", "LFX", "Outreachy", "Mentorship"],
+      "instructor": {
+        "name": "Mirai Faculty",
+        "title": "Open Source"
+      },
+      "modules": [
         {
-          "id": "module_4",
-          "title": "Week 4: GSoC, LFX & Outreachy",
+          "id": "module_1",
+          "title": "The Mentorship Landscape",
           "summary": "How the big mentorships differ — and how prior PRs make the application real.",
           "lessons": [
             {
-              "id": "l4_1",
+              "id": "l1_1",
               "title": "Google Summer of Code: roadmap",
               "type": "video",
               "duration": "45 min",
@@ -295,7 +311,7 @@
               "url": "https://www.youtube.com/watch?v=HA1nJ3rn4Cc"
             },
             {
-              "id": "l4_2",
+              "id": "l1_2",
               "title": "LFX Mentorship",
               "type": "video",
               "duration": "20 min",
@@ -303,7 +319,7 @@
               "url": "https://www.youtube.com/watch?v=o0V7Z6UQMBY"
             },
             {
-              "id": "l4_3",
+              "id": "l1_3",
               "title": "Outreachy: initial application",
               "type": "video",
               "duration": "15 min",
@@ -311,8 +327,8 @@
               "url": "https://www.youtube.com/watch?v=lRegecT11k0"
             },
             {
-              "id": "l4_quiz",
-              "title": "Week 4 Assessment: Mentorship programs",
+              "id": "l1_quiz",
+              "title": "Assessment: Mentorship Programs",
               "type": "quiz",
               "duration": "10 min",
               "description": "Pick the right program for the right person — and the work that has to happen first.",
@@ -357,6 +373,247 @@
                     ],
                     "correctOptionIds": ["a", "b", "d"],
                     "explanation": "Timelines change. Depth beats spraying 20 orgs. Proposals are project plans, not vibes. Process docs still apply."
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "product-development",
+      "title": "Building Your Own Product: Idea to Launch",
+      "subtitle": "Validate an idea, scope an MVP, and ship it to real users.",
+      "description": "A practical, video-based path for builders: find a problem worth solving, talk to real users, scope the smallest version worth shipping, and launch it — then do it again.",
+      "level": "Beginner",
+      "hours": "3 weeks",
+      "accent": "#f59e0b",
+      "tags": ["Product", "Startups", "MVP", "Product Hunt"],
+      "instructor": {
+        "name": "Mirai Faculty",
+        "title": "Product"
+      },
+      "modules": [
+        {
+          "id": "module_1",
+          "title": "Week 1: Finding & Validating an Idea",
+          "summary": "Where good startup ideas come from, and how to know if yours holds up.",
+          "lessons": [
+            {
+              "id": "l1_1",
+              "title": "How to Get and Evaluate Startup Ideas | Startup School",
+              "type": "video",
+              "description": "Y Combinator's Jared Friedman on where good startup ideas come from and a framework of questions to stress-test one before you commit to it.",
+              "url": "https://www.youtube.com/watch?v=Th8JoIan4dg"
+            },
+            {
+              "id": "l1_2",
+              "title": "How To Talk To Users | Startup School",
+              "type": "video",
+              "description": "How to find users, what to actually ask them, and how to turn conversations into decisions about what to build — without pitching first.",
+              "url": "https://www.youtube.com/watch?v=z1iF1c8w5Lg"
+            },
+            {
+              "id": "l1_pdf",
+              "title": "Lean Canvas Template",
+              "type": "pdf",
+              "duration": "15 min",
+              "description": "LeanStack's one-page business model canvas — problem, solution, unique value proposition, channels, and metrics — to fill in before you write any code.",
+              "url": "https://s3.amazonaws.com/leanstack/v4/Lean-Canvas.pdf"
+            },
+            {
+              "id": "l1_quiz",
+              "title": "Week 1 Assessment: Idea & Validation",
+              "type": "quiz",
+              "duration": "8 min",
+              "description": "Evaluating an idea and running a real user interview.",
+              "quiz": {
+                "passingScore": 70,
+                "questions": [
+                  {
+                    "id": "pd1_q1",
+                    "prompt": "Per YC's framework for evaluating startup ideas, which is the strongest signal an idea is worth pursuing?",
+                    "type": "single",
+                    "options": [
+                      { "id": "a", "text": "It sounds impressive when you pitch it at a party." },
+                      { "id": "b", "text": "You (or people you know) genuinely need this and would use it today." },
+                      { "id": "c", "text": "No one has ever tried anything like it." },
+                      { "id": "d", "text": "It requires the least possible work to build." }
+                    ],
+                    "correctOptionIds": ["b"],
+                    "explanation": "YC favors founders solving a problem they deeply understand and already feel, not an idea that merely sounds novel or easy."
+                  },
+                  {
+                    "id": "pd1_q2",
+                    "prompt": "What is the primary goal of an early user interview?",
+                    "type": "single",
+                    "options": [
+                      { "id": "a", "text": "Convince the user your idea is good." },
+                      { "id": "b", "text": "Understand their current behavior and pain points without pitching your solution." },
+                      { "id": "c", "text": "Get them to pre-pay immediately." },
+                      { "id": "d", "text": "Ask only yes/no questions to save time." }
+                    ],
+                    "correctOptionIds": ["b"],
+                    "explanation": "Good interviews focus on understanding existing behavior and pain. Pitching too early biases the feedback you get."
+                  },
+                  {
+                    "id": "pd1_q3",
+                    "prompt": "Select every section that belongs on a Lean Canvas.",
+                    "type": "multiple",
+                    "options": [
+                      { "id": "a", "text": "Problem" },
+                      { "id": "b", "text": "Unique Value Proposition" },
+                      { "id": "c", "text": "Office lease terms" },
+                      { "id": "d", "text": "Key Metrics" }
+                    ],
+                    "correctOptionIds": ["a", "b", "d"],
+                    "explanation": "The Lean Canvas covers problem, solution, UVP, channels, customer segments, cost structure, revenue, key metrics, and unfair advantage — not operational details like a lease."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "module_2",
+          "title": "Week 2: Scoping and Shipping an MVP",
+          "summary": "Turn a validated idea into the smallest version worth building — and say it out loud clearly.",
+          "lessons": [
+            {
+              "id": "l2_1",
+              "title": "Michael Seibel - How to Plan an MVP",
+              "type": "video",
+              "duration": "~30 min",
+              "description": "What actually counts as an MVP, and why 'launch something bad quickly' beats a long, quiet build.",
+              "url": "https://www.youtube.com/watch?v=1hHMwLxN6EM"
+            },
+            {
+              "id": "l2_2",
+              "title": "Kevin Hale - How to Pitch Your Startup",
+              "type": "video",
+              "description": "Package the idea into a pitch: the initial conditions, the solution, and the insight for why it can work — useful for users, cofounders, or investors alike.",
+              "url": "https://www.youtube.com/watch?v=17XZGUX_9iM"
+            },
+            {
+              "id": "l2_quiz",
+              "title": "Week 2 Assessment: MVP & Pitch",
+              "type": "quiz",
+              "duration": "8 min",
+              "description": "Scoping an MVP and framing a pitch.",
+              "quiz": {
+                "passingScore": 70,
+                "questions": [
+                  {
+                    "id": "pd2_q1",
+                    "prompt": "Per Michael Seibel's MVP framework, what should your first MVP optimize for?",
+                    "type": "single",
+                    "options": [
+                      { "id": "a", "text": "Supporting every feature you can imagine." },
+                      { "id": "b", "text": "The smallest thing you can ship to test if you can deliver real value to a few users." },
+                      { "id": "c", "text": "A polished, investor-ready product." },
+                      { "id": "d", "text": "Building for a huge, general audience from day one." }
+                    ],
+                    "correctOptionIds": ["b"],
+                    "explanation": "Seibel's advice: launch something ridiculously simple to a narrow set of early users first, then iterate on what you learn."
+                  },
+                  {
+                    "id": "pd2_q2",
+                    "prompt": "In Kevin Hale's pitch framework, a startup idea is best understood as:",
+                    "type": "single",
+                    "options": [
+                      { "id": "a", "text": "A finished business plan." },
+                      { "id": "b", "text": "A hypothesis about why the company could grow quickly, made of initial conditions, solution, and insight." },
+                      { "id": "c", "text": "A guaranteed outcome once funded." },
+                      { "id": "d", "text": "Only relevant once you have paying customers." }
+                    ],
+                    "correctOptionIds": ["b"],
+                    "explanation": "Hale frames a pitch as a hypothesis: why this solution, at this moment, for this insight, could grow fast."
+                  },
+                  {
+                    "id": "pd2_q3",
+                    "prompt": "Select every habit that matches 'launch something bad quickly' thinking.",
+                    "type": "multiple",
+                    "options": [
+                      { "id": "a", "text": "Ship a limited version to a small set of users this week." },
+                      { "id": "b", "text": "Delay launch until every edge case is handled." },
+                      { "id": "c", "text": "Treat the first release as a way to learn, not a finished product." },
+                      { "id": "d", "text": "Talk to the first users again after they try it." }
+                    ],
+                    "correctOptionIds": ["a", "c", "d"],
+                    "explanation": "MVP thinking favors fast, narrow releases you learn from, not indefinite polishing before anyone sees it."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "module_3",
+          "title": "Week 3: Launching & Getting First Users",
+          "summary": "Ship it publicly, then do it again.",
+          "lessons": [
+            {
+              "id": "l3_1",
+              "title": "Kat Mañalac - How to Launch (Again and Again)",
+              "type": "video",
+              "description": "Why launching is a continuous process — silent launch, friends & family, launching to strangers, and building your own community.",
+              "url": "https://www.youtube.com/watch?v=3xU050kMbHM"
+            },
+            {
+              "id": "l3_2",
+              "title": "How to Launch on Product Hunt (Official Guide)",
+              "type": "video",
+              "description": "Product Hunt's own walkthrough of preparing for and running a launch day.",
+              "url": "https://www.youtube.com/watch?v=UnZWZXcVLOs"
+            },
+            {
+              "id": "l3_quiz",
+              "title": "Week 3 Assessment: Launching",
+              "type": "quiz",
+              "duration": "8 min",
+              "description": "Launching as a repeatable process, not a one-time event.",
+              "quiz": {
+                "passingScore": 70,
+                "questions": [
+                  {
+                    "id": "pd3_q1",
+                    "prompt": "Per 'How to Launch (Again and Again)', launching is best treated as:",
+                    "type": "single",
+                    "options": [
+                      { "id": "a", "text": "A single, one-time event on launch day." },
+                      { "id": "b", "text": "A continuous process you repeat for every meaningful update." },
+                      { "id": "c", "text": "Something to avoid until the product is perfect." },
+                      { "id": "d", "text": "Only relevant for consumer apps." }
+                    ],
+                    "correctOptionIds": ["b"],
+                    "explanation": "The core point: launch repeatedly — silent launch, friends & family, strangers, press — not just once."
+                  },
+                  {
+                    "id": "pd3_q2",
+                    "prompt": "Per Product Hunt's official launch guide, which practice most improves a launch?",
+                    "type": "single",
+                    "options": [
+                      { "id": "a", "text": "Submitting with no prior engagement on the platform." },
+                      { "id": "b", "text": "Participating in the community and building relationships before launch day." },
+                      { "id": "c", "text": "Launching without a live product URL." },
+                      { "id": "d", "text": "Avoiding all outside promotion." }
+                    ],
+                    "correctOptionIds": ["b"],
+                    "explanation": "Product Hunt recommends genuine, sustained participation (comments, upvotes, feedback) well before your own launch, not a cold submission."
+                  },
+                  {
+                    "id": "pd3_q3",
+                    "prompt": "Select every legitimate way to 'launch again' for an existing product.",
+                    "type": "multiple",
+                    "options": [
+                      { "id": "a", "text": "Announcing a major new feature." },
+                      { "id": "b", "text": "Re-launching to a new audience or platform." },
+                      { "id": "c", "text": "Reposting the exact same launch post daily." },
+                      { "id": "d", "text": "Sharing a milestone (users, revenue, an integration) as its own moment." }
+                    ],
+                    "correctOptionIds": ["a", "b", "d"],
+                    "explanation": "Each real update, audience, or milestone is a legitimate reason to launch again — spamming the same post isn't."
                   }
                 ]
               }

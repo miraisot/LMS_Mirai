@@ -1,20 +1,33 @@
 # Student LMS
 
-A student portal for [Mirai School of Technology](https://miraisot.com/). Courses come from a JSON file. Lectures become YouTube embeds, readings open as PDFs, and quizzes run in the browser. Branding comes from `.env`. Progress is stored in `localStorage` so this can grow into a backend later.
+A student portal for [Mirai School of Technology](https://miraisot.com/). Courses come from a JSON file. Lectures become YouTube embeds, readings open as PDFs, and quizzes run in the browser. Branding comes from `.env`. Sign-in is backed by Supabase Auth; lesson/quiz progress is stored in `localStorage`.
 
 The visual system matches miraisot.com: Outfit type, dark navy surfaces, cyan-to-blue heading gradients, and teal CTA buttons.
+
+## Tech stack
+
+| Layer | Choice |
+| --- | --- |
+| Framework | [Next.js 16](https://nextjs.org/) (App Router, Server Actions, `proxy.ts` for route gating — renamed from Middleware in v16) |
+| UI | [React 19](https://react.dev/), [Tailwind CSS 4](https://tailwindcss.com/) |
+| Language | TypeScript |
+| Auth | [Supabase Auth](https://supabase.com/auth) via `@supabase/supabase-js` and `@supabase/ssr` (email + password, cookie-based sessions) |
+| Content | Static JSON (`data/courses.json`) — no database/CMS for course content |
+| Lint | ESLint (`eslint-config-next`) |
 
 ## Run
 
 ```bash
 npm install
-cp .env.example .env.local
+cp .env.example .env
 npm run dev
 ```
 
+Fill in `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` in `.env` (from your Supabase project's **Project Settings → API**), and create at least one user under **Authentication → Users** in the Supabase dashboard to sign in with.
+
 Open [http://localhost:3000](http://localhost:3000).
 
-## Branding (`.env.local`)
+## Branding (`.env`)
 
 | Variable | What it does |
 | --- | --- |
@@ -23,6 +36,8 @@ Open [http://localhost:3000](http://localhost:3000).
 | `NEXT_PUBLIC_INSTITUTION` | Campus / org line under the name |
 | `NEXT_PUBLIC_STUDENT_NAME` | Greeting chip |
 | `NEXT_PUBLIC_LMS_LOGO` | Optional logo URL |
+| `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL, used for auth |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase anon/public API key, used for auth |
 
 ## Content (`data/courses.json`)
 

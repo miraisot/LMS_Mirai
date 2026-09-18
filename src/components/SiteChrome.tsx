@@ -1,3 +1,4 @@
+import { logout } from "@/app/actions/auth";
 import { BrandMark } from "@/components/BrandMark";
 import { site } from "@/lib/config";
 
@@ -21,6 +22,14 @@ export function SiteHeader() {
             <span className="rounded-[10px] border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-white">
               {site.studentName}
             </span>
+            <form action={logout}>
+              <button
+                type="submit"
+                className="text-sm text-white/60 transition hover:text-white"
+              >
+                Log out
+              </button>
+            </form>
           </div>
         </div>
       </header>
