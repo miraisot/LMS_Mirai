@@ -70,6 +70,21 @@ export default async function CoursePage({
             <p className="mt-6 max-w-2xl text-base leading-7 text-ink-soft">
               {course.description}
             </p>
+            {course.outcomes && course.outcomes.length > 0 ? (
+              <ol className="mt-8 grid gap-3 sm:grid-cols-2">
+                {course.outcomes.map((outcome, index) => (
+                  <li
+                    key={outcome}
+                    className="rounded-2xl border border-[#f59e0b]/25 bg-[#f59e0b]/8 px-4 py-4"
+                  >
+                    <p className="text-[11px] uppercase tracking-[0.18em] text-[#fbbf24]">
+                      Outcome {String(index + 1).padStart(2, "0")}
+                    </p>
+                    <p className="mt-2 text-sm leading-6 text-white">{outcome}</p>
+                  </li>
+                ))}
+              </ol>
+            ) : null}
             <div className="mt-8">
               <StartCourseLink course={course} />
             </div>
@@ -84,7 +99,7 @@ export default async function CoursePage({
                 <dd className="font-display text-xl">{total}</dd>
               </div>
               <div className="flex justify-between">
-                <dt>Lectures</dt>
+                <dt>How-tos</dt>
                 <dd>{types.video}</dd>
               </div>
               <div className="flex justify-between">
@@ -95,6 +110,12 @@ export default async function CoursePage({
                 <dt>Quizzes</dt>
                 <dd>{types.quiz}</dd>
               </div>
+              {types.assignment > 0 ? (
+                <div className="flex justify-between">
+                  <dt>Assignments</dt>
+                  <dd>{types.assignment}</dd>
+                </div>
+              ) : null}
               {course.instructor ? (
                 <div className="border-t border-line pt-4">
                   <dt className="text-dust">Faculty</dt>
@@ -123,6 +144,11 @@ export default async function CoursePage({
                   </span>
                   <div>
                     <h3 className="text-lg font-medium">{module.title}</h3>
+                    {module.outcome ? (
+                      <p className="mt-1 text-[11px] uppercase tracking-[0.16em] text-[#fbbf24]">
+                        Outcome · {module.outcome}
+                      </p>
+                    ) : null}
                     {module.summary ? (
                       <p className="text-sm text-dust">{module.summary}</p>
                     ) : null}

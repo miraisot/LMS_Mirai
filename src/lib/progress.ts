@@ -1,10 +1,16 @@
-import type { CourseProgress, ProgressMap, QuizAttempt } from "./types";
+import type {
+  AssignmentAttempt,
+  CourseProgress,
+  ProgressMap,
+  QuizAttempt,
+} from "./types";
 
 export const PROGRESS_KEY = "studio-hall-progress-v1";
 
 const emptyCourse = (): CourseProgress => ({
   completedLessonIds: [],
   quizResults: {},
+  assignmentResults: {},
 });
 
 export function loadProgress(): ProgressMap {
@@ -27,7 +33,15 @@ export function getCourseProgress(
   map: ProgressMap,
   courseId: string,
 ): CourseProgress {
-  return map[courseId] ?? emptyCourse();
+  const current = map[courseId];
+  if (!current) return emptyCourse();
+  return {
+    ...emptyCourse(),
+    ...current,
+    quizResults: current.quizResults ?? {},
+    assignmentResults: current.assignmentResults ?? {},
+    completedLessonIds: current.completedLessonIds ?? [],
+  };
 }
 
 export function withCourse(
@@ -78,6 +92,25 @@ export function saveQuizAttempt(
       : [...current.completedLessonIds, lessonId],
     quizResults: {
       ...current.quizResults,
+      [lessonId]: attempt,
+    },
+  }));
+}
+
+export function saveAssignmentAttempt(
+  map: ProgressMap,
+  courseId: string,
+  lessonId: string,
+  attempt: AssignmentAttempt,
+): ProgressMap {
+  return withCourse(map, courseId, (current) => ({
+    ...current,
+    lastLessonId: lessonId,
+    completedLessonIds: current.completedLessonIds.includes(lessonId)
+      ? current.completedLessonIds
+      : [...current.completedLessonIds, lessonId],
+    assignmentResults: {
+      ...current.assignmentResults,
       [lessonId]: attempt,
     },
   }));

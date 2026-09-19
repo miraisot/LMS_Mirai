@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 import { BrandMark } from "@/components/BrandMark";
 import { LoginForm } from "@/components/LoginForm";
 import { createClient } from "@/lib/supabase/server";
+import { isSupabaseConfigured } from "@/lib/supabase/middleware";
 import { site } from "@/lib/config";
 
 export const metadata = {
@@ -9,12 +10,14 @@ export const metadata = {
 };
 
 export default async function LoginPage() {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (user) {
-    redirect("/");
+  if (isSupabaseConfigured()) {
+    const supabase = await createClient();
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+    if (user) {
+      redirect("/");
+    }
   }
 
   return (

@@ -5,11 +5,12 @@ import {
   PROGRESS_KEY,
   loadProgress,
   markLessonComplete,
+  saveAssignmentAttempt,
   saveProgress,
   saveQuizAttempt,
   touchLesson,
 } from "@/lib/progress";
-import type { ProgressMap, QuizAttempt } from "@/lib/types";
+import type { AssignmentAttempt, ProgressMap, QuizAttempt } from "@/lib/types";
 
 const EVENT = "lms-progress";
 
@@ -71,7 +72,14 @@ export function useProgress() {
     [map, persist],
   );
 
-  return { map, ready: true, completeLesson, openLesson, recordQuiz };
+  const recordAssignment = useCallback(
+    (courseId: string, lessonId: string, attempt: AssignmentAttempt) => {
+      persist(saveAssignmentAttempt(map, courseId, lessonId, attempt));
+    },
+    [map, persist],
+  );
+
+  return { map, ready: true, completeLesson, openLesson, recordQuiz, recordAssignment };
 }
 
 export function persistVisit(courseId: string, lessonId: string) {

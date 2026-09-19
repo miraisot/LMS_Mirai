@@ -11,7 +11,7 @@ export function SiteHeader() {
           LIVE
         </span>
         <span className="hidden sm:inline">
-          Student library · lectures · readings · quizzes
+          Student library · how-tos · labs · assignments
         </span>
       </div>
       <header className="border-b border-white/10 bg-[#05070a]/90 backdrop-blur">

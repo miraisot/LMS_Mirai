@@ -22,14 +22,24 @@ export function QuizGlyph({ className = "h-4 w-4" }: { className?: string }) {
   );
 }
 
-export function lessonGlyph(type: "video" | "pdf" | "quiz") {
+export function AssignmentGlyph({ className = "h-4 w-4" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 16 16" className={className} fill="currentColor" aria-hidden="true">
+      <path d="M5.2 1.2h5.6l.7.7V3h1A1.5 1.5 0 0 1 14 4.5v9A1.5 1.5 0 0 1 12.5 15h-9A1.5 1.5 0 0 1 2 13.5v-9A1.5 1.5 0 0 1 3.5 3h1V1.9l.7-.7zM6 2.2v.8h4v-.8H6zM4.5 4.2a.3.3 0 0 0-.3.3v9c0 .16.14.3.3.3h8a.3.3 0 0 0 .3-.3v-9a.3.3 0 0 0-.3-.3h-1V5H5.5V4.2h-1zM5.5 7h5v1h-5V7zm0 2.4h5v1h-5v-1zM5.5 11.8h3.2v1H5.5v-1z" />
+    </svg>
+  );
+}
+
+export function lessonGlyph(type: "video" | "pdf" | "quiz" | "assignment") {
   if (type === "video") return VideoGlyph;
   if (type === "pdf") return PdfGlyph;
+  if (type === "assignment") return AssignmentGlyph;
   return QuizGlyph;
 }
 
-export const lessonLabels: Record<"video" | "pdf" | "quiz", string> = {
-  video: "Lecture",
+export const lessonLabels: Record<"video" | "pdf" | "quiz" | "assignment", string> = {
+  video: "How-to",
   pdf: "Reading",
   quiz: "Quiz",
+  assignment: "Assignment",
 };

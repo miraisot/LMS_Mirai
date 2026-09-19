@@ -3,8 +3,8 @@
     {
       "id": "open-source",
       "title": "Open Source Contribution Basics: Git, GitHub & Pull Requests",
-      "subtitle": "From first commit to a merged pull request.",
-      "description": "A 3-week path from Git fundamentals and merge conflicts to landing PRs that maintainers actually review and merge. Original bootcamp links that 404 are replaced with working public lectures that cover the same skills.",
+      "subtitle": "Ship a real PR this month — not a lecture about one.",
+      "description": "A 3-week studio: official GitHub how-tos, two hands-on labs (GitHub Skills + First Contributions), then a real issue you can actually open a pull request for. Quizzes check the commands; assignments check that you did the work.",
       "level": "Beginner",
       "hours": "3 weeks",
       "accent": "#00f0ff",
@@ -16,24 +16,24 @@
       "modules": [
         {
           "id": "module_1",
-          "title": "Week 1: Git & GitHub Basics, Finding Repos & First PR",
-          "summary": "Repos, forks, branches, issues, and your first pull request.",
+          "title": "Week 1: Do the GitHub flow yourself",
+          "summary": "Watch the 4-minute PR, then leave a public PR URL in the assignment.",
           "lessons": [
             {
               "id": "l1_1",
-              "title": "Day 1: Open Source Contributions | BootCamp",
+              "title": "What is GitHub? (official, 2 min)",
               "type": "video",
-              "duration": "1 hr 16 min",
-              "description": "Fundamentals of open-source workflows: repos, forks, and how first-time contributors actually ship a change. Replaces an unavailable original BootCamp upload.",
-              "url": "https://www.youtube.com/watch?v=yzeVMecydCE"
+              "duration": "2 min",
+              "description": "GitHub’s own walkthrough of a repo: where the code lives, how a team shares it, and why the Pull requests tab exists.",
+              "url": "https://www.youtube.com/watch?v=w3jLJU7DT5E"
             },
             {
               "id": "l1_2",
-              "title": "Day 2: Git Branches and Pull Requests | Open Source Bootcamp",
+              "title": "Create a pull request in 4 minutes | GitHub for Beginners",
               "type": "video",
-              "duration": "1 hr 10 min",
-              "description": "Branching, isolated work, pull requests, and how collaboration actually happens on GitHub.",
-              "url": "https://www.youtube.com/watch?v=Uszj_k0DGsg"
+              "duration": "4 min",
+              "description": "Official screen-share: branch, commit, push, Compare & pull request, then write a title a reviewer can scan. Pause and do it on your account.",
+              "url": "https://www.youtube.com/watch?v=nCKdihvneS0"
             },
             {
               "id": "l1_3",
@@ -45,7 +45,7 @@
             },
             {
               "id": "l1_4",
-              "title": "How to Find Good First Issues in Open Source?",
+              "title": "How to Find Good First Issues in Open Source",
               "type": "video",
               "duration": "12 min",
               "description": "Beginner-friendly labels, maintainer channels, and aggregators so you are not staring at a 1,700-issue backlog.",
@@ -56,8 +56,56 @@
               "title": "Git Cheat Sheet & PR Workflow Handbook",
               "type": "pdf",
               "duration": "20 min",
-              "description": "GitHub’s education cheat sheet: status, branch, commit, remotes, and the commands you will use on every PR.",
+              "description": "GitHub’s education cheat sheet: status, branch, commit, remotes, and the commands you will use on every PR. Keep it open during the lab.",
               "url": "https://education.github.com/git-cheat-sheet-education.pdf"
+            },
+            {
+              "id": "l1_assign",
+              "title": "Lab: Open your first pull request",
+              "type": "assignment",
+              "duration": "60 min",
+              "description": "Complete GitHub Skills, then land a practice PR on First Contributions. Paste the URLs — watching does not count.",
+              "assignment": {
+                "brief": "Do the work on GitHub, then write what you actually ran. Two labs: GitHub Skills ‘Introduction to GitHub’ (https://github.com/skills/introduction-to-github) and First Contributions (https://github.com/firstcontributions/first-contributions). Either merged or still open is fine.",
+                "deliverable": "A public PR URL plus the commands you used.",
+                "fields": [
+                  {
+                    "id": "skills_url",
+                    "label": "GitHub Skills repo or completion URL",
+                    "placeholder": "https://github.com/YOUR-USER/introduction-to-github",
+                    "hint": "Copy the exercise to your account, finish the four steps (branch, commit, PR, merge), then paste that repo URL.",
+                    "rows": 2
+                  },
+                  {
+                    "id": "pr_url",
+                    "label": "Your First Contributions (or Skills) pull request URL",
+                    "placeholder": "https://github.com/firstcontributions/first-contributions/pull/…",
+                    "hint": "Must be a pull request, not the repo homepage.",
+                    "rows": 2
+                  },
+                  {
+                    "id": "what_changed",
+                    "label": "What you changed, in one sentence",
+                    "placeholder": "Added my name to Contributors.md on a branch called …",
+                    "hint": "If you cannot name the file and the branch, you did not finish the lab.",
+                    "minWords": 12,
+                    "rows": 3
+                  },
+                  {
+                    "id": "commands",
+                    "label": "Commands you actually ran",
+                    "placeholder": "git clone …\ngit checkout -b …\ngit add …\ngit commit -m …\ngit push origin …",
+                    "hint": "Paste the real sequence, including the one that failed and what you did next.",
+                    "minWords": 20,
+                    "rows": 8
+                  }
+                ],
+                "checklist": [
+                  "The PR URL opens in an incognito window.",
+                  "You named a file and a branch, not ‘I followed the video’.",
+                  "The command list includes clone or fork, a branch, commit, and push."
+                ]
+              }
             },
             {
               "id": "l1_quiz",
@@ -127,24 +175,24 @@
         },
         {
           "id": "module_2",
-          "title": "Week 2: Merge Conflicts, Rebase & Clean History",
-          "summary": "What happens when two people edit the same lines — and how to ship anyway.",
+          "title": "Week 2: Fix a conflict with your own hands",
+          "summary": "SSH, rebase vs merge, then the GitHub Skills conflict lab — not a 60-minute crash course.",
           "lessons": [
             {
               "id": "l2_1",
-              "title": "Git Branches, Merge, and Rebase",
+              "title": "GitHub for Beginners: SSH, PAT, conflicts, sync a fork",
               "type": "video",
-              "duration": "31 min",
-              "description": "Create, compare, merge, and rebase branches so your feature work can land on main without a mess.",
-              "url": "https://www.youtube.com/watch?v=e2IbNHi4uCI"
+              "duration": "12 min",
+              "description": "GitHub engineers screen-share the stuff that actually blocks first-timers: add an SSH key, mint a PAT, resolve a conflict in the PR UI, sync a fork, and review a diff.",
+              "url": "https://www.youtube.com/watch?v=ZgARMqR3qq8"
             },
             {
               "id": "l2_2",
-              "title": "Git & GitHub Crash Course (conflicts live in the merge story)",
+              "title": "Git Branches, Merge, and Rebase (do this in a throwaway repo)",
               "type": "video",
-              "duration": "1 hr",
-              "description": "A compact 2026 walkthrough of add, commit, branch, and the commands you will rerun when a merge turns red.",
-              "url": "https://www.youtube.com/watch?v=mAFoROnOfHs"
+              "duration": "31 min",
+              "description": "Create two branches, collide on the same line, merge, then rebase your feature onto updated main. Pause and reproduce each command locally.",
+              "url": "https://www.youtube.com/watch?v=e2IbNHi4uCI"
             },
             {
               "id": "l2_pdf",
@@ -153,6 +201,47 @@
               "duration": "15 min",
               "description": "Keep this open while you resolve conflicts: fetch, merge, rebase, stash, and log.",
               "url": "https://training.github.com/downloads/github-git-cheat-sheet.pdf"
+            },
+            {
+              "id": "l2_assign",
+              "title": "Lab: Resolve a merge conflict",
+              "type": "assignment",
+              "duration": "45 min",
+              "description": "Run GitHub Skills ‘Resolve merge conflicts’, then write what the markers meant and what you kept.",
+              "assignment": {
+                "brief": "Start the official lab: https://github.com/skills/resolve-merge-conflicts (about 30 minutes). You can also manufacture a conflict in a throwaway repo: two branches, same line, different words, then merge.",
+                "deliverable": "Proof you resolved a conflict, plus the final file contents in your own words.",
+                "fields": [
+                  {
+                    "id": "lab_url",
+                    "label": "Skills lab repo or the PR where you resolved the conflict",
+                    "placeholder": "https://github.com/YOUR-USER/resolve-merge-conflicts or a PR URL",
+                    "hint": "A repo or PR link a classmate could open.",
+                    "rows": 2
+                  },
+                  {
+                    "id": "markers",
+                    "label": "What you saw and what you kept",
+                    "placeholder": "<<<<<<< HEAD had … / ======= / >>>>>>> feature had … I kept … because …",
+                    "hint": "Quote the two sides. ‘I clicked resolve’ is not enough.",
+                    "minWords": 40,
+                    "rows": 6
+                  },
+                  {
+                    "id": "rebase_or_merge",
+                    "label": "On your next feature branch, rebase or merge — and why",
+                    "placeholder": "I would rebase onto latest main before the PR because…",
+                    "hint": "Rebase your unpushed solo branch. Do not rebase a shared main.",
+                    "minWords": 25,
+                    "rows": 4
+                  }
+                ],
+                "checklist": [
+                  "You linked a repo or PR, not a docs page.",
+                  "You described both sides of the conflict, not only the winner.",
+                  "You said when you would not rebase."
+                ]
+              }
             },
             {
               "id": "l2_quiz",
@@ -209,24 +298,67 @@
         },
         {
           "id": "module_3",
-          "title": "Week 3: Landing PRs",
-          "summary": "From local branch to a merged pull request maintainers will actually review.",
+          "title": "Week 3: Open a PR a maintainer can review",
+          "summary": "Pick a live issue, write the PR body, and draft the comment you will post.",
           "lessons": [
             {
               "id": "l3_1",
               "title": "Step-by-step: contribute to open source",
               "type": "video",
               "duration": "20 min",
-              "description": "Fork, clone, branch, commit, push, and open the PR — the full loop with the habits maintainers expect.",
+              "description": "Fork, clone, branch, commit, push, and open the PR — the full loop with the habits maintainers expect. Follow along on a real repo, not a notepad.",
               "url": "https://www.youtube.com/watch?v=yJRvCG5UhD0"
             },
             {
-              "id": "l3_2",
-              "title": "Git and GitHub for Beginners — the PR in context",
-              "type": "video",
-              "duration": "1 hr 8 min",
-              "description": "A full beginner crash course so the GitHub UI for compare & pull request is not a mystery.",
-              "url": "https://www.youtube.com/watch?v=RGOj5yH7evk"
+              "id": "l3_assign",
+              "title": "Studio: Claim a real issue and draft the PR",
+              "type": "assignment",
+              "duration": "50 min",
+              "description": "Find an open good-first-issue, extract the project’s rules, and write the PR description you would submit.",
+              "assignment": {
+                "brief": "Search `label:\"good first issue\" state:open` in a language you know. Read README + CONTRIBUTING. You do not have to merge this week — you do have to pick a real issue and write the artifacts a maintainer would read.",
+                "deliverable": "Issue URL, three project rules, a PR body, and the issue comment you will post.",
+                "fields": [
+                  {
+                    "id": "issue",
+                    "label": "Issue URL and why this one is sized for you",
+                    "placeholder": "https://github.com/org/repo/issues/123 — it asks for … and the file to touch is …",
+                    "hint": "Name the file or area. ‘It said good first issue’ is not a reason.",
+                    "minWords": 30,
+                    "rows": 4
+                  },
+                  {
+                    "id": "rules",
+                    "label": "Three rules from README / CONTRIBUTING you will follow",
+                    "placeholder": "1. Branch naming…\n2. How to claim an issue…\n3. Tests / DCO / PR template…",
+                    "hint": "Quote the project, not generic Git advice.",
+                    "minWords": 40,
+                    "rows": 6
+                  },
+                  {
+                    "id": "pr_body",
+                    "label": "Draft PR title + body",
+                    "placeholder": "Title: Fix typo in …\n\n## What\n## Why\n## How I tested\nFixes #123",
+                    "hint": "Include a closing keyword if the issue should close on merge.",
+                    "minWords": 50,
+                    "rows": 10
+                  },
+                  {
+                    "id": "comment",
+                    "label": "The issue comment you will post",
+                    "placeholder": "Hi — I’d like to take this. I will … Is this still open?",
+                    "hint": "Short, specific, and ask if it is free. No ‘please assign me this thank you’ spam.",
+                    "minWords": 25,
+                    "rows": 5
+                  }
+                ],
+                "checklist": [
+                  "The issue URL is open on GitHub today.",
+                  "The three rules came from that repo’s docs.",
+                  "The PR body says what, why, how you tested, and Fixes #n.",
+                  "The comment is something you would actually post."
+                ]
+              }
             },
             {
               "id": "l3_quiz",
@@ -286,8 +418,8 @@
     {
       "id": "gsoc",
       "title": "GSoC, LFX & Outreachy: Mentorship Roadmap",
-      "subtitle": "Turn open-source contributions into a paid mentorship.",
-      "description": "How Google Summer of Code, LFX Mentorship, and Outreachy differ, what each program expects, and how the PRs you already have shape a real application.",
+      "subtitle": "Pick an org, draft the proposal, write the mentor note.",
+      "description": "Skip the ‘what is GSoC’ overview. This week you choose a program, shortlist issues, and write a proposal a mentor could mark up — using the official student guide plus accepted-proposal habits.",
       "level": "Intermediate",
       "hours": "1 week",
       "accent": "#a78bfa",
@@ -299,39 +431,98 @@
       "modules": [
         {
           "id": "module_1",
-          "title": "The Mentorship Landscape",
-          "summary": "How the big mentorships differ — and how prior PRs make the application real.",
+          "title": "Apply like a contributor, not a tourist",
+          "summary": "How people actually get in: org pick, contributions, proposal, mentor message.",
           "lessons": [
             {
               "id": "l1_1",
-              "title": "Google Summer of Code: roadmap",
+              "title": "How I got into GSoC: org pick, contributions, proposal",
               "type": "video",
-              "duration": "45 min",
-              "description": "Eligibility, org lists, proposals, and why you contribute to the org before the form opens.",
-              "url": "https://www.youtube.com/watch?v=HA1nJ3rn4Cc"
+              "duration": "20 min",
+              "description": "A contributor walkthrough: start on page two of the org list, write up your local setup as a first patch, stay on one org, and put a week-by-week timeline plus research in the proposal.",
+              "url": "https://www.youtube.com/watch?v=8gQAF2iEDEQ"
             },
             {
               "id": "l1_2",
-              "title": "LFX Mentorship",
+              "title": "Nail your GSoC proposal (what mentors actually mark)",
               "type": "video",
-              "duration": "20 min",
-              "description": "Linux Foundation mentorships: terms, CNCF/kernel-adjacent projects, and how they sit next to GSoC.",
-              "url": "https://www.youtube.com/watch?v=o0V7Z6UQMBY"
+              "duration": "18 min",
+              "description": "OpenMRS mentors on the template they use, the sections they skip, and why a messy draft sent early beats a perfect PDF at 23:59. Pair with https://google.github.io/gsocguides/student/writing-a-proposal",
+              "url": "https://www.youtube.com/watch?v=b6xVkNAn3Ok"
             },
             {
               "id": "l1_3",
-              "title": "Outreachy: initial application",
+              "title": "LFX Mentorship: how the board and terms work",
+              "type": "video",
+              "duration": "20 min",
+              "description": "Linux Foundation mentorships: terms, CNCF/kernel-adjacent projects, and how you apply on the LFX board (up to a few tailored projects per term).",
+              "url": "https://www.youtube.com/watch?v=o0V7Z6UQMBY"
+            },
+            {
+              "id": "l1_4",
+              "title": "Outreachy: initial application, then the contribution period",
               "type": "video",
               "duration": "15 min",
-              "description": "How the Outreachy initial application is structured and what the contribution period is for.",
+              "description": "How the Outreachy initial application is structured and what the contribution period is for. Read the current applicant guide before you write: https://www.outreachy.org/docs/applicant/",
               "url": "https://www.youtube.com/watch?v=lRegecT11k0"
+            },
+            {
+              "id": "l1_assign",
+              "title": "Studio: Org shortlist + proposal draft",
+              "type": "assignment",
+              "duration": "75 min",
+              "description": "Pick one program and one org. List three issues. Write a 12-week proposal a mentor could comment on. Draft the first chat message.",
+              "assignment": {
+                "brief": "Use this year’s official pages — dates move. GSoC: https://summerofcode.withgoogle.com/ and the student proposal guide. LFX: https://mentorship.lfx.linuxfoundation.org/. Outreachy: https://www.outreachy.org/docs/applicant/. Depth on one org beats spraying twenty.",
+                "deliverable": "A mentor-facing proposal draft, not an essay about your passion.",
+                "fields": [
+                  {
+                    "id": "program_org",
+                    "label": "Program + organization + why this pair",
+                    "placeholder": "GSoC / LFX / Outreachy — org name — I can set this up locally because…",
+                    "hint": "Name a language or repo you can compile this week. ‘Prestige org’ is not a reason.",
+                    "minWords": 40,
+                    "rows": 5
+                  },
+                  {
+                    "id": "issues",
+                    "label": "Three issues or idea-list items you would take first",
+                    "placeholder": "1. URL — what it asks — first file you would open\n2. …\n3. …",
+                    "hint": "Real URLs. Include at least one you could finish before the application deadline.",
+                    "minWords": 50,
+                    "rows": 7
+                  },
+                  {
+                    "id": "proposal",
+                    "label": "Proposal draft: problem, approach, 12-week timeline",
+                    "placeholder": "Problem the org has…\nWhat I will ship (required vs optional)…\nWeeks 1–4 / 5–8 / 9–12…\nRisks and fallback…",
+                    "hint": "Follow the official sections: https://google.github.io/gsocguides/student/writing-a-proposal — deliverables a mentor can check, not vibes.",
+                    "minWords": 120,
+                    "rows": 14
+                  },
+                  {
+                    "id": "mentor_note",
+                    "label": "First message to a mentor (chat or email)",
+                    "placeholder": "Hi — I built the project locally (blocked on X, fixed by Y). I read issue #… and I would start by … Does that match what you want?",
+                    "hint": "Show setup + a specific issue. Do not send ‘please tell me how to start’ with no repo clone.",
+                    "minWords": 40,
+                    "rows": 6
+                  }
+                ],
+                "checklist": [
+                  "You named one program and one org, not five.",
+                  "Every issue has a URL.",
+                  "The timeline has weeks and deliverables, including a fallback.",
+                  "The mentor note proves you ran the project locally."
+                ]
+              }
             },
             {
               "id": "l1_quiz",
               "title": "Assessment: Mentorship Programs",
               "type": "quiz",
               "duration": "10 min",
-              "description": "Pick the right program for the right person — and the work that has to happen first.",
+              "description": "Pick the right program — and the work that has to happen before the form.",
               "quiz": {
                 "passingScore": 70,
                 "questions": [
@@ -384,65 +575,243 @@
     {
       "id": "product-development",
       "title": "Building Your Own Product: Idea to Launch",
-      "subtitle": "Validate an idea, scope an MVP, and ship it to real users.",
-      "description": "A practical, video-based path for builders: find a problem worth solving, talk to real users, scope the smallest version worth shipping, and launch it — then do it again.",
+      "subtitle": "Four outcomes: submit an idea, talk to customers, ship a product, name the brand.",
+      "description": "The only builder studio in the library. You leave with four artifacts on this device: a locked idea, interview notes from a real person, a live product URL, and a brand plus first-user list. Other courses stay on Git and pitching — this one is the build.",
       "level": "Beginner",
-      "hours": "3 weeks",
+      "hours": "4 weeks",
       "accent": "#f59e0b",
-      "tags": ["Product", "Startups", "MVP", "Product Hunt"],
+      "tags": ["Idea", "Customers", "Build", "Brand"],
+      "outcomes": [
+        "Idea submitted — one problem, one customer, locked for the month",
+        "Customers talked to — notes from a real conversation, not a survey",
+        "Product built — a live URL someone else can click",
+        "Brand named — a promise people can repeat, plus the first 20 users"
+      ],
       "instructor": {
         "name": "Mirai Faculty",
         "title": "Product"
       },
       "modules": [
         {
-          "id": "module_1",
-          "title": "Week 1: Finding & Validating an Idea",
-          "summary": "Where good startup ideas come from, and how to know if yours holds up.",
+          "id": "module_idea",
+          "title": "Week 1: Submit the idea",
+          "summary": "Lock one problem and one customer. Everything later in this course is about this idea.",
+          "outcome": "Idea submitted",
           "lessons": [
             {
-              "id": "l1_1",
+              "id": "idea_1",
               "title": "How to Get and Evaluate Startup Ideas | Startup School",
               "type": "video",
-              "description": "Y Combinator's Jared Friedman on where good startup ideas come from and a framework of questions to stress-test one before you commit to it.",
+              "duration": "30 min",
+              "description": "Jared Friedman’s questions you apply to a real idea this week: who already needs this, why you, why now. Pause after each question and write the answer you will submit.",
               "url": "https://www.youtube.com/watch?v=Th8JoIan4dg"
-            },
-            {
-              "id": "l1_2",
-              "title": "How To Talk To Users | Startup School",
-              "type": "video",
-              "description": "How to find users, what to actually ask them, and how to turn conversations into decisions about what to build — without pitching first.",
-              "url": "https://www.youtube.com/watch?v=z1iF1c8w5Lg"
             },
             {
               "id": "l1_pdf",
               "title": "Lean Canvas Template",
               "type": "pdf",
               "duration": "15 min",
-              "description": "LeanStack's one-page business model canvas — problem, solution, unique value proposition, channels, and metrics — to fill in before you write any code.",
+              "description": "Fill problem, customer, UVP, and channel before you write code. Empty boxes mean the idea is not submitted yet.",
               "url": "https://s3.amazonaws.com/leanstack/v4/Lean-Canvas.pdf"
             },
             {
-              "id": "l1_quiz",
-              "title": "Week 1 Assessment: Idea & Validation",
+              "id": "idea_assign",
+              "title": "Outcome 1: Submit your idea",
+              "type": "assignment",
+              "duration": "45 min",
+              "description": "Hand in the idea you will build for the rest of this course. After this, changing the customer is a rewrite, not a tweak.",
+              "assignment": {
+                "brief": "Pick one problem a named person already has. This submission is the brief for weeks 2–4 — interviews, the product URL, and the brand all have to match it.",
+                "deliverable": "A locked idea a classmate could explain back to you.",
+                "fields": [
+                  {
+                    "id": "oneliner",
+                    "label": "The idea in one sentence",
+                    "placeholder": "We help [who] do [job] without [pain].",
+                    "hint": "Name the job, not the category. ‘It’s an AI platform’ is not an idea.",
+                    "minWords": 12,
+                    "rows": 3
+                  },
+                  {
+                    "id": "who",
+                    "label": "The first customer (a real type of person, not ‘everyone’)",
+                    "placeholder": "Second-year students who already… / shop owners on Instagram who…",
+                    "hint": "If you cannot picture where they sit on a Tuesday, it is too wide.",
+                    "minWords": 25,
+                    "rows": 4
+                  },
+                  {
+                    "id": "proof",
+                    "label": "Why this is a real problem (something they already do or pay for)",
+                    "placeholder": "They currently use WhatsApp + a notebook, and last week they…",
+                    "hint": "Past behavior. ‘They would love this’ does not count.",
+                    "minWords": 30,
+                    "rows": 5
+                  },
+                  {
+                    "id": "wont_build",
+                    "label": "What you will not build this month",
+                    "placeholder": "No mobile app / no payments / no admin / no second customer type…",
+                    "hint": "If this list is empty, you have not submitted an idea — you have submitted a wishlist.",
+                    "minWords": 20,
+                    "rows": 4
+                  }
+                ],
+                "checklist": [
+                  "A stranger can say the one-liner back.",
+                  "The customer is narrow enough to find this week.",
+                  "You named something they already do, not a compliment they might give.",
+                  "You cut work you will refuse."
+                ]
+              }
+            },
+            {
+              "id": "idea_quiz",
+              "title": "Week 1 Assessment: Idea worth submitting",
               "type": "quiz",
               "duration": "8 min",
-              "description": "Evaluating an idea and running a real user interview.",
+              "description": "What makes an idea worth locking for a month.",
+              "quiz": {
+                "passingScore": 70,
+                "questions": [
+                  {
+                    "id": "idea_q1",
+                    "prompt": "The strongest signal an idea is worth submitting is:",
+                    "type": "single",
+                    "options": [
+                      { "id": "a", "text": "It sounds impressive when you pitch it at a party." },
+                      { "id": "b", "text": "You (or people you can name) already feel this problem and already work around it." },
+                      { "id": "c", "text": "No one has ever tried anything like it." },
+                      { "id": "d", "text": "It requires the least possible work to build." }
+                    ],
+                    "correctOptionIds": ["b"],
+                    "explanation": "Submit problems people already live with. Novelty and ease are not the test."
+                  },
+                  {
+                    "id": "idea_q2",
+                    "prompt": "A submitted idea should usually name:",
+                    "type": "single",
+                    "options": [
+                      { "id": "a", "text": "Every feature on the year-one roadmap." },
+                      { "id": "b", "text": "One customer, one job, and what you will not build yet." },
+                      { "id": "c", "text": "A company name and a logo only." },
+                      { "id": "d", "text": "A fundraising target." }
+                    ],
+                    "correctOptionIds": ["b"],
+                    "explanation": "The submission is a constraint: who, what job, and the cuts."
+                  },
+                  {
+                    "id": "idea_q3",
+                    "prompt": "Select every section that belongs on a Lean Canvas before you build.",
+                    "type": "multiple",
+                    "options": [
+                      { "id": "a", "text": "Problem" },
+                      { "id": "b", "text": "Unique Value Proposition" },
+                      { "id": "c", "text": "Office lease terms" },
+                      { "id": "d", "text": "Customer segment" }
+                    ],
+                    "correctOptionIds": ["a", "b", "d"],
+                    "explanation": "Problem, customer, UVP, channel, and metrics — not operations."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "module_1",
+          "title": "Week 2: Talk to a customer",
+          "summary": "Run a Mom Test conversation about the idea you submitted. Notes beat opinions.",
+          "outcome": "Customers talked to",
+          "lessons": [
+            {
+              "id": "l1_1",
+              "title": "The Mom Test: how to talk to customers without lying to yourself",
+              "type": "video",
+              "duration": "45 min",
+              "description": "Rob Fitzpatrick on the three rules: talk about their life, ask about the last time (not ‘would you’), and listen more than you pitch. Pause and write the questions you will actually ask.",
+              "url": "https://www.youtube.com/watch?v=FG1Fa-t4AEQ"
+            },
+            {
+              "id": "l1_2",
+              "title": "How To Talk To Users | Startup School",
+              "type": "video",
+              "duration": "30 min",
+              "description": "How to find people, book the call, and turn notes into a build/kill decision — without pitching first.",
+              "url": "https://www.youtube.com/watch?v=z1iF1c8w5Lg"
+            },
+            {
+              "id": "l1_assign",
+              "title": "Outcome 2: Talk to a customer",
+              "type": "assignment",
+              "duration": "60 min",
+              "description": "Interview one real person about the idea you submitted. Write what they already do — not whether they like your pitch.",
+              "assignment": {
+                "brief": "Use the idea from week 1. Talk about their last week, not your solution. Best prompt: ‘Walk me through the last time this happened.’ A scheduled interview with a full script counts if you name the person and the time.",
+                "deliverable": "Proof you talked to a customer: eight questions, notes, and a keep / kill / rewrite.",
+                "fields": [
+                  {
+                    "id": "who",
+                    "label": "Who you are interviewing and the last time they hit this problem",
+                    "placeholder": "Name / role — last Tuesday they … and they used …",
+                    "hint": "A real person. ‘Students in general’ is not an interview.",
+                    "minWords": 25,
+                    "rows": 4
+                  },
+                  {
+                    "id": "questions",
+                    "label": "Eight Mom Test questions you will ask",
+                    "placeholder": "1. Walk me through the last time…\n2. What did you try?\n3. What did that cost you?\n…",
+                    "hint": "Ban ‘Would you use this?’ and ‘Is this a good idea?’",
+                    "minWords": 60,
+                    "rows": 10
+                  },
+                  {
+                    "id": "notes",
+                    "label": "Interview notes (or the scheduled script if the call is this week)",
+                    "placeholder": "They currently… They already paid for… They refused to… Commitment they offered…",
+                    "hint": "Write behavior and commitments. Compliments do not count as signal.",
+                    "minWords": 60,
+                    "rows": 8
+                  },
+                  {
+                    "id": "decision",
+                    "label": "Keep / kill / rewrite the submitted idea — what changed",
+                    "placeholder": "Decision: keep / kill / rewrite because they already… The one-liner is now …",
+                    "hint": "If nothing about the idea moved, you pitched instead of interviewing.",
+                    "minWords": 40,
+                    "rows": 5
+                  }
+                ],
+                "checklist": [
+                  "You named a person, not a demographic.",
+                  "None of the eight questions pitch the product.",
+                  "Notes include something they already do or already pay for.",
+                  "The keep / kill / rewrite names what you heard."
+                ]
+              }
+            },
+            {
+              "id": "l1_quiz",
+              "title": "Week 2 Assessment: Talking to customers",
+              "type": "quiz",
+              "duration": "8 min",
+              "description": "Mom Test rules and what belongs on a Lean Canvas.",
               "quiz": {
                 "passingScore": 70,
                 "questions": [
                   {
                     "id": "pd1_q1",
-                    "prompt": "Per YC's framework for evaluating startup ideas, which is the strongest signal an idea is worth pursuing?",
+                    "prompt": "Which question is most likely to pass the Mom Test?",
                     "type": "single",
                     "options": [
-                      { "id": "a", "text": "It sounds impressive when you pitch it at a party." },
-                      { "id": "b", "text": "You (or people you know) genuinely need this and would use it today." },
-                      { "id": "c", "text": "No one has ever tried anything like it." },
-                      { "id": "d", "text": "It requires the least possible work to build." }
+                      { "id": "a", "text": "Would you use an app that does this?" },
+                      { "id": "b", "text": "Walk me through the last time this problem showed up. What did you do?" },
+                      { "id": "c", "text": "Isn’t this a great idea?" },
+                      { "id": "d", "text": "On a scale of 1–10, how excited are you?" }
                     ],
                     "correctOptionIds": ["b"],
-                    "explanation": "YC favors founders solving a problem they deeply understand and already feel, not an idea that merely sounds novel or easy."
+                    "explanation": "Ask about a specific past episode and what they already did. Opinions and compliments are polite lies."
                   },
                   {
                     "id": "pd1_q2",
@@ -459,16 +828,16 @@
                   },
                   {
                     "id": "pd1_q3",
-                    "prompt": "Select every section that belongs on a Lean Canvas.",
+                    "prompt": "Select every habit that belongs in a customer conversation.",
                     "type": "multiple",
                     "options": [
-                      { "id": "a", "text": "Problem" },
-                      { "id": "b", "text": "Unique Value Proposition" },
-                      { "id": "c", "text": "Office lease terms" },
-                      { "id": "d", "text": "Key Metrics" }
+                      { "id": "a", "text": "Ask about the last time the problem showed up." },
+                      { "id": "b", "text": "Write down what they already do or already pay for." },
+                      { "id": "c", "text": "Pitch the full product in the first two minutes." },
+                      { "id": "d", "text": "End by asking for a small commitment (intro, follow-up, a try)." }
                     ],
                     "correctOptionIds": ["a", "b", "d"],
-                    "explanation": "The Lean Canvas covers problem, solution, UVP, channels, customer segments, cost structure, revenue, key metrics, and unfair advantage — not operational details like a lease."
+                    "explanation": "Past behavior and a real next step beat a pitch. Compliments are not signal."
                   }
                 ]
               }
@@ -477,30 +846,82 @@
         },
         {
           "id": "module_2",
-          "title": "Week 2: Scoping and Shipping an MVP",
-          "summary": "Turn a validated idea into the smallest version worth building — and say it out loud clearly.",
+          "title": "Week 3: Build the product",
+          "summary": "Ship the smallest version of the submitted idea. The outcome is a URL, not a spec.",
+          "outcome": "Product built",
           "lessons": [
             {
               "id": "l2_1",
-              "title": "Michael Seibel - How to Plan an MVP",
+              "title": "Michael Seibel — How to Plan an MVP",
               "type": "video",
-              "duration": "~30 min",
-              "description": "What actually counts as an MVP, and why 'launch something bad quickly' beats a long, quiet build.",
+              "duration": "30 min",
+              "description": "What actually counts as an MVP: the smallest thing that delivers value to a few users. Pause and delete features from your list as he talks.",
               "url": "https://www.youtube.com/watch?v=1hHMwLxN6EM"
             },
             {
               "id": "l2_2",
-              "title": "Kevin Hale - How to Pitch Your Startup",
+              "title": "Value Proposition Canvas (fill this, 5 min)",
               "type": "video",
-              "description": "Package the idea into a pitch: the initial conditions, the solution, and the insight for why it can work — useful for users, cofounders, or investors alike.",
-              "url": "https://www.youtube.com/watch?v=17XZGUX_9iM"
+              "duration": "5 min",
+              "description": "Alex Osterwalder’s official walkthrough: customer jobs, pains, gains vs your pain relievers and gain creators. If a box is empty, that feature is not in the MVP.",
+              "url": "https://www.youtube.com/watch?v=D254suPMpwY"
+            },
+            {
+              "id": "l2_assign",
+              "title": "Outcome 3: Build the product (live URL)",
+              "type": "assignment",
+              "duration": "90 min",
+              "description": "Ship something a stranger can click: a site, form, bot, or demo. A spec without a URL does not count.",
+              "assignment": {
+                "brief": "Build the idea from week 1 using whatever is fastest — Carrd, Notion, Google Form, WhatsApp flow, Replit, Next.js. Ugly is fine. Private-only Figma is not a product.",
+                "deliverable": "A live URL plus what it does and who already clicked it.",
+                "fields": [
+                  {
+                    "id": "product_url",
+                    "label": "Live product URL",
+                    "placeholder": "https://… (or a public form / bot / demo link)",
+                    "hint": "Must open without a login you cannot share. If it is a WhatsApp number or form, write the exact link or handle.",
+                    "rows": 2
+                  },
+                  {
+                    "id": "what_ships",
+                    "label": "What a user can do in 60 seconds",
+                    "placeholder": "They land → they … → they get … That is the only job.",
+                    "hint": "One job from the submitted idea. If you need a tutorial, it is too big.",
+                    "minWords": 30,
+                    "rows": 5
+                  },
+                  {
+                    "id": "how_built",
+                    "label": "How you built it (tools + what you cut)",
+                    "placeholder": "Built in … I skipped accounts / payments / mobile because…",
+                    "hint": "Name the stack. Name the cuts. ‘I used AI’ is not a build log.",
+                    "minWords": 30,
+                    "rows": 5
+                  },
+                  {
+                    "id": "who_clicked",
+                    "label": "Who already used it (name + what they did)",
+                    "placeholder": "I sent it to [name]. They … They got stuck on … Next I will …",
+                    "hint": "At least one real person. ‘I will share later’ fails the outcome.",
+                    "minWords": 25,
+                    "rows": 5
+                  }
+                ],
+                "checklist": [
+                  "The URL opens for someone who is not you.",
+                  "The job matches the idea you submitted.",
+                  "You named what you refused to build.",
+                  "A named person already tried it."
+                ]
+              }
             },
             {
               "id": "l2_quiz",
-              "title": "Week 2 Assessment: MVP & Pitch",
+              "title": "Week 3 Assessment: Shipping an MVP",
               "type": "quiz",
               "duration": "8 min",
-              "description": "Scoping an MVP and framing a pitch.",
+              "description": "Scoping an MVP and problem–solution fit.",
               "quiz": {
                 "passingScore": 70,
                 "questions": [
@@ -519,16 +940,16 @@
                   },
                   {
                     "id": "pd2_q2",
-                    "prompt": "In Kevin Hale's pitch framework, a startup idea is best understood as:",
+                    "prompt": "On the Value Proposition Canvas, problem–solution fit means:",
                     "type": "single",
                     "options": [
-                      { "id": "a", "text": "A finished business plan." },
-                      { "id": "b", "text": "A hypothesis about why the company could grow quickly, made of initial conditions, solution, and insight." },
-                      { "id": "c", "text": "A guaranteed outcome once funded." },
-                      { "id": "d", "text": "Only relevant once you have paying customers." }
+                      { "id": "a", "text": "You listed as many features as the competitor." },
+                      { "id": "b", "text": "Your pain relievers and gain creators match jobs, pains, and gains you observed." },
+                      { "id": "c", "text": "You registered a domain." },
+                      { "id": "d", "text": "Investors liked the deck." }
                     ],
                     "correctOptionIds": ["b"],
-                    "explanation": "Hale frames a pitch as a hypothesis: why this solution, at this moment, for this insight, could grow fast."
+                    "explanation": "Fit is when the value map hits real jobs, pains, and gains — not when the feature list is long."
                   },
                   {
                     "id": "pd2_q3",
@@ -550,44 +971,98 @@
         },
         {
           "id": "module_3",
-          "title": "Week 3: Launching & Getting First Users",
-          "summary": "Ship it publicly, then do it again.",
+          "title": "Week 4: Build the brand and get first users",
+          "summary": "Name the promise, write the launch post, and put the live product in front of 20 people.",
+          "outcome": "Brand named + first users",
           "lessons": [
             {
               "id": "l3_1",
-              "title": "Kat Mañalac - How to Launch (Again and Again)",
+              "title": "How to Get Your First Customers | Startup School",
               "type": "video",
-              "description": "Why launching is a continuous process — silent launch, friends & family, launching to strangers, and building your own community.",
-              "url": "https://www.youtube.com/watch?v=3xU050kMbHM"
+              "duration": "30 min",
+              "description": "Gustaf Alströmer’s founder sales loop: make a list, send a short note, run a demo, track drop-off. Pause and start the spreadsheet of 20 names.",
+              "url": "https://www.youtube.com/watch?v=hyYCn_kAngI"
             },
             {
               "id": "l3_2",
               "title": "How to Launch on Product Hunt (Official Guide)",
               "type": "video",
-              "description": "Product Hunt's own walkthrough of preparing for and running a launch day.",
+              "duration": "15 min",
+              "description": "Product Hunt’s own walkthrough of preparing a hunter, a first comment, and a live URL — do this after friends already use the product.",
               "url": "https://www.youtube.com/watch?v=UnZWZXcVLOs"
             },
             {
+              "id": "l3_assign",
+              "title": "Outcome 4: Brand + first 20 users",
+              "type": "assignment",
+              "duration": "50 min",
+              "description": "Write the brand promise for the product you shipped, then put that URL in front of 20 people.",
+              "assignment": {
+                "brief": "Brand is the sentence people repeat when you are not in the room. Pair it with the live URL from week 3 and a list of people you will actually message.",
+                "deliverable": "A brand promise, a launch post with the product URL, and a named first-20 list.",
+                "fields": [
+                  {
+                    "id": "promise",
+                    "label": "Brand promise (one sentence people can repeat)",
+                    "placeholder": "For [who], we are the [category] that [unique outcome].",
+                    "hint": "If it still works after you swap in a rival’s name, it is not a brand yet.",
+                    "minWords": 10,
+                    "rows": 3
+                  },
+                  {
+                    "id": "first_twenty",
+                    "label": "The first 20 people or rooms who will see the live product",
+                    "placeholder": "Day 1–3: message these people…\nDay 4–7: post in this room…\nLink I will send: …",
+                    "hint": "Names, groups, or shops. Include the product URL. ‘Go viral’ is not a plan.",
+                    "minWords": 50,
+                    "rows": 7
+                  },
+                  {
+                    "id": "cold",
+                    "label": "The short note you will send (paste-ready)",
+                    "placeholder": "Hey [name] — I built X because you said Y. Can you try this URL this week and tell me if Z still hurts?",
+                    "hint": "About their last problem, the live URL, one ask.",
+                    "minWords": 40,
+                    "rows": 5
+                  },
+                  {
+                    "id": "launch_post",
+                    "label": "Launch post — tagline, who it’s for, product URL",
+                    "placeholder": "Tagline: …\nWho it’s for: …\nLink: …\nMaker comment: …",
+                    "hint": "A stranger should know what to click. The link must be the thing you built.",
+                    "minWords": 50,
+                    "rows": 8
+                  }
+                ],
+                "checklist": [
+                  "The promise is specific enough to reject customers.",
+                  "The 20-user plan names people or rooms and includes the live URL.",
+                  "The note asks for a try, not a compliment.",
+                  "The launch post has a tagline and the product link."
+                ]
+              }
+            },
+            {
               "id": "l3_quiz",
-              "title": "Week 3 Assessment: Launching",
+              "title": "Week 4 Assessment: Brand & first users",
               "type": "quiz",
               "duration": "8 min",
-              "description": "Launching as a repeatable process, not a one-time event.",
+              "description": "Founder-led sales and launching as a repeatable process.",
               "quiz": {
                 "passingScore": 70,
                 "questions": [
                   {
                     "id": "pd3_q1",
-                    "prompt": "Per 'How to Launch (Again and Again)', launching is best treated as:",
+                    "prompt": "For your first customers, Gustaf’s Startup School advice is to:",
                     "type": "single",
                     "options": [
-                      { "id": "a", "text": "A single, one-time event on launch day." },
-                      { "id": "b", "text": "A continuous process you repeat for every meaningful update." },
-                      { "id": "c", "text": "Something to avoid until the product is perfect." },
-                      { "id": "d", "text": "Only relevant for consumer apps." }
+                      { "id": "a", "text": "Buy ads before you can describe the buyer." },
+                      { "id": "b", "text": "Make a list of the easiest likely buyers, message them yourself, and track each step of the funnel." },
+                      { "id": "c", "text": "Wait until the product is famous." },
+                      { "id": "d", "text": "Hire a salesperson in week one." }
                     ],
                     "correctOptionIds": ["b"],
-                    "explanation": "The core point: launch repeatedly — silent launch, friends & family, strangers, press — not just once."
+                    "explanation": "First customers are founder-led and unscalable: a list, a note, a demo, and numbers on drop-off."
                   },
                   {
                     "id": "pd3_q2",
@@ -615,6 +1090,307 @@
                     "correctOptionIds": ["a", "b", "d"],
                     "explanation": "Each real update, audience, or milestone is a legitimate reason to launch again — spamming the same post isn't."
                   }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "entrepreneurship",
+      "title": "Entrepreneurship Studio: Brand, Product, Sales & Pitch",
+      "subtitle": "Write the company, the offer, the outreach, and the deck — this month.",
+      "description": "The founder voice — thesis, brand language, sales script, and a deck you can say out loud. The idea → customer → shipped-product loop lives only in Building Your Own Product.",
+      "level": "Beginner",
+      "hours": "4 weeks",
+      "accent": "#34d399",
+      "tags": ["Entrepreneurship", "Brand", "Sales", "Pitch Deck"],
+      "instructor": {
+        "name": "Mirai Faculty",
+        "title": "Entrepreneurship"
+      },
+      "modules": [
+        {
+          "id": "module_1",
+          "title": "Week 1: Pick a problem you can sell this quarter",
+          "summary": "Stress-test the idea, then write the 90-day outcome and the first customer list.",
+          "lessons": [
+            {
+              "id": "e1_1",
+              "title": "How to Get and Evaluate Startup Ideas | Startup School",
+              "type": "video",
+              "duration": "30 min",
+              "description": "Jared Friedman’s questions you apply to a real idea this week: who already needs this, why you, why now. Pause after each question and answer it for your company.",
+              "url": "https://www.youtube.com/watch?v=Th8JoIan4dg"
+            },
+            {
+              "id": "e1_2",
+              "title": "How to Get Your First Customers | Startup School",
+              "type": "video",
+              "duration": "30 min",
+              "description": "The founder sales loop you will run in week 4: list, note, demo, close. Start the spreadsheet of names while you watch.",
+              "url": "https://www.youtube.com/watch?v=hyYCn_kAngI"
+            },
+            {
+              "id": "e1_assign",
+              "title": "Assignment 1: Founder Thesis & 90-Day Outcome",
+              "type": "assignment",
+              "duration": "45 min",
+              "description": "Write the company in one sentence, why you are the person to build it, and one leadership outcome that will be true in 90 days.",
+              "assignment": {
+                "brief": "Pick a real problem you would spend a year on — not a class project. Leadership here means an observable outcome, not a vibe.",
+                "deliverable": "A founder thesis you can say out loud without slides.",
+                "fields": [
+                  {
+                    "id": "oneliner",
+                    "label": "The company in one sentence",
+                    "placeholder": "We help [who] do [job] without [pain].",
+                    "hint": "Lead with what you do. No adjectives that a competitor could copy-paste.",
+                    "minWords": 10,
+                    "rows": 3
+                  },
+                  {
+                    "id": "why_you",
+                    "label": "Why you (founder-market fit)",
+                    "placeholder": "I have lived this problem because…",
+                    "hint": "Specific history beats 'I am passionate about this space.'",
+                    "minWords": 40,
+                    "rows": 5
+                  },
+                  {
+                    "id": "outcome",
+                    "label": "Leadership outcome in 90 days",
+                    "placeholder": "By day 90, these 10 people will…",
+                    "hint": "Name a result a stranger could check: users, conversations, revenue, a shipped loop — not 'have a better culture.'",
+                    "minWords": 30,
+                    "rows": 5
+                  },
+                  {
+                    "id": "wont_do",
+                    "label": "What you will not do for 90 days",
+                    "placeholder": "I will not hire a sales team / redesign the logo / …",
+                    "hint": "Founders fail by adding work. List the tempting distractions you are cutting.",
+                    "minWords": 20,
+                    "rows": 4
+                  }
+                ],
+                "checklist": [
+                  "A stranger would understand what you do after the first sentence.",
+                  "The 90-day outcome is observable, not motivational.",
+                  "You named work you will refuse, not only work you will start."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "module_2",
+          "title": "Week 2: Write the offer, then pick one channel",
+          "summary": "Fill a value proposition, then decide where you will show up weekly.",
+          "lessons": [
+            {
+              "id": "e2_1",
+              "title": "Value Proposition Canvas (fill this, 5 min)",
+              "type": "video",
+              "duration": "5 min",
+              "description": "Osterwalder’s official canvas: jobs, pains, gains vs pain relievers and gain creators. Fill it for your company before you write the brand promise.",
+              "url": "https://www.youtube.com/watch?v=D254suPMpwY"
+            },
+            {
+              "id": "e2_2",
+              "title": "PR + Content for Growth | Kat Mañalac & Craig Cannon",
+              "type": "video",
+              "duration": "52 min",
+              "description": "How founders actually sell a brand: owned content first, then press. Pause and pick the one platform you will post on this month.",
+              "url": "https://www.youtube.com/watch?v=JL9yoVFHx-Q"
+            },
+            {
+              "id": "e2_assign",
+              "title": "Assignment 2: Brand Promise & Competitor Map",
+              "type": "assignment",
+              "duration": "50 min",
+              "description": "Write the brand promise, pick the first platform you will sell it on, and map three alternatives you refuse to look like.",
+              "assignment": {
+                "brief": "Brand is the sentence people repeat when you are not in the room. Competition is who they compare you to instead — including doing nothing.",
+                "deliverable": "A one-page brand brief plus a three-player competitor map.",
+                "fields": [
+                  {
+                    "id": "promise",
+                    "label": "Brand promise (one sentence people can repeat)",
+                    "placeholder": "For [who], we are the [category] that [unique outcome].",
+                    "hint": "If it works for a rival after a name swap, it is not a brand yet.",
+                    "minWords": 10,
+                    "rows": 3
+                  },
+                  {
+                    "id": "not_for",
+                    "label": "Who it is for — and who it is not for",
+                    "placeholder": "For: … / Not for: …",
+                    "hint": "Narrow is a strategy. 'Everyone who wants to be productive' is not.",
+                    "minWords": 30,
+                    "rows": 5
+                  },
+                  {
+                    "id": "competitors",
+                    "label": "Three alternatives and how you win",
+                    "placeholder": "1. Status quo / 2. Direct rival / 3. Adjacent tool — and why a user switches.",
+                    "hint": "Include the status quo (doing nothing, Excel, a WhatsApp group). That is usually the real competitor.",
+                    "minWords": 50,
+                    "rows": 7
+                  },
+                  {
+                    "id": "platform",
+                    "label": "First platform you will sell the brand on",
+                    "placeholder": "I will show up weekly on … because the buyers already gather there.",
+                    "hint": "Pick one: a community, marketplace, newsletter, or social surface. 'Everywhere' is how brands stay invisible.",
+                    "minWords": 25,
+                    "rows": 4
+                  }
+                ],
+                "checklist": [
+                  "The promise is specific enough to reject customers.",
+                  "At least one competitor is the status quo, not another startup logo.",
+                  "You named one platform, not five."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "module_3",
+          "title": "Week 3: Product people come back to + 20-user plan",
+          "summary": "Define the smallest lovable version, then name how 20 people try it.",
+          "lessons": [
+            {
+              "id": "e3_1",
+              "title": "How to Build Products Users Love | Kevin Hale",
+              "type": "video",
+              "duration": "53 min",
+              "description": "Support-driven product: make a few people unconditionally want you to succeed. Write down the support channel you will sit on this month.",
+              "url": "https://www.youtube.com/watch?v=sz_LgBAGYyo"
+            },
+            {
+              "id": "e3_assign",
+              "title": "Assignment 3: Product Promise & First-Channel Plan",
+              "type": "assignment",
+              "duration": "50 min",
+              "description": "Define the smallest lovable product, the first marketing channel, and how you will get 20 people to try it.",
+              "assignment": {
+                "brief": "Marketing cannot rescue a product nobody returns to. Write the product as a job, then pick one channel you will work this month.",
+                "deliverable": "A product promise plus a first-channel plan for 20 users.",
+                "fields": [
+                  {
+                    "id": "job",
+                    "label": "Who + job-to-be-done + smallest lovable version",
+                    "placeholder": "When [situation], [who] wants to [job], so they can [outcome]. The first version only does …",
+                    "hint": "If the first version needs a roadmap to be useful, it is not first.",
+                    "minWords": 40,
+                    "rows": 5
+                  },
+                  {
+                    "id": "love",
+                    "label": "What 'love' looks like in week one",
+                    "placeholder": "They come back / they pay / they text a friend because…",
+                    "hint": "Name a behavior, not a feeling. 'They said it was cool' does not count.",
+                    "minWords": 25,
+                    "rows": 4
+                  },
+                  {
+                    "id": "channel",
+                    "label": "First marketing channel and why it fits",
+                    "placeholder": "I will use [channel] because my users already …",
+                    "hint": "Match the channel to where the buyer already spends attention. Paid ads are rarely first.",
+                    "minWords": 30,
+                    "rows": 5
+                  },
+                  {
+                    "id": "twenty",
+                    "label": "Plan to get the first 20 people to try it",
+                    "placeholder": "Day 1–7: list, messages, places I will show up…",
+                    "hint": "Do things that do not scale. Names, DMs, communities, office hours — not 'viral loop TBD.'",
+                    "minWords": 40,
+                    "rows": 6
+                  }
+                ],
+                "checklist": [
+                  "The first version is small enough to ship this month.",
+                  "Love is a behavior you can count.",
+                  "The 20-user plan names real places or people, not a funnel diagram."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "module_4",
+          "title": "Week 4: Sales script, deck outline, send the note",
+          "summary": "Write the spoken pitch, the 10 slides, and one outbound note you would send today.",
+          "lessons": [
+            {
+              "id": "e4_1",
+              "title": "How to Sell | Tyler Bosmeny",
+              "type": "video",
+              "duration": "34 min",
+              "description": "Founders are the first salespeople: prospecting, a short personalized note, listening on the call, and asking for the close. Draft your note while he talks.",
+              "url": "https://www.youtube.com/watch?v=xZi4kTJG-LE"
+            },
+            {
+              "id": "e4_2",
+              "title": "How to Pitch Your Seed-Stage Startup | Michael Seibel",
+              "type": "video",
+              "duration": "24 min",
+              "description": "A pitch is what you do, who is on the team, traction, insight, market, and the ask — said clearly enough that someone can fund or buy it. Template notes: https://www.ycombinator.com/blog/intro-to-the-yc-seed-deck",
+              "url": "https://www.youtube.com/watch?v=lw2X3PxKlAY"
+            },
+            {
+              "id": "e4_assign",
+              "title": "Assignment 4: Pitch Deck Outline & First Sales Script",
+              "type": "assignment",
+              "duration": "60 min",
+              "description": "Write the spoken pitch, the 10-slide deck outline, a cold note you would actually send, and where you will sell the brand this week.",
+              "assignment": {
+                "brief": "Sales and the deck are the same story told to different rooms. If you cannot say it in two sentences, the slides will not save you.",
+                "deliverable": "A spoken pitch, a 10-slide outline, and one outbound note.",
+                "fields": [
+                  {
+                    "id": "spoken",
+                    "label": "Spoken pitch (what / who / why now / ask)",
+                    "placeholder": "We do X for Y. The reason this works now is Z. We are asking for…",
+                    "hint": "Two or three sentences a person could repeat after you leave the room.",
+                    "minWords": 40,
+                    "rows": 5
+                  },
+                  {
+                    "id": "deck",
+                    "label": "10-slide pitch deck outline",
+                    "placeholder": "1. Purpose\n2. Problem\n3. Solution\n4. Why now\n5. Market\n6. Competition\n7. Model\n8. Team\n9. Traction / plan\n10. Ask",
+                    "hint": "One idea per slide. Write the title and the single sentence on the slide — not a paragraph of speaker notes. Use YC’s seed-deck order if you want a default.",
+                    "minWords": 80,
+                    "rows": 12
+                  },
+                  {
+                    "id": "cold",
+                    "label": "Cold note to a first customer or partner",
+                    "placeholder": "Subject + 4–6 lines. Personalized. One ask: time this week.",
+                    "hint": "Short, specific, and about them. The only job of this note is a conversation.",
+                    "minWords": 40,
+                    "rows": 6
+                  },
+                  {
+                    "id": "sell_platform",
+                    "label": "Where you will sell the brand this week",
+                    "placeholder": "This week I will post / message / show up on [platform] with [artifact].",
+                    "hint": "Name the platform, the artifact (post, listing, thread, demo), and the person you want to reach.",
+                    "minWords": 25,
+                    "rows": 4
+                  }
+                ],
+                "checklist": [
+                  "The spoken pitch does not need a slide to make sense.",
+                  "Each deck slide is one idea.",
+                  "The cold note asks for time, not a purchase.",
+                  "You named one platform and one artifact for this week."
                 ]
               }
             }

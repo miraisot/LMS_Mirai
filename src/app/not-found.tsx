@@ -13,7 +13,7 @@ export default function NotFound() {
           That page is not in the library.
         </h1>
         <p className="mt-4 text-ink-soft">
-          The course or lesson id does not match anything in the JSON catalog.
+          The track, course, or lesson id does not match anything in the JSON catalog.
         </p>
         <Link
           href="/"

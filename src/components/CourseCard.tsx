@@ -40,6 +40,11 @@ export function CourseCard({
         <p className="mt-3 max-w-md text-sm leading-6 text-ink-soft">
           {course.subtitle ?? course.description}
         </p>
+        {course.outcomes && course.outcomes.length > 0 ? (
+          <p className="mt-4 text-[11px] uppercase tracking-[0.16em] text-[#fbbf24]">
+            {course.outcomes.length} outcomes · idea · customers · product · brand
+          </p>
+        ) : null}
       </div>
       <div className="relative mt-auto flex items-end justify-between pt-10">
         <div className="space-y-2 text-xs uppercase tracking-[0.16em] text-dust">
@@ -52,6 +57,9 @@ export function CourseCard({
             {types.pdf} {lessonLabels.pdf.toLowerCase()}
             {" · "}
             {types.quiz} {lessonLabels.quiz.toLowerCase()}
+            {types.assignment > 0
+              ? ` · ${types.assignment} ${types.assignment === 1 ? "assignment" : "assignments"}`
+              : ""}
           </p>
         </div>
         <div className="text-right">

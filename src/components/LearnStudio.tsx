@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BrandMark } from "@/components/BrandMark";
+import { AssignmentLesson } from "@/components/AssignmentLesson";
 import { PdfLesson } from "@/components/PdfLesson";
 import { QuizLesson } from "@/components/QuizLesson";
 import { VideoLesson } from "@/components/VideoLesson";
@@ -19,7 +20,7 @@ export function LearnStudio({
   course: Course;
   lesson: Lesson;
 }) {
-  const { map, completeLesson, recordQuiz } = useProgress();
+  const { map, completeLesson, recordQuiz, recordAssignment } = useProgress();
   const [openNav, setOpenNav] = useState(false);
   const context = getLessonContext(course, lesson.id);
   const progress = getCourseProgress(map, course.id);
@@ -78,7 +79,8 @@ export function LearnStudio({
           {course.modules.map((module, moduleIndex) => (
             <div key={module.id}>
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#82cdd6]">
-                {String(moduleIndex + 1).padStart(2, "0")} · {module.title}
+                {String(moduleIndex + 1).padStart(2, "0")} ·{" "}
+                {module.outcome ?? module.title}
               </p>
               <ul className="mt-3 space-y-1">
                 {module.lessons.map((item) => {
@@ -131,8 +133,10 @@ export function LearnStudio({
               Syllabus
             </button>
             <p className="text-[11px] uppercase tracking-[0.2em] text-dust">
-              {context.module.title} · {lessonLabels[lesson.type]} · {context.number}/
-              {context.total}
+              {context.module.outcome
+                ? `Outcome · ${context.module.outcome}`
+                : context.module.title}{" "}
+              · {lessonLabels[lesson.type]} · {context.number}/{context.total}
             </p>
             <p className="hidden text-sm text-dust sm:block">
               {lesson.duration ?? "Self-paced"}
@@ -148,7 +152,7 @@ export function LearnStudio({
           ) : null}
         </div>
 
-        <div className="px-5 py-6 sm:px-8">
+        <div className="px-5 py-6 pb-28 sm:px-8">
           {lesson.type === "video" ? <VideoLesson lesson={lesson} /> : null}
           {lesson.type === "pdf" ? <PdfLesson lesson={lesson} /> : null}
           {lesson.type === "quiz" ? (
@@ -157,6 +161,16 @@ export function LearnStudio({
               lesson={lesson}
               existing={progress.quizResults[lesson.id]}
               onSubmit={(attempt) => recordQuiz(course.id, lesson.id, attempt)}
+            />
+          ) : null}
+          {lesson.type === "assignment" ? (
+            <AssignmentLesson
+              key={lesson.id}
+              lesson={lesson}
+              existing={progress.assignmentResults[lesson.id]}
+              onSubmit={(attempt) =>
+                recordAssignment(course.id, lesson.id, attempt)
+              }
             />
           ) : null}
         </div>
@@ -176,7 +190,7 @@ export function LearnStudio({
               </Link>
             )}
             <div className="flex flex-wrap items-center gap-3">
-              {lesson.type !== "quiz" ? (
+              {lesson.type !== "quiz" && lesson.type !== "assignment" ? (
                 <button
                   type="button"
                   onClick={goComplete}
@@ -193,7 +207,9 @@ export function LearnStudio({
                 <Link
                   href={lessonHref(course.id, context.next.lesson.id)}
                   onClick={() => {
-                    if (lesson.type !== "quiz") goComplete();
+                    if (lesson.type !== "quiz" && lesson.type !== "assignment") {
+                      goComplete();
+                    }
                   }}
                   className="ember-btn inline-flex h-11 items-center px-6 text-sm"
                 >
@@ -203,7 +219,9 @@ export function LearnStudio({
                 <Link
                   href={`/course/${course.id}`}
                   onClick={() => {
-                    if (lesson.type !== "quiz") goComplete();
+                    if (lesson.type !== "quiz" && lesson.type !== "assignment") {
+                      goComplete();
+                    }
                   }}
                   className="inline-flex h-11 items-center rounded-[10px] bg-[#069bad] px-6 text-sm text-white"
                 >

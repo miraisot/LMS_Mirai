@@ -1,4 +1,6 @@
 import type {
+  Assignment,
+  AssignmentField,
   Catalog,
   Course,
   Lesson,
@@ -105,8 +107,51 @@ function normalizeQuiz(record: Record<string, unknown>): Quiz | undefined {
 
 function normalizeLessonType(value: unknown): LessonType | null {
   if (value === "youtube" || value === "video") return "video";
-  if (value === "pdf" || value === "quiz") return value;
+  if (value === "pdf" || value === "quiz" || value === "assignment") return value;
   return null;
+}
+
+function normalizeAssignmentField(value: unknown, index: number): AssignmentField | null {
+  const record = asRecord(value);
+  if (!record) return null;
+  const label = asString(record.label);
+  if (!label) return null;
+  const minWords =
+    typeof record.minWords === "number" && record.minWords > 0
+      ? record.minWords
+      : undefined;
+  const rows =
+    typeof record.rows === "number" && record.rows > 0 ? record.rows : undefined;
+  return {
+    id: asString(record.id) || `field-${index + 1}`,
+    label,
+    placeholder: asString(record.placeholder) || undefined,
+    hint: asString(record.hint) || undefined,
+    minWords,
+    rows,
+  };
+}
+
+function normalizeAssignment(record: Record<string, unknown>): Assignment | undefined {
+  const source = asRecord(record.assignment) ?? record;
+  const fieldsSource = Array.isArray(source.fields) ? source.fields : null;
+  if (!fieldsSource) return undefined;
+  const fields = fieldsSource
+    .map((item, index) => normalizeAssignmentField(item, index))
+    .filter((item): item is AssignmentField => item !== null);
+  if (fields.length === 0) return undefined;
+  const checklist = Array.isArray(source.checklist)
+    ? source.checklist
+        .filter((item): item is string => typeof item === "string")
+        .map((item) => decodeEntities(item.trim()))
+        .filter(Boolean)
+    : undefined;
+  return {
+    brief: asString(source.brief) || asString(record.description),
+    deliverable: asString(source.deliverable) || undefined,
+    fields,
+    checklist: checklist && checklist.length > 0 ? checklist : undefined,
+  };
 }
 
 function normalizeLesson(value: unknown, index: number): Lesson | null {
@@ -117,6 +162,7 @@ function normalizeLesson(value: unknown, index: number): Lesson | null {
   const title = asString(record.title);
   if (!title) return null;
   const quiz = type === "quiz" ? normalizeQuiz(record) : undefined;
+  const assignment = type === "assignment" ? normalizeAssignment(record) : undefined;
   return {
     id: asString(record.id) || `lesson-${index + 1}`,
     title,
@@ -125,6 +171,7 @@ function normalizeLesson(value: unknown, index: number): Lesson | null {
     description: asString(record.description) || undefined,
     url: asString(record.url) || undefined,
     quiz,
+    assignment,
   };
 }
 
@@ -141,6 +188,7 @@ function normalizeModule(value: unknown, index: number): Module | null {
     id: asString(record.id) || `module-${index + 1}`,
     title,
     summary: asString(record.summary) || undefined,
+    outcome: asString(record.outcome) || undefined,
     lessons,
   };
 }
@@ -155,6 +203,12 @@ function normalizeCourse(value: unknown, index: number): Course | null {
     .filter((item): item is Module => item !== null);
   if (modules.length === 0) return null;
   const instructor = asRecord(record.instructor);
+  const outcomes = Array.isArray(record.outcomes)
+    ? record.outcomes
+        .filter((item): item is string => typeof item === "string")
+        .map((item) => decodeEntities(item.trim()))
+        .filter(Boolean)
+    : undefined;
   return {
     id: asString(record.id) || slug(title) || `course-${index + 1}`,
     title,
@@ -166,6 +220,7 @@ function normalizeCourse(value: unknown, index: number): Course | null {
       ? record.tags.filter((tag): tag is string => typeof tag === "string")
       : undefined,
     accent: asString(record.accent) || undefined,
+    outcomes: outcomes && outcomes.length > 0 ? outcomes : undefined,
     instructor: instructor
       ? {
           name: asString(instructor.name),
@@ -253,7 +308,7 @@ export function countByType(course: Course) {
       acc[item.lesson.type] += 1;
       return acc;
     },
-    { video: 0, pdf: 0, quiz: 0 },
+    { video: 0, pdf: 0, quiz: 0, assignment: 0 },
   );
 }
 

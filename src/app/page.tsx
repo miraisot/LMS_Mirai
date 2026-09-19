@@ -22,8 +22,8 @@ export default function HomePage() {
             </span>
           </h1>
           <p className="rise rise-delay-2 mt-6 max-w-xl text-base leading-7 text-ink-soft md:text-lg md:leading-8">
-            {site.tagline} Watch a lecture, sit with a paper, then prove it on a
-            quiz — the same stack students use from week one.
+            {site.tagline} Watch a short how-to, do the lab, then ship the
+            assignment — the same stack students use from week one.
           </p>
           <dl className="rise rise-delay-3 mt-10 grid max-w-lg grid-cols-3 gap-6 border-t border-white/10 pt-6 text-sm">
             <div>

@@ -1,4 +1,4 @@
-export type LessonType = "video" | "pdf" | "quiz";
+export type LessonType = "video" | "pdf" | "quiz" | "assignment";
 
 export type QuizOption = {
   id: string;
@@ -20,6 +20,22 @@ export type Quiz = {
   questions: QuizQuestion[];
 };
 
+export type AssignmentField = {
+  id: string;
+  label: string;
+  placeholder?: string;
+  hint?: string;
+  minWords?: number;
+  rows?: number;
+};
+
+export type Assignment = {
+  brief: string;
+  deliverable?: string;
+  fields: AssignmentField[];
+  checklist?: string[];
+};
+
 export type Lesson = {
   id: string;
   title: string;
@@ -28,12 +44,15 @@ export type Lesson = {
   description?: string;
   url?: string;
   quiz?: Quiz;
+  assignment?: Assignment;
 };
 
 export type Module = {
   id: string;
   title: string;
   summary?: string;
+  /** What the student must leave this week with. */
+  outcome?: string;
   lessons: Lesson[];
 };
 
@@ -52,6 +71,8 @@ export type Course = {
   tags?: string[];
   accent?: string;
   instructor?: Instructor;
+  /** Concrete artifacts this course exists to produce. */
+  outcomes?: string[];
   modules: Module[];
 };
 
@@ -66,10 +87,16 @@ export type QuizAttempt = {
   submittedAt: string;
 };
 
+export type AssignmentAttempt = {
+  answers: Record<string, string>;
+  submittedAt: string;
+};
+
 export type CourseProgress = {
   completedLessonIds: string[];
   lastLessonId?: string;
   quizResults: Record<string, QuizAttempt>;
+  assignmentResults: Record<string, AssignmentAttempt>;
 };
 
 export type ProgressMap = Record<string, CourseProgress>;
