@@ -1,0 +1,570 @@
+{
+  "id": "open-source",
+  "trackId": "opensource",
+  "title": "Open Source Contribution Basics: Git, GitHub & Pull Requests",
+  "subtitle": "Ship a real PR this month — not a lecture about one.",
+  "description": "A 3-week studio: official GitHub how-tos, two hands-on labs (GitHub Skills + First Contributions), then a real issue you can actually open a pull request for. Quizzes check the commands; assignments check that you did the work.",
+  "level": "Beginner",
+  "hours": "3 weeks",
+  "accent": "#00f0ff",
+  "tags": [
+    "Git",
+    "GitHub",
+    "Pull Requests",
+    "Open Source"
+  ],
+  "outcomes": [
+    "First PR shipped — a public pull request URL from this month"
+  ],
+  "instructor": {
+    "name": "Mirai Faculty",
+    "title": "Open Source"
+  },
+  "modules": [
+    {
+      "id": "module_1",
+      "title": "Week 1: Do the GitHub flow yourself",
+      "summary": "Watch the 4-minute PR, then leave a public PR URL in the assignment.",
+      "lessons": [
+        {
+          "id": "l1_1",
+          "title": "What is GitHub? (official, 2 min)",
+          "type": "video",
+          "duration": "2 min",
+          "description": "GitHub’s own walkthrough of a repo: where the code lives, how a team shares it, and why the Pull requests tab exists.",
+          "url": "https://www.youtube.com/watch?v=w3jLJU7DT5E"
+        },
+        {
+          "id": "l1_2",
+          "title": "Create a pull request in 4 minutes | GitHub for Beginners",
+          "type": "video",
+          "duration": "4 min",
+          "description": "Official screen-share: branch, commit, push, Compare & pull request, then write a title a reviewer can scan. Pause and do it on your account.",
+          "url": "https://www.youtube.com/watch?v=nCKdihvneS0"
+        },
+        {
+          "id": "l1_3",
+          "title": "How to Find GitHub Repos to Contribute To",
+          "type": "video",
+          "duration": "2 min",
+          "description": "Use GitHub search, topics, and the good-first-issue label to find active projects instead of guessing.",
+          "url": "https://www.youtube.com/watch?v=BwTpsf11DMU"
+        },
+        {
+          "id": "l1_4",
+          "title": "How to Find Good First Issues in Open Source",
+          "type": "video",
+          "duration": "12 min",
+          "description": "Beginner-friendly labels, maintainer channels, and aggregators so you are not staring at a 1,700-issue backlog.",
+          "url": "https://www.youtube.com/watch?v=ZIkkPzTuOXw"
+        },
+        {
+          "id": "l1_pdf",
+          "title": "Git Cheat Sheet & PR Workflow Handbook",
+          "type": "pdf",
+          "duration": "20 min",
+          "description": "GitHub’s education cheat sheet: status, branch, commit, remotes, and the commands you will use on every PR. Keep it open during the lab.",
+          "url": "https://education.github.com/git-cheat-sheet-education.pdf"
+        },
+        {
+          "id": "l1_assign",
+          "title": "Lab: Open your first pull request",
+          "type": "assignment",
+          "duration": "60 min",
+          "description": "Complete GitHub Skills, then land a practice PR on First Contributions. Paste the URLs — watching does not count.",
+          "assignment": {
+            "brief": "Do the work on GitHub, then write what you actually ran. Two labs: GitHub Skills ‘Introduction to GitHub’ (https://github.com/skills/introduction-to-github) and First Contributions (https://github.com/firstcontributions/first-contributions). Either merged or still open is fine.",
+            "deliverable": "A public PR URL plus the commands you used.",
+            "fields": [
+              {
+                "id": "skills_url",
+                "label": "GitHub Skills repo or completion URL",
+                "placeholder": "https://github.com/YOUR-USER/introduction-to-github",
+                "hint": "Copy the exercise to your account, finish the four steps (branch, commit, PR, merge), then paste that repo URL.",
+                "rows": 2
+              },
+              {
+                "id": "pr_url",
+                "label": "Your First Contributions (or Skills) pull request URL",
+                "placeholder": "https://github.com/firstcontributions/first-contributions/pull/…",
+                "hint": "Must be a pull request, not the repo homepage.",
+                "rows": 2
+              },
+              {
+                "id": "what_changed",
+                "label": "What you changed, in one sentence",
+                "placeholder": "Added my name to Contributors.md on a branch called …",
+                "hint": "If you cannot name the file and the branch, you did not finish the lab.",
+                "minWords": 12,
+                "rows": 3
+              },
+              {
+                "id": "commands",
+                "label": "Commands you actually ran",
+                "placeholder": "git clone …\ngit checkout -b …\ngit add …\ngit commit -m …\ngit push origin …",
+                "hint": "Paste the real sequence, including the one that failed and what you did next.",
+                "minWords": 20,
+                "rows": 8
+              }
+            ],
+            "checklist": [
+              "The PR URL opens in an incognito window.",
+              "You named a file and a branch, not ‘I followed the video’.",
+              "The command list includes clone or fork, a branch, commit, and push."
+            ]
+          }
+        },
+        {
+          "id": "l1_quiz",
+          "title": "Week 1 Assessment: Git & Contribution Basics",
+          "type": "quiz",
+          "duration": "10 min",
+          "description": "Branching, issue linking, and how you actually find a first issue.",
+          "quiz": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "w1_q1",
+                "prompt": "Which command creates a new feature branch and switches to it in one step?",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "git branch fix/issue-10"
+                  },
+                  {
+                    "id": "b",
+                    "text": "git checkout -b fix/issue-10"
+                  },
+                  {
+                    "id": "c",
+                    "text": "git commit -m 'fix issue'"
+                  },
+                  {
+                    "id": "d",
+                    "text": "git push origin main"
+                  }
+                ],
+                "correctOptionIds": [
+                  "b"
+                ],
+                "explanation": "`git checkout -b fix/issue-10` (or `git switch -c`) creates the branch and checks it out. `git branch` only creates it; you would still need to switch."
+              },
+              {
+                "id": "w1_q2",
+                "prompt": "In a pull request body, how do you link the work to GitHub issue 42 so the issue can close when the PR merges?",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "Write the issue number only: 42"
+                  },
+                  {
+                    "id": "b",
+                    "text": "Use a closing keyword: Fixes #42"
+                  },
+                  {
+                    "id": "c",
+                    "text": "Tag @github"
+                  },
+                  {
+                    "id": "d",
+                    "text": "Put the issue URL in a commit that never gets pushed"
+                  }
+                ],
+                "correctOptionIds": [
+                  "b"
+                ],
+                "explanation": "`Fixes #42`, `Closes #42`, or `Resolves #42` links the PR to the issue and can auto-close it on merge."
+              },
+              {
+                "id": "w1_q3",
+                "prompt": "You want beginner issues in Python on GitHub. Which search is the most useful starting point?",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "stars:>100000 is:closed"
+                  },
+                  {
+                    "id": "b",
+                    "text": "language:python label:\"good first issue\" state:open"
+                  },
+                  {
+                    "id": "c",
+                    "text": "filename:password.txt"
+                  },
+                  {
+                    "id": "d",
+                    "text": "org:ghost"
+                  }
+                ],
+                "correctOptionIds": [
+                  "b"
+                ],
+                "explanation": "Filter by language plus a newcomer label and open state. Huge starred + closed searches hide the work you can actually take."
+              },
+              {
+                "id": "w1_q4",
+                "prompt": "Select every habit that belongs in a first contribution.",
+                "type": "multiple",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "Read README and CONTRIBUTING before writing code."
+                  },
+                  {
+                    "id": "b",
+                    "text": "Work on a branch, not on upstream main."
+                  },
+                  {
+                    "id": "c",
+                    "text": "Force-push to the project's main branch."
+                  },
+                  {
+                    "id": "d",
+                    "text": "Comment on the issue before (or as) you start, if the project asks you to."
+                  }
+                ],
+                "correctOptionIds": [
+                  "a",
+                  "b",
+                  "d"
+                ],
+                "explanation": "Read the room, branch off main, talk to maintainers. Never force-push someone else's default branch."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "module_2",
+      "title": "Week 2: Fix a conflict with your own hands",
+      "summary": "SSH, rebase vs merge, then the GitHub Skills conflict lab — not a 60-minute crash course.",
+      "lessons": [
+        {
+          "id": "l2_1",
+          "title": "GitHub for Beginners: SSH, PAT, conflicts, sync a fork",
+          "type": "video",
+          "duration": "12 min",
+          "description": "GitHub engineers screen-share the stuff that actually blocks first-timers: add an SSH key, mint a PAT, resolve a conflict in the PR UI, sync a fork, and review a diff.",
+          "url": "https://www.youtube.com/watch?v=ZgARMqR3qq8"
+        },
+        {
+          "id": "l2_2",
+          "title": "Git Branches, Merge, and Rebase (do this in a throwaway repo)",
+          "type": "video",
+          "duration": "31 min",
+          "description": "Create two branches, collide on the same line, merge, then rebase your feature onto updated main. Pause and reproduce each command locally.",
+          "url": "https://www.youtube.com/watch?v=e2IbNHi4uCI"
+        },
+        {
+          "id": "l2_pdf",
+          "title": "GitHub Git Cheat Sheet",
+          "type": "pdf",
+          "duration": "15 min",
+          "description": "Keep this open while you resolve conflicts: fetch, merge, rebase, stash, and log.",
+          "url": "https://training.github.com/downloads/github-git-cheat-sheet.pdf"
+        },
+        {
+          "id": "l2_assign",
+          "title": "Lab: Resolve a merge conflict",
+          "type": "assignment",
+          "duration": "45 min",
+          "description": "Run GitHub Skills ‘Resolve merge conflicts’, then write what the markers meant and what you kept.",
+          "assignment": {
+            "brief": "Start the official lab: https://github.com/skills/resolve-merge-conflicts (about 30 minutes). You can also manufacture a conflict in a throwaway repo: two branches, same line, different words, then merge.",
+            "deliverable": "Proof you resolved a conflict, plus the final file contents in your own words.",
+            "fields": [
+              {
+                "id": "lab_url",
+                "label": "Skills lab repo or the PR where you resolved the conflict",
+                "placeholder": "https://github.com/YOUR-USER/resolve-merge-conflicts or a PR URL",
+                "hint": "A repo or PR link a classmate could open.",
+                "rows": 2
+              },
+              {
+                "id": "markers",
+                "label": "What you saw and what you kept",
+                "placeholder": "<<<<<<< HEAD had … / ======= / >>>>>>> feature had … I kept … because …",
+                "hint": "Quote the two sides. ‘I clicked resolve’ is not enough.",
+                "minWords": 40,
+                "rows": 6
+              },
+              {
+                "id": "rebase_or_merge",
+                "label": "On your next feature branch, rebase or merge — and why",
+                "placeholder": "I would rebase onto latest main before the PR because…",
+                "hint": "Rebase your unpushed solo branch. Do not rebase a shared main.",
+                "minWords": 25,
+                "rows": 4
+              }
+            ],
+            "checklist": [
+              "You linked a repo or PR, not a docs page.",
+              "You described both sides of the conflict, not only the winner.",
+              "You said when you would not rebase."
+            ]
+          }
+        },
+        {
+          "id": "l2_quiz",
+          "title": "Week 2 Assessment: Conflicts & History",
+          "type": "quiz",
+          "duration": "8 min",
+          "description": "Conflict markers, rebase vs merge, and what not to rewrite.",
+          "quiz": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "w2_q1",
+                "prompt": "You open a file after a failed merge and see <<<<<<<, =======, and >>>>>>>. What should you do?",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "Commit immediately; Git already picked a winner."
+                  },
+                  {
+                    "id": "b",
+                    "text": "Edit the file to the intended result, delete the markers, then add and commit."
+                  },
+                  {
+                    "id": "c",
+                    "text": "Delete the repository and clone again."
+                  },
+                  {
+                    "id": "d",
+                    "text": "Run git push --force on main."
+                  }
+                ],
+                "correctOptionIds": [
+                  "b"
+                ],
+                "explanation": "Conflict markers are a pause, not a result. You choose the code, remove the markers, then stage and commit the resolution."
+              },
+              {
+                "id": "w2_q2",
+                "prompt": "When is `git rebase` a reasonable tool on your own feature branch?",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "To replay your commits on top of latest main before you open a PR."
+                  },
+                  {
+                    "id": "b",
+                    "text": "To rewrite commits already on the shared main branch."
+                  },
+                  {
+                    "id": "c",
+                    "text": "To delete GitHub issues."
+                  },
+                  {
+                    "id": "d",
+                    "text": "To skip code review."
+                  }
+                ],
+                "correctOptionIds": [
+                  "a"
+                ],
+                "explanation": "Rebase your unpushed (or solo) feature branch onto updated main. Do not rebase public history others already pulled."
+              },
+              {
+                "id": "w2_q3",
+                "prompt": "Select the true statements.",
+                "type": "multiple",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "git fetch updates your remote-tracking branches without merging."
+                  },
+                  {
+                    "id": "b",
+                    "text": "A merge commit records that two histories were joined."
+                  },
+                  {
+                    "id": "c",
+                    "text": "git push --force on origin/main is standard for first-time contributors."
+                  },
+                  {
+                    "id": "d",
+                    "text": "Small, focused commits are easier to review than one giant dump."
+                  }
+                ],
+                "correctOptionIds": [
+                  "a",
+                  "b",
+                  "d"
+                ],
+                "explanation": "Fetch is safe. Merge commits are a record. Force-pushing main is how you become unwelcome. Small diffs review faster."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "module_3",
+      "title": "Week 3: Open a PR a maintainer can review",
+      "summary": "Pick a live issue, write the PR body, and draft the comment you will post.",
+      "lessons": [
+        {
+          "id": "l3_1",
+          "title": "Step-by-step: contribute to open source",
+          "type": "video",
+          "duration": "20 min",
+          "description": "Fork, clone, branch, commit, push, and open the PR — the full loop with the habits maintainers expect. Follow along on a real repo, not a notepad.",
+          "url": "https://www.youtube.com/watch?v=yJRvCG5UhD0"
+        },
+        {
+          "id": "l3_assign",
+          "title": "Studio: Claim a real issue and draft the PR",
+          "type": "assignment",
+          "duration": "50 min",
+          "description": "Find an open good-first-issue, extract the project’s rules, and write the PR description you would submit.",
+          "assignment": {
+            "brief": "Search `label:\"good first issue\" state:open` in a language you know. Read README + CONTRIBUTING. You do not have to merge this week — you do have to pick a real issue and write the artifacts a maintainer would read.",
+            "deliverable": "Issue URL, three project rules, a PR body, and the issue comment you will post.",
+            "fields": [
+              {
+                "id": "issue",
+                "label": "Issue URL and why this one is sized for you",
+                "placeholder": "https://github.com/org/repo/issues/123 — it asks for … and the file to touch is …",
+                "hint": "Name the file or area. ‘It said good first issue’ is not a reason.",
+                "minWords": 30,
+                "rows": 4
+              },
+              {
+                "id": "rules",
+                "label": "Three rules from README / CONTRIBUTING you will follow",
+                "placeholder": "1. Branch naming…\n2. How to claim an issue…\n3. Tests / DCO / PR template…",
+                "hint": "Quote the project, not generic Git advice.",
+                "minWords": 40,
+                "rows": 6
+              },
+              {
+                "id": "pr_body",
+                "label": "Draft PR title + body",
+                "placeholder": "Title: Fix typo in …\n\n## What\n## Why\n## How I tested\nFixes #123",
+                "hint": "Include a closing keyword if the issue should close on merge.",
+                "minWords": 50,
+                "rows": 10
+              },
+              {
+                "id": "comment",
+                "label": "The issue comment you will post",
+                "placeholder": "Hi — I’d like to take this. I will … Is this still open?",
+                "hint": "Short, specific, and ask if it is free. No ‘please assign me this thank you’ spam.",
+                "minWords": 25,
+                "rows": 5
+              }
+            ],
+            "checklist": [
+              "The issue URL is open on GitHub today.",
+              "The three rules came from that repo’s docs.",
+              "The PR body says what, why, how you tested, and Fixes #n.",
+              "The comment is something you would actually post."
+            ]
+          }
+        },
+        {
+          "id": "l3_quiz",
+          "title": "Week 3 Assessment: Pull Requests",
+          "type": "quiz",
+          "duration": "8 min",
+          "description": "What a reviewable PR looks like.",
+          "quiz": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "w3_q1",
+                "prompt": "A reviewable first PR usually is:",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "A rewrite of the entire codebase."
+                  },
+                  {
+                    "id": "b",
+                    "text": "Small, tested, and described, with the related issue linked."
+                  },
+                  {
+                    "id": "c",
+                    "text": "Pushed straight to upstream main."
+                  },
+                  {
+                    "id": "d",
+                    "text": "Opened without a description so reviewers 'see the code'."
+                  }
+                ],
+                "correctOptionIds": [
+                  "b"
+                ],
+                "explanation": "Maintainers merge small, explained changes. Giant surprise rewrites stall."
+              },
+              {
+                "id": "w3_q2",
+                "prompt": "CI on your PR is red. Best next move?",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "Ask for merge anyway; CI is optional."
+                  },
+                  {
+                    "id": "b",
+                    "text": "Read the failing job, fix it on your branch, and push a follow-up commit."
+                  },
+                  {
+                    "id": "c",
+                    "text": "Close the repo."
+                  },
+                  {
+                    "id": "d",
+                    "text": "Open five more PRs to distract from it."
+                  }
+                ],
+                "correctOptionIds": [
+                  "b"
+                ],
+                "explanation": "Green checks are part of the contribution. Fix the branch; don't argue with the required workflow."
+              },
+              {
+                "id": "w3_q3",
+                "prompt": "Select every true statement about review.",
+                "type": "multiple",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "Review comments are normal; reply and/or push fixes."
+                  },
+                  {
+                    "id": "b",
+                    "text": "You should discuss scope on the issue if the fix grows."
+                  },
+                  {
+                    "id": "c",
+                    "text": "Changing files the issue never mentioned, silently, is a gift."
+                  },
+                  {
+                    "id": "d",
+                    "text": "A polite, specific PR description saves a round of questions."
+                  }
+                ],
+                "correctOptionIds": [
+                  "a",
+                  "b",
+                  "d"
+                ],
+                "explanation": "Review is collaboration. Stay on scope unless you agree otherwise. Write like a teammate."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "id": "gsoc",
+  "trackId": "opensource",
+  "title": "GSoC, LFX & Outreachy: Mentorship Roadmap",
+  "subtitle": "Pick an org, draft the proposal, write the mentor note.",
+  "description": "Skip the ‘what is GSoC’ overview. This week you choose a program, shortlist issues, and write a proposal a mentor could mark up — using the official student guide plus accepted-proposal habits.",
+  "level": "Intermediate",
+  "hours": "1 week",
+  "accent": "#a78bfa",
+  "tags": [
+    "GSoC",
+    "LFX",
+    "Outreachy",
+    "Mentorship"
+  ],
+  "outcomes": [
+    "Mentorship application drafted — org pick, proposal, mentor note"
+  ],
+  "instructor": {
+    "name": "Mirai Faculty",
+    "title": "Open Source"
+  },
+  "modules": [
+    {
+      "id": "module_1",
+      "title": "Apply like a contributor, not a tourist",
+      "summary": "How people actually get in: org pick, contributions, proposal, mentor message.",
+      "lessons": [
+        {
+          "id": "l1_1",
+          "title": "How I got into GSoC: org pick, contributions, proposal",
+          "type": "video",
+          "duration": "20 min",
+          "description": "A contributor walkthrough: start on page two of the org list, write up your local setup as a first patch, stay on one org, and put a week-by-week timeline plus research in the proposal.",
+          "url": "https://www.youtube.com/watch?v=8gQAF2iEDEQ"
+        },
+        {
+          "id": "l1_2",
+          "title": "Nail your GSoC proposal (what mentors actually mark)",
+          "type": "video",
+          "duration": "18 min",
+          "description": "OpenMRS mentors on the template they use, the sections they skip, and why a messy draft sent early beats a perfect PDF at 23:59. Pair with https://google.github.io/gsocguides/student/writing-a-proposal",
+          "url": "https://www.youtube.com/watch?v=b6xVkNAn3Ok"
+        },
+        {
+          "id": "l1_3",
+          "title": "LFX Mentorship: how the board and terms work",
+          "type": "video",
+          "duration": "20 min",
+          "description": "Linux Foundation mentorships: terms, CNCF/kernel-adjacent projects, and how you apply on the LFX board (up to a few tailored projects per term).",
+          "url": "https://www.youtube.com/watch?v=o0V7Z6UQMBY"
+        },
+        {
+          "id": "l1_4",
+          "title": "Outreachy: initial application, then the contribution period",
+          "type": "video",
+          "duration": "15 min",
+          "description": "How the Outreachy initial application is structured and what the contribution period is for. Read the current applicant guide before you write: https://www.outreachy.org/docs/applicant/",
+          "url": "https://www.youtube.com/watch?v=lRegecT11k0"
+        },
+        {
+          "id": "l1_assign",
+          "title": "Studio: Org shortlist + proposal draft",
+          "type": "assignment",
+          "duration": "75 min",
+          "description": "Pick one program and one org. List three issues. Write a 12-week proposal a mentor could comment on. Draft the first chat message.",
+          "assignment": {
+            "brief": "Use this year’s official pages — dates move. GSoC: https://summerofcode.withgoogle.com/ and the student proposal guide. LFX: https://mentorship.lfx.linuxfoundation.org/. Outreachy: https://www.outreachy.org/docs/applicant/. Depth on one org beats spraying twenty.",
+            "deliverable": "A mentor-facing proposal draft, not an essay about your passion.",
+            "fields": [
+              {
+                "id": "program_org",
+                "label": "Program + organization + why this pair",
+                "placeholder": "GSoC / LFX / Outreachy — org name — I can set this up locally because…",
+                "hint": "Name a language or repo you can compile this week. ‘Prestige org’ is not a reason.",
+                "minWords": 40,
+                "rows": 5
+              },
+              {
+                "id": "issues",
+                "label": "Three issues or idea-list items you would take first",
+                "placeholder": "1. URL — what it asks — first file you would open\n2. …\n3. …",
+                "hint": "Real URLs. Include at least one you could finish before the application deadline.",
+                "minWords": 50,
+                "rows": 7
+              },
+              {
+                "id": "proposal",
+                "label": "Proposal draft: problem, approach, 12-week timeline",
+                "placeholder": "Problem the org has…\nWhat I will ship (required vs optional)…\nWeeks 1–4 / 5–8 / 9–12…\nRisks and fallback…",
+                "hint": "Follow the official sections: https://google.github.io/gsocguides/student/writing-a-proposal — deliverables a mentor can check, not vibes.",
+                "minWords": 120,
+                "rows": 14
+              },
+              {
+                "id": "mentor_note",
+                "label": "First message to a mentor (chat or email)",
+                "placeholder": "Hi — I built the project locally (blocked on X, fixed by Y). I read issue #… and I would start by … Does that match what you want?",
+                "hint": "Show setup + a specific issue. Do not send ‘please tell me how to start’ with no repo clone.",
+                "minWords": 40,
+                "rows": 6
+              }
+            ],
+            "checklist": [
+              "You named one program and one org, not five.",
+              "Every issue has a URL.",
+              "The timeline has weeks and deliverables, including a fallback.",
+              "The mentor note proves you ran the project locally."
+            ]
+          }
+        },
+        {
+          "id": "l1_quiz",
+          "title": "Assessment: Mentorship Programs",
+          "type": "quiz",
+          "duration": "10 min",
+          "description": "Pick the right program — and the work that has to happen before the form.",
+          "quiz": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "w4_q1",
+                "prompt": "The strongest GSoC / LFX / Outreachy application usually includes:",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "Zero prior PRs and a very long essay."
+                  },
+                  {
+                    "id": "b",
+                    "text": "Merged (or at least serious) contributions to the org, plus a specific proposal."
+                  },
+                  {
+                    "id": "c",
+                    "text": "A promise to learn the language after selection only."
+                  },
+                  {
+                    "id": "d",
+                    "text": "Copy-pasting last year's winning proposal unchanged."
+                  }
+                ],
+                "correctOptionIds": [
+                  "b"
+                ],
+                "explanation": "Mentors pick people they have already seen in the issue tracker. Proof of work beats a generic essay."
+              },
+              {
+                "id": "w4_q2",
+                "prompt": "Which pairing is most accurate?",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "Outreachy is only for people who already completed GSoC."
+                  },
+                  {
+                    "id": "b",
+                    "text": "LFX Mentorship is run around Linux Foundation / CNCF-style projects in seasonal terms."
+                  },
+                  {
+                    "id": "c",
+                    "text": "GSoC still requires you to be enrolled in a university."
+                  },
+                  {
+                    "id": "d",
+                    "text": "All three programs merge your PRs without a mentor."
+                  }
+                ],
+                "correctOptionIds": [
+                  "b"
+                ],
+                "explanation": "LFX is the LF/CNCF mentorship board. GSoC has not required student status since 2022. Outreachy has its own eligibility (underrepresented in tech) and a contribution phase. Always read the current year's rules."
+              },
+              {
+                "id": "w4_q3",
+                "prompt": "Select every true statement.",
+                "type": "multiple",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "Read this year's official timeline; dates move."
+                  },
+                  {
+                    "id": "b",
+                    "text": "Pick 1–2 orgs and show up in their chat/issues early."
+                  },
+                  {
+                    "id": "c",
+                    "text": "You can skip CONTRIBUTING.md if the stipend is large."
+                  },
+                  {
+                    "id": "d",
+                    "text": "A proposal should name a project, a mentor-facing plan, and a realistic schedule."
+                  }
+                ],
+                "correctOptionIds": [
+                  "a",
+                  "b",
+                  "d"
+                ],
+                "explanation": "Timelines change. Depth beats spraying 20 orgs. Proposals are project plans, not vibes. Process docs still apply."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

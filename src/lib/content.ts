@@ -9,8 +9,33 @@ import type {
   Quiz,
   QuizOption,
   QuizQuestion,
+  Track,
 } from "./types";
-import raw from "../../data/courses.json";
+import catalogIndex from "../../data/courses/index.json";
+import openSource from "../../data/courses/open-source.json";
+import gsoc from "../../data/courses/gsoc.json";
+import productDevelopment from "../../data/courses/product-development.json";
+import entrepreneurship from "../../data/courses/entrepreneurship.json";
+import interviewStartups from "../../data/courses/interview-startups.json";
+
+const courseFiles: Record<string, unknown> = {
+  "open-source": openSource,
+  gsoc,
+  "product-development": productDevelopment,
+  entrepreneurship,
+  "interview-startups": interviewStartups,
+};
+
+const raw = {
+  tracks: catalogIndex.tracks,
+  courses: catalogIndex.courses.map((id) => {
+    const course = courseFiles[id];
+    if (!course) {
+      throw new Error(`Missing course file for id "${id}"`);
+    }
+    return course;
+  }),
+};
 
 function decodeEntities(value: string) {
   return value
@@ -203,12 +228,7 @@ function normalizeCourse(value: unknown, index: number): Course | null {
     .filter((item): item is Module => item !== null);
   if (modules.length === 0) return null;
   const instructor = asRecord(record.instructor);
-  const outcomes = Array.isArray(record.outcomes)
-    ? record.outcomes
-        .filter((item): item is string => typeof item === "string")
-        .map((item) => decodeEntities(item.trim()))
-        .filter(Boolean)
-    : undefined;
+  const outcomes = normalizeOutcomes(record.outcomes);
   return {
     id: asString(record.id) || slug(title) || `course-${index + 1}`,
     title,
@@ -220,6 +240,7 @@ function normalizeCourse(value: unknown, index: number): Course | null {
       ? record.tags.filter((tag): tag is string => typeof tag === "string")
       : undefined,
     accent: asString(record.accent) || undefined,
+    trackId: asString(record.trackId) || undefined,
     outcomes: outcomes && outcomes.length > 0 ? outcomes : undefined,
     instructor: instructor
       ? {
@@ -231,9 +252,34 @@ function normalizeCourse(value: unknown, index: number): Course | null {
   };
 }
 
+function normalizeOutcomes(value: unknown): string[] | undefined {
+  if (!Array.isArray(value)) return undefined;
+  const outcomes = value
+    .filter((item): item is string => typeof item === "string")
+    .map((item) => decodeEntities(item.trim()))
+    .filter(Boolean);
+  return outcomes.length > 0 ? outcomes : undefined;
+}
+
+function normalizeTrack(value: unknown, index: number): Track | null {
+  const record = asRecord(value);
+  if (!record) return null;
+  const title = asString(record.title);
+  if (!title) return null;
+  return {
+    id: asString(record.id) || slug(title) || `track-${index + 1}`,
+    title,
+    subtitle: asString(record.subtitle) || undefined,
+    description: asString(record.description) || undefined,
+    accent: asString(record.accent) || undefined,
+    outcomes: normalizeOutcomes(record.outcomes),
+  };
+}
+
 function normalize(input: unknown): Catalog {
   if (Array.isArray(input)) {
     return {
+      tracks: [],
       courses: input
         .map((item, index) => normalizeCourse(item, index))
         .filter((item): item is Course => item !== null),
@@ -241,10 +287,17 @@ function normalize(input: unknown): Catalog {
   }
 
   const record = asRecord(input);
-  if (!record) return { courses: [] };
+  if (!record) return { tracks: [], courses: [] };
+
+  const tracks = Array.isArray(record.tracks)
+    ? record.tracks
+        .map((item, index) => normalizeTrack(item, index))
+        .filter((item): item is Track => item !== null)
+    : [];
 
   if (Array.isArray(record.courses)) {
     return {
+      tracks,
       courses: record.courses
         .map((item, index) => normalizeCourse(item, index))
         .filter((item): item is Course => item !== null),
@@ -252,7 +305,7 @@ function normalize(input: unknown): Catalog {
   }
 
   const single = normalizeCourse(record, 0);
-  return { courses: single ? [single] : [] };
+  return { tracks, courses: single ? [single] : [] };
 }
 
 export const catalog = normalize(raw);
@@ -263,6 +316,24 @@ export function getCourses(): Course[] {
 
 export function getCourse(courseId: string): Course | undefined {
   return catalog.courses.find((course) => course.id === courseId);
+}
+
+export function getTracks(): Track[] {
+  return catalog.tracks;
+}
+
+export function getTrack(trackId: string): Track | undefined {
+  return catalog.tracks.find((track) => track.id === trackId);
+}
+
+export function getCoursesByTrack(trackId: string): Course[] {
+  return catalog.courses.filter((course) => course.trackId === trackId);
+}
+
+/** First clause of an outcome, before an em dash or hyphen. */
+export function shortOutcome(value: string) {
+  const [head] = value.split(/\s+[—–-]\s+/);
+  return (head ?? value).trim();
 }
 
 export function flattenLessons(course: Course): Array<{

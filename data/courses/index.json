@@ -1,0 +1,45 @@
+{
+  "tracks": [
+    {
+      "id": "opensource",
+      "title": "Open Source Track",
+      "subtitle": "Ship a real PR, then apply like a contributor.",
+      "description": "The maintainer path. First you land a public pull request. Then you pick an org and write a GSoC / LFX / Outreachy proposal a mentor can mark up.",
+      "accent": "#00f0ff",
+      "outcomes": [
+        "First PR shipped — a public pull request URL from this month",
+        "Mentorship application drafted — org pick, proposal, mentor note"
+      ]
+    },
+    {
+      "id": "entrepreneur",
+      "title": "Entrepreneur Track",
+      "subtitle": "Build the product, then write the company.",
+      "description": "The founder path. One studio takes an idea to a live URL. The other writes the brand, the offer, the outreach, and a deck you can say out loud.",
+      "accent": "#f59e0b",
+      "outcomes": [
+        "Idea, customers, live product, brand — from the builder studio",
+        "Company written — thesis, offer, outreach, and a spoken pitch"
+      ]
+    },
+    {
+      "id": "interview",
+      "title": "Interview Track",
+      "subtitle": "Get into YC startups, reach out, get hired.",
+      "description": "Tech-specific hiring studio for good / YC companies. You shortlist on Work at a Startup, send founder notes they actually open, then package shipped work so a founding-engineer interview does not surprise you.",
+      "accent": "#f472b6",
+      "outcomes": [
+        "Get in — a shortlist of YC / good startups and the role you fit",
+        "Reach out — founder notes sent, not just drafted",
+        "Get hired — a tech story bank and a weekend take-home plan"
+      ]
+    }
+  ],
+  "courses": [
+    "open-source",
+    "gsoc",
+    "product-development",
+    "entrepreneurship",
+    "interview-startups"
+  ]
+}

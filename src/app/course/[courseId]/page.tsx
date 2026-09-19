@@ -10,6 +10,7 @@ import {
   courseHoursLabel,
   getCourse,
   getCourses,
+  getTrack,
   lessonHref,
 } from "@/lib/content";
 
@@ -43,20 +44,22 @@ export default async function CoursePage({
 
   const types = countByType(course);
   const total = countLessons(course);
+  const track = course.trackId ? getTrack(course.trackId) : undefined;
 
   return (
     <div className="paper-grid min-h-screen">
       <SiteHeader />
       <main className="mx-auto w-full max-w-5xl px-6 pb-20 pt-10">
         <Link
-          href="/"
+          href={track ? `/track/${track.id}` : "/"}
           className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#82cdd6] hover:text-white"
         >
-          ← Library
+          ← {track ? track.title : "Library"}
         </Link>
         <div className="mt-8 grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#82cdd6]">
+              {track ? `${track.title} · ` : ""}
               {course.level ?? "Course"} · {courseHoursLabel(course)}
             </p>
             <h1 className="mt-3 font-display text-5xl leading-[1.05] text-white sm:text-6xl">

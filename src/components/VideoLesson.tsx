@@ -11,7 +11,7 @@ export function VideoLesson({ lesson }: { lesson: Lesson }) {
       <div className="rounded-3xl border border-line bg-paper-2 p-8">
         <p className="font-display text-2xl">This how-to has no usable link.</p>
         <p className="mt-2 text-sm text-ink-soft">
-          Add a YouTube URL on the lesson in <code>data/courses.json</code>.
+          Add a YouTube URL on the lesson in <code>data/courses/</code>.
         </p>
       </div>
     );

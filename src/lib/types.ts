@@ -61,6 +61,16 @@ export type Instructor = {
   title?: string;
 };
 
+export type Track = {
+  id: string;
+  title: string;
+  subtitle?: string;
+  description?: string;
+  accent?: string;
+  /** What a student should leave this track able to do. */
+  outcomes?: string[];
+};
+
 export type Course = {
   id: string;
   title: string;
@@ -70,6 +80,7 @@ export type Course = {
   hours?: string;
   tags?: string[];
   accent?: string;
+  trackId?: string;
   instructor?: Instructor;
   /** Concrete artifacts this course exists to produce. */
   outcomes?: string[];
@@ -77,6 +88,7 @@ export type Course = {
 };
 
 export type Catalog = {
+  tracks: Track[];
   courses: Course[];
 };
 

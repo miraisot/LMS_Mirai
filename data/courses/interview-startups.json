@@ -1,0 +1,529 @@
+{
+  "id": "interview-startups",
+  "trackId": "interview",
+  "title": "Get Hired at YC Startups",
+  "subtitle": "Get in, reach out, get hired — tech roles only.",
+  "description": "Three weeks for engineers who want good / YC companies. Week 1 you shortlist on Work at a Startup and the YC directory. Week 2 you send founder notes. Week 3 you package shipped work and a take-home plan so a founding-engineer interview does not surprise you.",
+  "level": "Intermediate",
+  "hours": "3 weeks",
+  "accent": "#f472b6",
+  "tags": [
+    "YC",
+    "Startups",
+    "Outreach",
+    "Hiring"
+  ],
+  "outcomes": [
+    "Get in — 8 companies from Work at a Startup / the YC directory, with why you and what you would ship in 90 days",
+    "Reach out — 5 founder notes sent, each pointing at one shipped artifact",
+    "Get hired — a tech story bank plus a weekend take-home plan in their stack"
+  ],
+  "instructor": {
+    "name": "Mirai Faculty",
+    "title": "Hiring"
+  },
+  "modules": [
+    {
+      "id": "module_get_in",
+      "title": "Week 1: Get into good / YC startups",
+      "summary": "Work at a Startup is the hub. You leave with a profile and a shortlist you could defend to a founder.",
+      "outcome": "Get in",
+      "lessons": [
+        {
+          "id": "in_1",
+          "title": "Founding Engineer at a YC Startup | Work at a Startup",
+          "type": "video",
+          "duration": "55 min",
+          "description": "YC’s Work at a Startup team plus three early engineers. Pause on: what founding engineer actually means, how they found the company (WAAS, founder DM, a friend), and which skills besides code they were hired for.",
+          "url": "https://www.youtube.com/watch?v=6W-cu0yp5cA"
+        },
+        {
+          "id": "in_2",
+          "title": "Advice for Picking the Right Startup",
+          "type": "video",
+          "duration": "12 min",
+          "description": "Treat the offer like a concentrated investment: learn the business, talk to people who work there, and do not pick on title. Use this to throw companies off your shortlist.",
+          "url": "https://www.youtube.com/watch?v=2LsGNHPZ8wM"
+        },
+        {
+          "id": "in_assign",
+          "title": "Outcome 1: Shortlist 8 YC / good startups",
+          "type": "assignment",
+          "duration": "90 min",
+          "description": "Fill a Work at a Startup profile, then pick eight companies you could join as an engineer this year. Watching does not count.",
+          "assignment": {
+            "brief": "Create or update your profile on Work at a Startup (https://www.workatastartup.com). Use the YC directory (https://www.ycombinator.com/companies) to filter by batch, industry, and hiring. Every company on the list needs a role you can actually do, a stack you can ship in, and a 90-day ship. Drop companies you cannot explain.",
+            "deliverable": "A public WAAS profile plus eight companies a founder could take seriously.",
+            "fields": [
+              {
+                "id": "waas_url",
+                "label": "Work at a Startup profile URL",
+                "placeholder": "https://www.workatastartup.com/…",
+                "hint": "Fill the profile in earnest — engineers on the YC panel said founders messaged them within a day when the profile was specific.",
+                "rows": 2
+              },
+              {
+                "id": "stack",
+                "label": "The stack you can ship in this month (languages, frameworks, systems)",
+                "placeholder": "TypeScript + Next.js + Postgres. I have shipped X. I will not claim Y.",
+                "hint": "Early YC teams hire generalists who can touch the product this week. Name what you can demo, not a wishlist.",
+                "minWords": 25,
+                "rows": 4
+              },
+              {
+                "id": "shortlist",
+                "label": "Eight companies: name, YC batch or why they are ‘good’, role, 90-day ship",
+                "placeholder": "1. [Company] · [W24 / Series A / why] · [role] · In 90 days I would ship…\n2. …",
+                "hint": "Prefer companies that are hiring engineers on WAAS. If they are not YC, say why they are still a company you would join (product, team, stage).",
+                "minWords": 80,
+                "rows": 12
+              },
+              {
+                "id": "refused",
+                "label": "Two companies you refused, and why",
+                "placeholder": "I passed on [company] because I cannot explain the business / I would hate the team / the role is not engineering…",
+                "hint": "Picking the right startup is also saying no. Use the video’s test: would you spend two years in the trenches with these people, and do you understand the business?",
+                "minWords": 30,
+                "rows": 5
+              }
+            ],
+            "checklist": [
+              "The WAAS profile names a stack and shipped work, not ‘passionate about startups’.",
+              "Each of the eight has a role you could do this quarter.",
+              "You can explain the business of each company in one sentence.",
+              "You cut two companies on purpose."
+            ]
+          }
+        },
+        {
+          "id": "in_quiz",
+          "title": "Week 1 Assessment: Getting into YC companies",
+          "type": "quiz",
+          "duration": "8 min",
+          "description": "How engineers actually land at good / YC startups.",
+          "quiz": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "in_q1",
+                "prompt": "The official place YC companies hire engineers, and candidates apply, is:",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "A cold LinkedIn blast to every founder in the last three batches."
+                  },
+                  {
+                    "id": "b",
+                    "text": "Work at a Startup (workatastartup.com) plus the YC company directory."
+                  },
+                  {
+                    "id": "c",
+                    "text": "Only campus placement cells."
+                  },
+                  {
+                    "id": "d",
+                    "text": "LeetCode contests — the top 1% get an automatic YC offer."
+                  }
+                ],
+                "correctOptionIds": [
+                  "b"
+                ],
+                "explanation": "WAAS is the YC hiring hub. The directory tells you who exists. Outreach is week 2, after you have a shortlist."
+              },
+              {
+                "id": "in_q2",
+                "prompt": "A founding / early engineer role at a YC company is mostly:",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "One language, one ticket queue, no customer contact."
+                  },
+                  {
+                    "id": "b",
+                    "text": "Shipping across the stack, plus product, customers, and culture — not just code."
+                  },
+                  {
+                    "id": "c",
+                    "text": "The same as a Staff Engineer at a 10,000-person company."
+                  },
+                  {
+                    "id": "d",
+                    "text": "A guaranteed CTO title after 90 days."
+                  }
+                ],
+                "correctOptionIds": [
+                  "b"
+                ],
+                "explanation": "The WAAS panel: you bleed into PM, support, and hiring. Titles are often just ‘software engineer’."
+              },
+              {
+                "id": "in_q3",
+                "prompt": "When choosing which startup to join, the video’s strongest filter is:",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "The job title printed on the offer letter."
+                  },
+                  {
+                    "id": "b",
+                    "text": "Whether you understand the business and would spend years with the people."
+                  },
+                  {
+                    "id": "c",
+                    "text": "Whichever company replied to you first."
+                  },
+                  {
+                    "id": "d",
+                    "text": "The one with the most blog posts about culture."
+                  }
+                ],
+                "correctOptionIds": [
+                  "b"
+                ],
+                "explanation": "Treat it like a concentrated investment. Learn the business. Talk to people there. Like the team — most early startups fail."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "module_reach",
+      "title": "Week 2: Reach out to them",
+      "summary": "Same loop founders use to get customers: list, short note, one artifact, one ask. Send it.",
+      "outcome": "Reach out",
+      "lessons": [
+        {
+          "id": "reach_1",
+          "title": "How to Sell | Startup School",
+          "type": "video",
+          "duration": "30 min",
+          "description": "Tyler Bosmeny’s sales craft applied to founder notes: short, personal, about them, one ask. You are not selling a product — you are asking for 20 minutes and pointing at one shipped artifact.",
+          "url": "https://www.youtube.com/watch?v=xZi4kTJG-LE"
+        },
+        {
+          "id": "reach_2",
+          "title": "How to Get Your First Customers | Startup School",
+          "type": "video",
+          "duration": "30 min",
+          "description": "The list → note → demo loop. This week the ‘customer’ is a hiring founder. Build the list from WAAS DMs, founder emails on the YC directory, and people you already know. Do not wait for a careers page.",
+          "url": "https://www.youtube.com/watch?v=hyYCn_kAngI"
+        },
+        {
+          "id": "reach_assign",
+          "title": "Outcome 2: Send five founder notes",
+          "type": "assignment",
+          "duration": "90 min",
+          "description": "Write and send five notes. A draft folder is not outreach.",
+          "assignment": {
+            "brief": "Pick five companies from week 1. Find the founder or hiring engineer (WAAS message, email on the YC directory, or a warm intro). Each note: why this company, one shipped artifact (PR, product URL, write-up), one ask (20 minutes or a take-home). Paste the sent text and how you sent it.",
+            "deliverable": "Five notes that left your outbox, plus the artifact URL you pointed at.",
+            "fields": [
+              {
+                "id": "artifact",
+                "label": "The one shipped artifact you will point every note at",
+                "placeholder": "https://github.com/…/pull/12  or  https://your-product.vercel.app",
+                "hint": "A live URL a founder can click in 30 seconds. A résumé PDF is not an artifact.",
+                "rows": 2
+              },
+              {
+                "id": "note",
+                "label": "The best note you actually sent (subject + body)",
+                "placeholder": "Subject: shipped X — relevant to [their product]\n\n4–8 lines. Why them. The link. One ask.",
+                "hint": "Personal. About their product. One ask for time, not ‘any roles?’.",
+                "minWords": 40,
+                "rows": 8
+              },
+              {
+                "id": "sent",
+                "label": "The five sends: company, person, channel, date",
+                "placeholder": "1. [Company] · [Name] · WAAS DM / email / intro · 20 Sep\n2. …",
+                "hint": "If you could not send yet, write ‘queued’ and the blocker. Three of the five must be sent.",
+                "minWords": 40,
+                "rows": 8
+              },
+              {
+                "id": "followup",
+                "label": "The follow-up you will send in five days if they are silent",
+                "placeholder": "One new line (a commit, a user quote, a question about their product) + the same ask.",
+                "hint": "Do not resend the first note. Add one new fact.",
+                "minWords": 20,
+                "rows": 4
+              }
+            ],
+            "checklist": [
+              "A founder can click the artifact without logging in.",
+              "The note is about their company, not your GPA.",
+              "At least three notes left your outbox.",
+              "The follow-up adds a new fact."
+            ]
+          }
+        },
+        {
+          "id": "reach_quiz",
+          "title": "Week 2 Assessment: Outreach that gets a reply",
+          "type": "quiz",
+          "duration": "8 min",
+          "description": "What a hiring founder actually opens.",
+          "quiz": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "reach_q1",
+                "prompt": "The job of a first founder note is:",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "Attach a CV and ask if they are hiring anyone."
+                  },
+                  {
+                    "id": "b",
+                    "text": "Get 20 minutes (or a take-home) by showing you already understand their product."
+                  },
+                  {
+                    "id": "c",
+                    "text": "List every language you have touched since class 11."
+                  },
+                  {
+                    "id": "d",
+                    "text": "Negotiate salary before they know your name."
+                  }
+                ],
+                "correctOptionIds": [
+                  "b"
+                ],
+                "explanation": "Same as a founder sales note: one ask, about them, with proof you did the work."
+              },
+              {
+                "id": "reach_q2",
+                "prompt": "The strongest thing to put in the note is:",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "A live PR or product URL that is relevant to what they ship."
+                  },
+                  {
+                    "id": "b",
+                    "text": "Your CGPA and rank."
+                  },
+                  {
+                    "id": "c",
+                    "text": "A five-page cover letter."
+                  },
+                  {
+                    "id": "d",
+                    "text": "‘I am passionate about your mission’ with no product detail."
+                  }
+                ],
+                "correctOptionIds": [
+                  "a"
+                ],
+                "explanation": "YC engineers got replies when the profile and the note pointed at specific shipped work."
+              },
+              {
+                "id": "reach_q3",
+                "prompt": "If the founder does not reply, the next move is:",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "Send the same note daily until they block you."
+                  },
+                  {
+                    "id": "b",
+                    "text": "Wait six months and assume they hated you."
+                  },
+                  {
+                    "id": "c",
+                    "text": "Follow up once with one new fact (a commit, a user quote, a product question)."
+                  },
+                  {
+                    "id": "d",
+                    "text": "Post publicly that they ignored you."
+                  }
+                ],
+                "correctOptionIds": [
+                  "c"
+                ],
+                "explanation": "One new fact, same ask. Silence is normal. Spam is how you get remembered the wrong way."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "module_hired",
+      "title": "Week 3: Make sure you get hired",
+      "summary": "Tech-specific: story bank from shipped work, a weekend take-home plan, and questions that prove you learned the business.",
+      "outcome": "Get hired",
+      "lessons": [
+        {
+          "id": "hired_1",
+          "title": "How Startup Hiring Actually Works",
+          "type": "video",
+          "duration": "25 min",
+          "description": "What founders screen for: speed, judgment, and whether you have shipped. Map each point to one story from your PRs or product — not a textbook definition of ‘culture fit’.",
+          "url": "https://www.youtube.com/watch?v=i_PjjXKNpA4"
+        },
+        {
+          "id": "hired_2",
+          "title": "Founding Engineer at a YC Startup (replay the hiring bits)",
+          "type": "video",
+          "duration": "20 min",
+          "description": "Skip to how the panelists interviewed and what they wish they had shown: generalist range, shipping ugly MVPs, talking to customers, and questions about the business. Rewatch with a notebook of your own stories.",
+          "url": "https://www.youtube.com/watch?v=6W-cu0yp5cA"
+        },
+        {
+          "id": "hired_assign",
+          "title": "Outcome 3: Story bank + weekend take-home plan",
+          "type": "assignment",
+          "duration": "90 min",
+          "description": "Package the proof a founding-engineer interview asks for. If they send a take-home tonight, you already know the timebox.",
+          "assignment": {
+            "brief": "Pick one company from week 1 you would accept. Write three stories from work you actually shipped (a PR, a product, a broken deploy). Then write the weekend take-home plan in their stack: repo, tests, README, what you will not polish. End with five questions for the founder about the business — the picking-a-startup video said almost nobody does this.",
+            "deliverable": "A story bank and a take-home plan you could start tonight.",
+            "fields": [
+              {
+                "id": "company",
+                "label": "The company you would accept, and why (business + people)",
+                "placeholder": "I would join [company] because the product is… and I would spend two years with…",
+                "hint": "Use week 1’s filter. Title and salary are not enough.",
+                "minWords": 30,
+                "rows": 4
+              },
+              {
+                "id": "stories",
+                "label": "Three shipped-work stories (problem → what you built → what broke → result)",
+                "placeholder": "1. [PR/product] — problem, your change, the failure, the metric or user.\n2. …\n3. …",
+                "hint": "Founders hire people who have already shipped. Include one story where you threw work away or talked to a user.",
+                "minWords": 80,
+                "rows": 12
+              },
+              {
+                "id": "takehome",
+                "label": "Weekend take-home plan in their stack",
+                "placeholder": "Stack: …\nTimebox: 8 hours\nMust ship: README, one happy path, tests for X\nWill not polish: …\nHow I will record a 3-min walkthrough: …",
+                "hint": "Early teams care that you ship a working slice with a README, not a framework tour. Name what you will refuse so you finish.",
+                "minWords": 50,
+                "rows": 8
+              },
+              {
+                "id": "asks",
+                "label": "Five questions you will ask the founder about the business",
+                "placeholder": "1. Who already pays / uses this, and what they did last week…\n2. What broke in the last month…",
+                "hint": "Business, customers, and how they decide what to build. Not ‘what is the tech stack?’ — you can read that.",
+                "minWords": 40,
+                "rows": 8
+              }
+            ],
+            "checklist": [
+              "Each story is from work you shipped, not a hypothetical.",
+              "The take-home has a timebox and a ‘will not polish’ list.",
+              "At least one story includes a user or a thrown-away MVP.",
+              "The founder questions are about the business, not the cafeteria."
+            ]
+          }
+        },
+        {
+          "id": "hired_quiz",
+          "title": "Week 3 Assessment: Getting hired as an engineer",
+          "type": "quiz",
+          "duration": "8 min",
+          "description": "What actually moves a YC / early-startup hire.",
+          "quiz": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "hired_q1",
+                "prompt": "In a founding-engineer interview, the strongest proof is:",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "A story of something you shipped, including what broke."
+                  },
+                  {
+                    "id": "b",
+                    "text": "Naming every design pattern in Gang of Four."
+                  },
+                  {
+                    "id": "c",
+                    "text": "Saying you only want to write backend in one language."
+                  },
+                  {
+                    "id": "d",
+                    "text": "Asking about snacks before asking about customers."
+                  }
+                ],
+                "correctOptionIds": [
+                  "a"
+                ],
+                "explanation": "Early teams hire people who have shipped and can talk about the mess. Specialists who refuse the rest of the stack are a poor early-stage fit."
+              },
+              {
+                "id": "hired_q2",
+                "prompt": "If they send a take-home on Friday, the move is:",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "Rewrite it in a new framework to impress them."
+                  },
+                  {
+                    "id": "b",
+                    "text": "Timebox a working slice, tests for the risky part, and a README / walkthrough."
+                  },
+                  {
+                    "id": "c",
+                    "text": "Spend the weekend on perfect CSS and skip the happy path."
+                  },
+                  {
+                    "id": "d",
+                    "text": "Paste ChatGPT output with no repo they can run."
+                  }
+                ],
+                "correctOptionIds": [
+                  "b"
+                ],
+                "explanation": "Same as the founding-engineer panel: ship a testable slice fast. They will run it."
+              },
+              {
+                "id": "hired_q3",
+                "prompt": "A question that makes you look hireable at a YC company is:",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "‘What is the work-life balance?’ as the first question."
+                  },
+                  {
+                    "id": "b",
+                    "text": "‘Who is the customer, what did they do last week, and what did you throw away?’"
+                  },
+                  {
+                    "id": "c",
+                    "text": "‘Can I be CTO in three months?’"
+                  },
+                  {
+                    "id": "d",
+                    "text": "‘Do I have to talk to users?’"
+                  }
+                ],
+                "correctOptionIds": [
+                  "b"
+                ],
+                "explanation": "Almost nobody does the business homework. That is the filter from the picking-a-startup talk — and it is how you decide whether to join."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

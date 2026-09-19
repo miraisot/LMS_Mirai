@@ -12,7 +12,7 @@ The visual system matches miraisot.com: Outfit type, dark navy surfaces, cyan-to
 | UI | [React 19](https://react.dev/), [Tailwind CSS 4](https://tailwindcss.com/) |
 | Language | TypeScript |
 | Auth | [Supabase Auth](https://supabase.com/auth) via `@supabase/supabase-js` and `@supabase/ssr` (email + password, cookie-based sessions) |
-| Content | Static JSON (`data/courses.json`) — no database/CMS for course content |
+| Content | Static JSON (`data/courses/`) — no database/CMS for course content |
 | Lint | ESLint (`eslint-config-next`) |
 
 ## Run
@@ -39,9 +39,20 @@ Open [http://localhost:3000](http://localhost:3000).
 | `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL, used for auth |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase anon/public API key, used for auth |
 
-## Content (`data/courses.json`)
+## Content (`data/courses/`)
 
-Replace the sample file with yours. The loader also accepts a single course object, `type: "youtube"` as video, quiz `question` / string `options` / numeric `correctAnswer`, and HTML entities like `&amp;`.
+Each course is one JSON file. `index.json` lists tracks and the load order of course ids:
+
+```
+data/courses/index.json
+data/courses/open-source.json
+data/courses/gsoc.json
+data/courses/product-development.json
+data/courses/entrepreneurship.json
+data/courses/interview-startups.json
+```
+
+Replace a course file (or add a new one and register it in `index.json` plus `src/lib/content.ts`). The loader also accepts a single course object, `type: "youtube"` as video, quiz `question` / string `options` / numeric `correctAnswer`, and HTML entities like `&amp;`.
 
 Each lesson is one of:
 

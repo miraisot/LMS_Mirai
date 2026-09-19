@@ -1,6 +1,12 @@
 import Link from "next/link";
 import { lessonLabels } from "@/components/glyphs";
-import { countByType, countLessons, courseHoursLabel } from "@/lib/content";
+import {
+  countByType,
+  countLessons,
+  courseHoursLabel,
+  getTrack,
+  shortOutcome,
+} from "@/lib/content";
 import type { Course } from "@/lib/types";
 
 export function CourseCard({
@@ -16,6 +22,13 @@ export function CourseCard({
   const types = countByType(course);
   const percent = total ? Math.round((completed / total) * 100) : 0;
   const n = String(index + 1).padStart(2, "0");
+  const track = course.trackId ? getTrack(course.trackId) : undefined;
+  const outcomeLine = course.outcomes?.length
+    ? `${course.outcomes.length} ${course.outcomes.length === 1 ? "outcome" : "outcomes"}${course.outcomes
+        .slice(0, 4)
+        .map((outcome) => ` · ${shortOutcome(outcome)}`)
+        .join("")}`
+    : null;
 
   return (
     <Link
@@ -30,7 +43,7 @@ export function CourseCard({
       <div className="relative flex items-start justify-between">
         <p className="font-display text-6xl leading-none text-[#22d3ee]/80">{n}</p>
         <span className="rounded-full border border-white/10 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-dust">
-          {course.level ?? "Course"}
+          {track?.title.replace(/ Track$/i, "") ?? course.level ?? "Course"}
         </span>
       </div>
       <div className="relative mt-8">
@@ -40,9 +53,9 @@ export function CourseCard({
         <p className="mt-3 max-w-md text-sm leading-6 text-ink-soft">
           {course.subtitle ?? course.description}
         </p>
-        {course.outcomes && course.outcomes.length > 0 ? (
+        {outcomeLine ? (
           <p className="mt-4 text-[11px] uppercase tracking-[0.16em] text-[#fbbf24]">
-            {course.outcomes.length} outcomes · idea · customers · product · brand
+            {outcomeLine}
           </p>
         ) : null}
       </div>

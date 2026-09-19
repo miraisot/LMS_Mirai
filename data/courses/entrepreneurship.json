@@ -1,0 +1,310 @@
+{
+  "id": "entrepreneurship",
+  "trackId": "entrepreneur",
+  "title": "Entrepreneurship Studio: Brand, Product, Sales & Pitch",
+  "subtitle": "Write the company, the offer, the outreach, and the deck — this month.",
+  "description": "The founder voice — thesis, brand language, sales script, and a deck you can say out loud. The idea → customer → shipped-product loop lives only in Building Your Own Product.",
+  "level": "Beginner",
+  "hours": "4 weeks",
+  "accent": "#34d399",
+  "tags": [
+    "Entrepreneurship",
+    "Brand",
+    "Sales",
+    "Pitch Deck"
+  ],
+  "outcomes": [
+    "Company written — thesis, offer, outreach, and a spoken pitch"
+  ],
+  "instructor": {
+    "name": "Mirai Faculty",
+    "title": "Entrepreneurship"
+  },
+  "modules": [
+    {
+      "id": "module_1",
+      "title": "Week 1: Pick a problem you can sell this quarter",
+      "summary": "Stress-test the idea, then write the 90-day outcome and the first customer list.",
+      "lessons": [
+        {
+          "id": "e1_1",
+          "title": "How to Get and Evaluate Startup Ideas | Startup School",
+          "type": "video",
+          "duration": "30 min",
+          "description": "Jared Friedman’s questions you apply to a real idea this week: who already needs this, why you, why now. Pause after each question and answer it for your company.",
+          "url": "https://www.youtube.com/watch?v=Th8JoIan4dg"
+        },
+        {
+          "id": "e1_2",
+          "title": "How to Get Your First Customers | Startup School",
+          "type": "video",
+          "duration": "30 min",
+          "description": "The founder sales loop you will run in week 4: list, note, demo, close. Start the spreadsheet of names while you watch.",
+          "url": "https://www.youtube.com/watch?v=hyYCn_kAngI"
+        },
+        {
+          "id": "e1_assign",
+          "title": "Assignment 1: Founder Thesis & 90-Day Outcome",
+          "type": "assignment",
+          "duration": "45 min",
+          "description": "Write the company in one sentence, why you are the person to build it, and one leadership outcome that will be true in 90 days.",
+          "assignment": {
+            "brief": "Pick a real problem you would spend a year on — not a class project. Leadership here means an observable outcome, not a vibe.",
+            "deliverable": "A founder thesis you can say out loud without slides.",
+            "fields": [
+              {
+                "id": "oneliner",
+                "label": "The company in one sentence",
+                "placeholder": "We help [who] do [job] without [pain].",
+                "hint": "Lead with what you do. No adjectives that a competitor could copy-paste.",
+                "minWords": 10,
+                "rows": 3
+              },
+              {
+                "id": "why_you",
+                "label": "Why you (founder-market fit)",
+                "placeholder": "I have lived this problem because…",
+                "hint": "Specific history beats 'I am passionate about this space.'",
+                "minWords": 40,
+                "rows": 5
+              },
+              {
+                "id": "outcome",
+                "label": "Leadership outcome in 90 days",
+                "placeholder": "By day 90, these 10 people will…",
+                "hint": "Name a result a stranger could check: users, conversations, revenue, a shipped loop — not 'have a better culture.'",
+                "minWords": 30,
+                "rows": 5
+              },
+              {
+                "id": "wont_do",
+                "label": "What you will not do for 90 days",
+                "placeholder": "I will not hire a sales team / redesign the logo / …",
+                "hint": "Founders fail by adding work. List the tempting distractions you are cutting.",
+                "minWords": 20,
+                "rows": 4
+              }
+            ],
+            "checklist": [
+              "A stranger would understand what you do after the first sentence.",
+              "The 90-day outcome is observable, not motivational.",
+              "You named work you will refuse, not only work you will start."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "module_2",
+      "title": "Week 2: Write the offer, then pick one channel",
+      "summary": "Fill a value proposition, then decide where you will show up weekly.",
+      "lessons": [
+        {
+          "id": "e2_1",
+          "title": "Value Proposition Canvas (fill this, 5 min)",
+          "type": "video",
+          "duration": "5 min",
+          "description": "Osterwalder’s official canvas: jobs, pains, gains vs pain relievers and gain creators. Fill it for your company before you write the brand promise.",
+          "url": "https://www.youtube.com/watch?v=D254suPMpwY"
+        },
+        {
+          "id": "e2_2",
+          "title": "PR + Content for Growth | Kat Mañalac & Craig Cannon",
+          "type": "video",
+          "duration": "52 min",
+          "description": "How founders actually sell a brand: owned content first, then press. Pause and pick the one platform you will post on this month.",
+          "url": "https://www.youtube.com/watch?v=JL9yoVFHx-Q"
+        },
+        {
+          "id": "e2_assign",
+          "title": "Assignment 2: Brand Promise & Competitor Map",
+          "type": "assignment",
+          "duration": "50 min",
+          "description": "Write the brand promise, pick the first platform you will sell it on, and map three alternatives you refuse to look like.",
+          "assignment": {
+            "brief": "Brand is the sentence people repeat when you are not in the room. Competition is who they compare you to instead — including doing nothing.",
+            "deliverable": "A one-page brand brief plus a three-player competitor map.",
+            "fields": [
+              {
+                "id": "promise",
+                "label": "Brand promise (one sentence people can repeat)",
+                "placeholder": "For [who], we are the [category] that [unique outcome].",
+                "hint": "If it works for a rival after a name swap, it is not a brand yet.",
+                "minWords": 10,
+                "rows": 3
+              },
+              {
+                "id": "not_for",
+                "label": "Who it is for — and who it is not for",
+                "placeholder": "For: … / Not for: …",
+                "hint": "Narrow is a strategy. 'Everyone who wants to be productive' is not.",
+                "minWords": 30,
+                "rows": 5
+              },
+              {
+                "id": "competitors",
+                "label": "Three alternatives and how you win",
+                "placeholder": "1. Status quo / 2. Direct rival / 3. Adjacent tool — and why a user switches.",
+                "hint": "Include the status quo (doing nothing, Excel, a WhatsApp group). That is usually the real competitor.",
+                "minWords": 50,
+                "rows": 7
+              },
+              {
+                "id": "platform",
+                "label": "First platform you will sell the brand on",
+                "placeholder": "I will show up weekly on … because the buyers already gather there.",
+                "hint": "Pick one: a community, marketplace, newsletter, or social surface. 'Everywhere' is how brands stay invisible.",
+                "minWords": 25,
+                "rows": 4
+              }
+            ],
+            "checklist": [
+              "The promise is specific enough to reject customers.",
+              "At least one competitor is the status quo, not another startup logo.",
+              "You named one platform, not five."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "module_3",
+      "title": "Week 3: Product people come back to + 20-user plan",
+      "summary": "Define the smallest lovable version, then name how 20 people try it.",
+      "lessons": [
+        {
+          "id": "e3_1",
+          "title": "How to Build Products Users Love | Kevin Hale",
+          "type": "video",
+          "duration": "53 min",
+          "description": "Support-driven product: make a few people unconditionally want you to succeed. Write down the support channel you will sit on this month.",
+          "url": "https://www.youtube.com/watch?v=sz_LgBAGYyo"
+        },
+        {
+          "id": "e3_assign",
+          "title": "Assignment 3: Product Promise & First-Channel Plan",
+          "type": "assignment",
+          "duration": "50 min",
+          "description": "Define the smallest lovable product, the first marketing channel, and how you will get 20 people to try it.",
+          "assignment": {
+            "brief": "Marketing cannot rescue a product nobody returns to. Write the product as a job, then pick one channel you will work this month.",
+            "deliverable": "A product promise plus a first-channel plan for 20 users.",
+            "fields": [
+              {
+                "id": "job",
+                "label": "Who + job-to-be-done + smallest lovable version",
+                "placeholder": "When [situation], [who] wants to [job], so they can [outcome]. The first version only does …",
+                "hint": "If the first version needs a roadmap to be useful, it is not first.",
+                "minWords": 40,
+                "rows": 5
+              },
+              {
+                "id": "love",
+                "label": "What 'love' looks like in week one",
+                "placeholder": "They come back / they pay / they text a friend because…",
+                "hint": "Name a behavior, not a feeling. 'They said it was cool' does not count.",
+                "minWords": 25,
+                "rows": 4
+              },
+              {
+                "id": "channel",
+                "label": "First marketing channel and why it fits",
+                "placeholder": "I will use [channel] because my users already …",
+                "hint": "Match the channel to where the buyer already spends attention. Paid ads are rarely first.",
+                "minWords": 30,
+                "rows": 5
+              },
+              {
+                "id": "twenty",
+                "label": "Plan to get the first 20 people to try it",
+                "placeholder": "Day 1–7: list, messages, places I will show up…",
+                "hint": "Do things that do not scale. Names, DMs, communities, office hours — not 'viral loop TBD.'",
+                "minWords": 40,
+                "rows": 6
+              }
+            ],
+            "checklist": [
+              "The first version is small enough to ship this month.",
+              "Love is a behavior you can count.",
+              "The 20-user plan names real places or people, not a funnel diagram."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "module_4",
+      "title": "Week 4: Sales script, deck outline, send the note",
+      "summary": "Write the spoken pitch, the 10 slides, and one outbound note you would send today.",
+      "lessons": [
+        {
+          "id": "e4_1",
+          "title": "How to Sell | Tyler Bosmeny",
+          "type": "video",
+          "duration": "34 min",
+          "description": "Founders are the first salespeople: prospecting, a short personalized note, listening on the call, and asking for the close. Draft your note while he talks.",
+          "url": "https://www.youtube.com/watch?v=xZi4kTJG-LE"
+        },
+        {
+          "id": "e4_2",
+          "title": "How to Pitch Your Seed-Stage Startup | Michael Seibel",
+          "type": "video",
+          "duration": "24 min",
+          "description": "A pitch is what you do, who is on the team, traction, insight, market, and the ask — said clearly enough that someone can fund or buy it. Template notes: https://www.ycombinator.com/blog/intro-to-the-yc-seed-deck",
+          "url": "https://www.youtube.com/watch?v=lw2X3PxKlAY"
+        },
+        {
+          "id": "e4_assign",
+          "title": "Assignment 4: Pitch Deck Outline & First Sales Script",
+          "type": "assignment",
+          "duration": "60 min",
+          "description": "Write the spoken pitch, the 10-slide deck outline, a cold note you would actually send, and where you will sell the brand this week.",
+          "assignment": {
+            "brief": "Sales and the deck are the same story told to different rooms. If you cannot say it in two sentences, the slides will not save you.",
+            "deliverable": "A spoken pitch, a 10-slide outline, and one outbound note.",
+            "fields": [
+              {
+                "id": "spoken",
+                "label": "Spoken pitch (what / who / why now / ask)",
+                "placeholder": "We do X for Y. The reason this works now is Z. We are asking for…",
+                "hint": "Two or three sentences a person could repeat after you leave the room.",
+                "minWords": 40,
+                "rows": 5
+              },
+              {
+                "id": "deck",
+                "label": "10-slide pitch deck outline",
+                "placeholder": "1. Purpose\n2. Problem\n3. Solution\n4. Why now\n5. Market\n6. Competition\n7. Model\n8. Team\n9. Traction / plan\n10. Ask",
+                "hint": "One idea per slide. Write the title and the single sentence on the slide — not a paragraph of speaker notes. Use YC’s seed-deck order if you want a default.",
+                "minWords": 80,
+                "rows": 12
+              },
+              {
+                "id": "cold",
+                "label": "Cold note to a first customer or partner",
+                "placeholder": "Subject + 4–6 lines. Personalized. One ask: time this week.",
+                "hint": "Short, specific, and about them. The only job of this note is a conversation.",
+                "minWords": 40,
+                "rows": 6
+              },
+              {
+                "id": "sell_platform",
+                "label": "Where you will sell the brand this week",
+                "placeholder": "This week I will post / message / show up on [platform] with [artifact].",
+                "hint": "Name the platform, the artifact (post, listing, thread, demo), and the person you want to reach.",
+                "minWords": 25,
+                "rows": 4
+              }
+            ],
+            "checklist": [
+              "The spoken pitch does not need a slide to make sense.",
+              "Each deck slide is one idea.",
+              "The cold note asks for time, not a purchase.",
+              "You named one platform and one artifact for this week."
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

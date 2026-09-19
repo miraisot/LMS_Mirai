@@ -1,0 +1,707 @@
+{
+  "id": "product-development",
+  "trackId": "entrepreneur",
+  "title": "Building Your Own Product: Idea to Launch",
+  "subtitle": "Four outcomes: submit an idea, talk to customers, ship a product, name the brand.",
+  "description": "The only builder studio in the library. You leave with four artifacts on this device: a locked idea, interview notes from a real person, a live product URL, and a brand plus first-user list. Other courses stay on Git and pitching — this one is the build.",
+  "level": "Beginner",
+  "hours": "4 weeks",
+  "accent": "#f59e0b",
+  "tags": [
+    "Idea",
+    "Customers",
+    "Build",
+    "Brand"
+  ],
+  "outcomes": [
+    "Idea submitted — one problem, one customer, locked for the month",
+    "Customers talked to — notes from a real conversation, not a survey",
+    "Product built — a live URL someone else can click",
+    "Brand named — a promise people can repeat, plus the first 20 users"
+  ],
+  "instructor": {
+    "name": "Mirai Faculty",
+    "title": "Product"
+  },
+  "modules": [
+    {
+      "id": "module_idea",
+      "title": "Week 1: Submit the idea",
+      "summary": "Lock one problem and one customer. Everything later in this course is about this idea.",
+      "outcome": "Idea submitted",
+      "lessons": [
+        {
+          "id": "idea_1",
+          "title": "How to Get and Evaluate Startup Ideas | Startup School",
+          "type": "video",
+          "duration": "30 min",
+          "description": "Jared Friedman’s questions you apply to a real idea this week: who already needs this, why you, why now. Pause after each question and write the answer you will submit.",
+          "url": "https://www.youtube.com/watch?v=Th8JoIan4dg"
+        },
+        {
+          "id": "l1_pdf",
+          "title": "Lean Canvas Template",
+          "type": "pdf",
+          "duration": "15 min",
+          "description": "Fill problem, customer, UVP, and channel before you write code. Empty boxes mean the idea is not submitted yet.",
+          "url": "https://s3.amazonaws.com/leanstack/v4/Lean-Canvas.pdf"
+        },
+        {
+          "id": "idea_assign",
+          "title": "Outcome 1: Submit your idea",
+          "type": "assignment",
+          "duration": "45 min",
+          "description": "Hand in the idea you will build for the rest of this course. After this, changing the customer is a rewrite, not a tweak.",
+          "assignment": {
+            "brief": "Pick one problem a named person already has. This submission is the brief for weeks 2–4 — interviews, the product URL, and the brand all have to match it.",
+            "deliverable": "A locked idea a classmate could explain back to you.",
+            "fields": [
+              {
+                "id": "oneliner",
+                "label": "The idea in one sentence",
+                "placeholder": "We help [who] do [job] without [pain].",
+                "hint": "Name the job, not the category. ‘It’s an AI platform’ is not an idea.",
+                "minWords": 12,
+                "rows": 3
+              },
+              {
+                "id": "who",
+                "label": "The first customer (a real type of person, not ‘everyone’)",
+                "placeholder": "Second-year students who already… / shop owners on Instagram who…",
+                "hint": "If you cannot picture where they sit on a Tuesday, it is too wide.",
+                "minWords": 25,
+                "rows": 4
+              },
+              {
+                "id": "proof",
+                "label": "Why this is a real problem (something they already do or pay for)",
+                "placeholder": "They currently use WhatsApp + a notebook, and last week they…",
+                "hint": "Past behavior. ‘They would love this’ does not count.",
+                "minWords": 30,
+                "rows": 5
+              },
+              {
+                "id": "wont_build",
+                "label": "What you will not build this month",
+                "placeholder": "No mobile app / no payments / no admin / no second customer type…",
+                "hint": "If this list is empty, you have not submitted an idea — you have submitted a wishlist.",
+                "minWords": 20,
+                "rows": 4
+              }
+            ],
+            "checklist": [
+              "A stranger can say the one-liner back.",
+              "The customer is narrow enough to find this week.",
+              "You named something they already do, not a compliment they might give.",
+              "You cut work you will refuse."
+            ]
+          }
+        },
+        {
+          "id": "idea_quiz",
+          "title": "Week 1 Assessment: Idea worth submitting",
+          "type": "quiz",
+          "duration": "8 min",
+          "description": "What makes an idea worth locking for a month.",
+          "quiz": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "idea_q1",
+                "prompt": "The strongest signal an idea is worth submitting is:",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "It sounds impressive when you pitch it at a party."
+                  },
+                  {
+                    "id": "b",
+                    "text": "You (or people you can name) already feel this problem and already work around it."
+                  },
+                  {
+                    "id": "c",
+                    "text": "No one has ever tried anything like it."
+                  },
+                  {
+                    "id": "d",
+                    "text": "It requires the least possible work to build."
+                  }
+                ],
+                "correctOptionIds": [
+                  "b"
+                ],
+                "explanation": "Submit problems people already live with. Novelty and ease are not the test."
+              },
+              {
+                "id": "idea_q2",
+                "prompt": "A submitted idea should usually name:",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "Every feature on the year-one roadmap."
+                  },
+                  {
+                    "id": "b",
+                    "text": "One customer, one job, and what you will not build yet."
+                  },
+                  {
+                    "id": "c",
+                    "text": "A company name and a logo only."
+                  },
+                  {
+                    "id": "d",
+                    "text": "A fundraising target."
+                  }
+                ],
+                "correctOptionIds": [
+                  "b"
+                ],
+                "explanation": "The submission is a constraint: who, what job, and the cuts."
+              },
+              {
+                "id": "idea_q3",
+                "prompt": "Select every section that belongs on a Lean Canvas before you build.",
+                "type": "multiple",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "Problem"
+                  },
+                  {
+                    "id": "b",
+                    "text": "Unique Value Proposition"
+                  },
+                  {
+                    "id": "c",
+                    "text": "Office lease terms"
+                  },
+                  {
+                    "id": "d",
+                    "text": "Customer segment"
+                  }
+                ],
+                "correctOptionIds": [
+                  "a",
+                  "b",
+                  "d"
+                ],
+                "explanation": "Problem, customer, UVP, channel, and metrics — not operations."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "module_1",
+      "title": "Week 2: Talk to a customer",
+      "summary": "Run a Mom Test conversation about the idea you submitted. Notes beat opinions.",
+      "outcome": "Customers talked to",
+      "lessons": [
+        {
+          "id": "l1_1",
+          "title": "The Mom Test: how to talk to customers without lying to yourself",
+          "type": "video",
+          "duration": "45 min",
+          "description": "Rob Fitzpatrick on the three rules: talk about their life, ask about the last time (not ‘would you’), and listen more than you pitch. Pause and write the questions you will actually ask.",
+          "url": "https://www.youtube.com/watch?v=FG1Fa-t4AEQ"
+        },
+        {
+          "id": "l1_2",
+          "title": "How To Talk To Users | Startup School",
+          "type": "video",
+          "duration": "30 min",
+          "description": "How to find people, book the call, and turn notes into a build/kill decision — without pitching first.",
+          "url": "https://www.youtube.com/watch?v=z1iF1c8w5Lg"
+        },
+        {
+          "id": "l1_assign",
+          "title": "Outcome 2: Talk to a customer",
+          "type": "assignment",
+          "duration": "60 min",
+          "description": "Interview one real person about the idea you submitted. Write what they already do — not whether they like your pitch.",
+          "assignment": {
+            "brief": "Use the idea from week 1. Talk about their last week, not your solution. Best prompt: ‘Walk me through the last time this happened.’ A scheduled interview with a full script counts if you name the person and the time.",
+            "deliverable": "Proof you talked to a customer: eight questions, notes, and a keep / kill / rewrite.",
+            "fields": [
+              {
+                "id": "who",
+                "label": "Who you are interviewing and the last time they hit this problem",
+                "placeholder": "Name / role — last Tuesday they … and they used …",
+                "hint": "A real person. ‘Students in general’ is not an interview.",
+                "minWords": 25,
+                "rows": 4
+              },
+              {
+                "id": "questions",
+                "label": "Eight Mom Test questions you will ask",
+                "placeholder": "1. Walk me through the last time…\n2. What did you try?\n3. What did that cost you?\n…",
+                "hint": "Ban ‘Would you use this?’ and ‘Is this a good idea?’",
+                "minWords": 60,
+                "rows": 10
+              },
+              {
+                "id": "notes",
+                "label": "Interview notes (or the scheduled script if the call is this week)",
+                "placeholder": "They currently… They already paid for… They refused to… Commitment they offered…",
+                "hint": "Write behavior and commitments. Compliments do not count as signal.",
+                "minWords": 60,
+                "rows": 8
+              },
+              {
+                "id": "decision",
+                "label": "Keep / kill / rewrite the submitted idea — what changed",
+                "placeholder": "Decision: keep / kill / rewrite because they already… The one-liner is now …",
+                "hint": "If nothing about the idea moved, you pitched instead of interviewing.",
+                "minWords": 40,
+                "rows": 5
+              }
+            ],
+            "checklist": [
+              "You named a person, not a demographic.",
+              "None of the eight questions pitch the product.",
+              "Notes include something they already do or already pay for.",
+              "The keep / kill / rewrite names what you heard."
+            ]
+          }
+        },
+        {
+          "id": "l1_quiz",
+          "title": "Week 2 Assessment: Talking to customers",
+          "type": "quiz",
+          "duration": "8 min",
+          "description": "Mom Test rules and what belongs on a Lean Canvas.",
+          "quiz": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "pd1_q1",
+                "prompt": "Which question is most likely to pass the Mom Test?",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "Would you use an app that does this?"
+                  },
+                  {
+                    "id": "b",
+                    "text": "Walk me through the last time this problem showed up. What did you do?"
+                  },
+                  {
+                    "id": "c",
+                    "text": "Isn’t this a great idea?"
+                  },
+                  {
+                    "id": "d",
+                    "text": "On a scale of 1–10, how excited are you?"
+                  }
+                ],
+                "correctOptionIds": [
+                  "b"
+                ],
+                "explanation": "Ask about a specific past episode and what they already did. Opinions and compliments are polite lies."
+              },
+              {
+                "id": "pd1_q2",
+                "prompt": "What is the primary goal of an early user interview?",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "Convince the user your idea is good."
+                  },
+                  {
+                    "id": "b",
+                    "text": "Understand their current behavior and pain points without pitching your solution."
+                  },
+                  {
+                    "id": "c",
+                    "text": "Get them to pre-pay immediately."
+                  },
+                  {
+                    "id": "d",
+                    "text": "Ask only yes/no questions to save time."
+                  }
+                ],
+                "correctOptionIds": [
+                  "b"
+                ],
+                "explanation": "Good interviews focus on understanding existing behavior and pain. Pitching too early biases the feedback you get."
+              },
+              {
+                "id": "pd1_q3",
+                "prompt": "Select every habit that belongs in a customer conversation.",
+                "type": "multiple",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "Ask about the last time the problem showed up."
+                  },
+                  {
+                    "id": "b",
+                    "text": "Write down what they already do or already pay for."
+                  },
+                  {
+                    "id": "c",
+                    "text": "Pitch the full product in the first two minutes."
+                  },
+                  {
+                    "id": "d",
+                    "text": "End by asking for a small commitment (intro, follow-up, a try)."
+                  }
+                ],
+                "correctOptionIds": [
+                  "a",
+                  "b",
+                  "d"
+                ],
+                "explanation": "Past behavior and a real next step beat a pitch. Compliments are not signal."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "module_2",
+      "title": "Week 3: Build the product",
+      "summary": "Ship the smallest version of the submitted idea. The outcome is a URL, not a spec.",
+      "outcome": "Product built",
+      "lessons": [
+        {
+          "id": "l2_1",
+          "title": "Michael Seibel — How to Plan an MVP",
+          "type": "video",
+          "duration": "30 min",
+          "description": "What actually counts as an MVP: the smallest thing that delivers value to a few users. Pause and delete features from your list as he talks.",
+          "url": "https://www.youtube.com/watch?v=1hHMwLxN6EM"
+        },
+        {
+          "id": "l2_2",
+          "title": "Value Proposition Canvas (fill this, 5 min)",
+          "type": "video",
+          "duration": "5 min",
+          "description": "Alex Osterwalder’s official walkthrough: customer jobs, pains, gains vs your pain relievers and gain creators. If a box is empty, that feature is not in the MVP.",
+          "url": "https://www.youtube.com/watch?v=D254suPMpwY"
+        },
+        {
+          "id": "l2_assign",
+          "title": "Outcome 3: Build the product (live URL)",
+          "type": "assignment",
+          "duration": "90 min",
+          "description": "Ship something a stranger can click: a site, form, bot, or demo. A spec without a URL does not count.",
+          "assignment": {
+            "brief": "Build the idea from week 1 using whatever is fastest — Carrd, Notion, Google Form, WhatsApp flow, Replit, Next.js. Ugly is fine. Private-only Figma is not a product.",
+            "deliverable": "A live URL plus what it does and who already clicked it.",
+            "fields": [
+              {
+                "id": "product_url",
+                "label": "Live product URL",
+                "placeholder": "https://… (or a public form / bot / demo link)",
+                "hint": "Must open without a login you cannot share. If it is a WhatsApp number or form, write the exact link or handle.",
+                "rows": 2
+              },
+              {
+                "id": "what_ships",
+                "label": "What a user can do in 60 seconds",
+                "placeholder": "They land → they … → they get … That is the only job.",
+                "hint": "One job from the submitted idea. If you need a tutorial, it is too big.",
+                "minWords": 30,
+                "rows": 5
+              },
+              {
+                "id": "how_built",
+                "label": "How you built it (tools + what you cut)",
+                "placeholder": "Built in … I skipped accounts / payments / mobile because…",
+                "hint": "Name the stack. Name the cuts. ‘I used AI’ is not a build log.",
+                "minWords": 30,
+                "rows": 5
+              },
+              {
+                "id": "who_clicked",
+                "label": "Who already used it (name + what they did)",
+                "placeholder": "I sent it to [name]. They … They got stuck on … Next I will …",
+                "hint": "At least one real person. ‘I will share later’ fails the outcome.",
+                "minWords": 25,
+                "rows": 5
+              }
+            ],
+            "checklist": [
+              "The URL opens for someone who is not you.",
+              "The job matches the idea you submitted.",
+              "You named what you refused to build.",
+              "A named person already tried it."
+            ]
+          }
+        },
+        {
+          "id": "l2_quiz",
+          "title": "Week 3 Assessment: Shipping an MVP",
+          "type": "quiz",
+          "duration": "8 min",
+          "description": "Scoping an MVP and problem–solution fit.",
+          "quiz": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "pd2_q1",
+                "prompt": "Per Michael Seibel's MVP framework, what should your first MVP optimize for?",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "Supporting every feature you can imagine."
+                  },
+                  {
+                    "id": "b",
+                    "text": "The smallest thing you can ship to test if you can deliver real value to a few users."
+                  },
+                  {
+                    "id": "c",
+                    "text": "A polished, investor-ready product."
+                  },
+                  {
+                    "id": "d",
+                    "text": "Building for a huge, general audience from day one."
+                  }
+                ],
+                "correctOptionIds": [
+                  "b"
+                ],
+                "explanation": "Seibel's advice: launch something ridiculously simple to a narrow set of early users first, then iterate on what you learn."
+              },
+              {
+                "id": "pd2_q2",
+                "prompt": "On the Value Proposition Canvas, problem–solution fit means:",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "You listed as many features as the competitor."
+                  },
+                  {
+                    "id": "b",
+                    "text": "Your pain relievers and gain creators match jobs, pains, and gains you observed."
+                  },
+                  {
+                    "id": "c",
+                    "text": "You registered a domain."
+                  },
+                  {
+                    "id": "d",
+                    "text": "Investors liked the deck."
+                  }
+                ],
+                "correctOptionIds": [
+                  "b"
+                ],
+                "explanation": "Fit is when the value map hits real jobs, pains, and gains — not when the feature list is long."
+              },
+              {
+                "id": "pd2_q3",
+                "prompt": "Select every habit that matches 'launch something bad quickly' thinking.",
+                "type": "multiple",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "Ship a limited version to a small set of users this week."
+                  },
+                  {
+                    "id": "b",
+                    "text": "Delay launch until every edge case is handled."
+                  },
+                  {
+                    "id": "c",
+                    "text": "Treat the first release as a way to learn, not a finished product."
+                  },
+                  {
+                    "id": "d",
+                    "text": "Talk to the first users again after they try it."
+                  }
+                ],
+                "correctOptionIds": [
+                  "a",
+                  "c",
+                  "d"
+                ],
+                "explanation": "MVP thinking favors fast, narrow releases you learn from, not indefinite polishing before anyone sees it."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "module_3",
+      "title": "Week 4: Build the brand and get first users",
+      "summary": "Name the promise, write the launch post, and put the live product in front of 20 people.",
+      "outcome": "Brand named + first users",
+      "lessons": [
+        {
+          "id": "l3_1",
+          "title": "How to Get Your First Customers | Startup School",
+          "type": "video",
+          "duration": "30 min",
+          "description": "Gustaf Alströmer’s founder sales loop: make a list, send a short note, run a demo, track drop-off. Pause and start the spreadsheet of 20 names.",
+          "url": "https://www.youtube.com/watch?v=hyYCn_kAngI"
+        },
+        {
+          "id": "l3_2",
+          "title": "How to Launch on Product Hunt (Official Guide)",
+          "type": "video",
+          "duration": "15 min",
+          "description": "Product Hunt’s own walkthrough of preparing a hunter, a first comment, and a live URL — do this after friends already use the product.",
+          "url": "https://www.youtube.com/watch?v=UnZWZXcVLOs"
+        },
+        {
+          "id": "l3_assign",
+          "title": "Outcome 4: Brand + first 20 users",
+          "type": "assignment",
+          "duration": "50 min",
+          "description": "Write the brand promise for the product you shipped, then put that URL in front of 20 people.",
+          "assignment": {
+            "brief": "Brand is the sentence people repeat when you are not in the room. Pair it with the live URL from week 3 and a list of people you will actually message.",
+            "deliverable": "A brand promise, a launch post with the product URL, and a named first-20 list.",
+            "fields": [
+              {
+                "id": "promise",
+                "label": "Brand promise (one sentence people can repeat)",
+                "placeholder": "For [who], we are the [category] that [unique outcome].",
+                "hint": "If it still works after you swap in a rival’s name, it is not a brand yet.",
+                "minWords": 10,
+                "rows": 3
+              },
+              {
+                "id": "first_twenty",
+                "label": "The first 20 people or rooms who will see the live product",
+                "placeholder": "Day 1–3: message these people…\nDay 4–7: post in this room…\nLink I will send: …",
+                "hint": "Names, groups, or shops. Include the product URL. ‘Go viral’ is not a plan.",
+                "minWords": 50,
+                "rows": 7
+              },
+              {
+                "id": "cold",
+                "label": "The short note you will send (paste-ready)",
+                "placeholder": "Hey [name] — I built X because you said Y. Can you try this URL this week and tell me if Z still hurts?",
+                "hint": "About their last problem, the live URL, one ask.",
+                "minWords": 40,
+                "rows": 5
+              },
+              {
+                "id": "launch_post",
+                "label": "Launch post — tagline, who it’s for, product URL",
+                "placeholder": "Tagline: …\nWho it’s for: …\nLink: …\nMaker comment: …",
+                "hint": "A stranger should know what to click. The link must be the thing you built.",
+                "minWords": 50,
+                "rows": 8
+              }
+            ],
+            "checklist": [
+              "The promise is specific enough to reject customers.",
+              "The 20-user plan names people or rooms and includes the live URL.",
+              "The note asks for a try, not a compliment.",
+              "The launch post has a tagline and the product link."
+            ]
+          }
+        },
+        {
+          "id": "l3_quiz",
+          "title": "Week 4 Assessment: Brand & first users",
+          "type": "quiz",
+          "duration": "8 min",
+          "description": "Founder-led sales and launching as a repeatable process.",
+          "quiz": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "pd3_q1",
+                "prompt": "For your first customers, Gustaf’s Startup School advice is to:",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "Buy ads before you can describe the buyer."
+                  },
+                  {
+                    "id": "b",
+                    "text": "Make a list of the easiest likely buyers, message them yourself, and track each step of the funnel."
+                  },
+                  {
+                    "id": "c",
+                    "text": "Wait until the product is famous."
+                  },
+                  {
+                    "id": "d",
+                    "text": "Hire a salesperson in week one."
+                  }
+                ],
+                "correctOptionIds": [
+                  "b"
+                ],
+                "explanation": "First customers are founder-led and unscalable: a list, a note, a demo, and numbers on drop-off."
+              },
+              {
+                "id": "pd3_q2",
+                "prompt": "Per Product Hunt's official launch guide, which practice most improves a launch?",
+                "type": "single",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "Submitting with no prior engagement on the platform."
+                  },
+                  {
+                    "id": "b",
+                    "text": "Participating in the community and building relationships before launch day."
+                  },
+                  {
+                    "id": "c",
+                    "text": "Launching without a live product URL."
+                  },
+                  {
+                    "id": "d",
+                    "text": "Avoiding all outside promotion."
+                  }
+                ],
+                "correctOptionIds": [
+                  "b"
+                ],
+                "explanation": "Product Hunt recommends genuine, sustained participation (comments, upvotes, feedback) well before your own launch, not a cold submission."
+              },
+              {
+                "id": "pd3_q3",
+                "prompt": "Select every legitimate way to 'launch again' for an existing product.",
+                "type": "multiple",
+                "options": [
+                  {
+                    "id": "a",
+                    "text": "Announcing a major new feature."
+                  },
+                  {
+                    "id": "b",
+                    "text": "Re-launching to a new audience or platform."
+                  },
+                  {
+                    "id": "c",
+                    "text": "Reposting the exact same launch post daily."
+                  },
+                  {
+                    "id": "d",
+                    "text": "Sharing a milestone (users, revenue, an integration) as its own moment."
+                  }
+                ],
+                "correctOptionIds": [
+                  "a",
+                  "b",
+                  "d"
+                ],
+                "explanation": "Each real update, audience, or milestone is a legitimate reason to launch again — spamming the same post isn't."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

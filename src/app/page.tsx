@@ -1,10 +1,12 @@
-import { CourseGrid, ResumeLearning } from "@/components/ResumeLearning";
+import { ResumeLearning } from "@/components/ResumeLearning";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
-import { countLessons, getCourses } from "@/lib/content";
+import { TrackLibrary } from "@/components/TrackLibrary";
+import { countLessons, getCourses, getTracks } from "@/lib/content";
 import { site } from "@/lib/config";
 
 export default function HomePage() {
   const courses = getCourses();
+  const tracks = getTracks();
   const lessonCount = courses.reduce((sum, course) => sum + countLessons(course), 0);
 
   return (
@@ -22,10 +24,14 @@ export default function HomePage() {
             </span>
           </h1>
           <p className="rise rise-delay-2 mt-6 max-w-xl text-base leading-7 text-ink-soft md:text-lg md:leading-8">
-            {site.tagline} Watch a short how-to, do the lab, then ship the
-            assignment — the same stack students use from week one.
+            {site.tagline} Pick a track — Open Source, Entrepreneur, or
+            Interview — then watch a how-to, do the lab, and ship the assignment.
           </p>
           <dl className="rise rise-delay-3 mt-10 grid max-w-lg grid-cols-3 gap-6 border-t border-white/10 pt-6 text-sm">
+            <div>
+              <dt className="text-dust">Tracks</dt>
+              <dd className="mt-1 font-display text-3xl text-white">{tracks.length}</dd>
+            </div>
             <div>
               <dt className="text-dust">Courses</dt>
               <dd className="mt-1 font-display text-3xl text-white">{courses.length}</dd>
@@ -33,10 +39,6 @@ export default function HomePage() {
             <div>
               <dt className="text-dust">Lessons</dt>
               <dd className="mt-1 font-display text-3xl text-white">{lessonCount}</dd>
-            </div>
-            <div>
-              <dt className="text-dust">Hello</dt>
-              <dd className="mt-1 font-display text-3xl text-white">{site.studentName}</dd>
             </div>
           </dl>
         </section>
@@ -46,11 +48,7 @@ export default function HomePage() {
         </div>
 
         <section className="mt-16">
-          <div className="mb-6 flex items-end justify-between gap-4">
-            <h2 className="font-display text-3xl text-white">Your library</h2>
-            <p className="text-sm text-dust">Replace data/courses.json anytime</p>
-          </div>
-          <CourseGrid courses={courses} />
+          <TrackLibrary tracks={tracks} courses={courses} />
         </section>
       </main>
       <SiteFooter />
