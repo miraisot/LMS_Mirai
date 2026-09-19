@@ -17,6 +17,7 @@ import gsoc from "../../data/courses/gsoc.json";
 import productDevelopment from "../../data/courses/product-development.json";
 import entrepreneurship from "../../data/courses/entrepreneurship.json";
 import interviewStartups from "../../data/courses/interview-startups.json";
+import startupJobHunting from "../../data/courses/startup-job-hunting.json";
 
 const courseFiles: Record<string, unknown> = {
   "open-source": openSource,
@@ -24,6 +25,7 @@ const courseFiles: Record<string, unknown> = {
   "product-development": productDevelopment,
   entrepreneurship,
   "interview-startups": interviewStartups,
+  "startup-job-hunting": startupJobHunting,
 };
 
 const raw = {

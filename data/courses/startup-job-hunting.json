@@ -1,0 +1,497 @@
+{
+  "id": "startup-job-hunting",
+  "trackId": "interview",
+  "title": "Find Startup Jobs on LinkedIn, X & Reddit",
+  "subtitle": "Turn the platforms founders already live on into a lead machine.",
+  "description": "Job boards are the last place good startup roles get filled — founders post, reply, and hire on LinkedIn, X (Twitter), Reddit, Hacker News, and niche communities first. Four weeks: fix your LinkedIn so it reads like a landing page and message people instead of clicking Easy Apply, build a public presence on X that gets founders to notice you before you apply, source real leads from the communities startups actually use, then run the flow from first reply to a phone screen you don't fumble.",
+  "level": "Beginner",
+  "hours": "4 weeks",
+  "accent": "#34d399",
+  "tags": ["LinkedIn", "Twitter/X", "Reddit", "Outreach", "Job Search"],
+  "outcomes": [
+    "LinkedIn engine — a founder-ready profile plus 10 outbound messages sent",
+    "Public build log — an X (Twitter) presence that gets you noticed before you apply",
+    "Community leads — 5 real leads sourced from Reddit, Hacker News, or niche communities",
+    "Reply-to-offer flow — a tracked pipeline and a phone-screen script ready to run"
+  ],
+  "instructor": { "name": "Mirai Faculty", "title": "Job Search & Outreach" },
+  "modules": [
+    {
+      "id": "module_linkedin",
+      "title": "Week 1: LinkedIn — profile, content, and DMs that get replies",
+      "summary": "Your LinkedIn profile is a landing page, not a résumé PDF. Fix it, then message people instead of clicking Easy Apply.",
+      "outcome": "LinkedIn engine",
+      "lessons": [
+        {
+          "id": "li_1",
+          "title": "LinkedIn + Resume Tips by a FAANG Recruiter",
+          "type": "video",
+          "duration": "29 min",
+          "description": "A Senior Technical Recruiter at AWS on what a resume/LinkedIn profile actually needs: how ATS parses you, what a recruiter scans for in six seconds, and LinkedIn profile vs résumé vs CV. Rewrite your headline and About section while you watch — do not just take notes.",
+          "url": "https://www.youtube.com/watch?v=bQ_dxs2b0f4"
+        },
+        {
+          "id": "li_2",
+          "title": "How To Convert Customers With Cold Emails | Startup School",
+          "type": "video",
+          "duration": "32 min",
+          "description": "Same funnel, different customer: here the 'customer' is a hiring founder, and the channel is a LinkedIn DM instead of email. Map your funnel, find the right person, and see why most first messages get ignored.",
+          "url": "https://www.youtube.com/watch?v=7Kh_fpxP1yY"
+        },
+        {
+          "id": "li_assign",
+          "title": "Outcome 1: A LinkedIn profile plus 10 messages sent",
+          "type": "assignment",
+          "duration": "90 min",
+          "description": "A profile nobody reads is not an engine. Fix the profile, then message ten people who could actually hire you — not the Easy Apply button.",
+          "assignment": {
+            "brief": "Rewrite your LinkedIn headline, About section, and Featured section like a landing page for you: what you build, in what stack, with one proof link (GitHub, product, or write-up). Then find ten people — founders or hiring engineers at startups you would actually join — and send each a short, personal connection note or DM. No 'Hi, I am looking for opportunities.'",
+            "deliverable": "A public LinkedIn URL that reads like a landing page, plus ten sent messages.",
+            "fields": [
+              {
+                "id": "profile_url",
+                "label": "LinkedIn profile URL",
+                "placeholder": "https://linkedin.com/in/…",
+                "hint": "Headline should say what you build, not 'Aspiring Software Engineer'.",
+                "rows": 2
+              },
+              {
+                "id": "rewrite",
+                "label": "Your new headline + About section (paste both)",
+                "placeholder": "Headline: …\nAbout: …",
+                "hint": "Lead with what you can ship this month and one proof link. Cut the adjectives.",
+                "minWords": 40,
+                "rows": 6
+              },
+              {
+                "id": "targets_messages",
+                "label": "Ten people messaged: name, company, role, channel",
+                "placeholder": "1. [Name] · [Company] · Founder / Eng Manager · Connection note\n2. …",
+                "hint": "Prioritize people at companies you'd actually join, not random recruiters.",
+                "minWords": 60,
+                "rows": 10
+              },
+              {
+                "id": "best_dm",
+                "label": "The best DM you actually sent (paste it)",
+                "placeholder": "Hi [Name] — I saw [specific thing about their product]. I built [proof link] with [stack]. Would love 15 minutes to…",
+                "hint": "Specific beats flattering. Reference something real about their product.",
+                "minWords": 30,
+                "rows": 6
+              }
+            ],
+            "checklist": [
+              "The headline names a stack and a proof link, not a job-title wishlist.",
+              "At least seven of the ten messages actually left your outbox.",
+              "Each message references something specific about that company.",
+              "No message is a copy-paste template with only the name swapped."
+            ]
+          }
+        },
+        {
+          "id": "li_quiz",
+          "title": "Week 1 Assessment: LinkedIn that gets replies",
+          "type": "quiz",
+          "duration": "8 min",
+          "description": "What actually makes a profile and a DM worth responding to.",
+          "quiz": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "li_q1",
+                "prompt": "The fastest way to make a LinkedIn profile useless is to:",
+                "type": "single",
+                "options": [
+                  { "id": "a", "text": "Lead with a stack you can ship in and a proof link." },
+                  { "id": "b", "text": "Write 'Aspiring Software Developer | Looking for Opportunities' as the headline." },
+                  { "id": "c", "text": "List one shipped project with a live link." },
+                  { "id": "d", "text": "Keep the About section under five lines." }
+                ],
+                "correctOptionIds": ["b"],
+                "explanation": "Recruiters and founders scan for proof, not intent. 'Looking for opportunities' tells them nothing about what you can do."
+              },
+              {
+                "id": "li_q2",
+                "prompt": "According to the recruiter interview, what matters most in the first few seconds of a resume/profile scan?",
+                "type": "single",
+                "options": [
+                  { "id": "a", "text": "Font choice and color scheme." },
+                  { "id": "b", "text": "Whether the top third answers 'can this person do the job.'" },
+                  { "id": "c", "text": "The length of the objective statement." },
+                  { "id": "d", "text": "A professional headshot." }
+                ],
+                "correctOptionIds": ["b"],
+                "explanation": "Recruiters scan the top third first. If it does not answer the job question immediately, the rest rarely gets read."
+              },
+              {
+                "id": "li_q3",
+                "prompt": "A cold LinkedIn DM that gets replies looks like:",
+                "type": "single",
+                "options": [
+                  { "id": "a", "text": "A mass template sent to 200 people with only the name changed." },
+                  { "id": "b", "text": "Short, specific to their product, with one proof link and one ask." },
+                  { "id": "c", "text": "A full cover letter pasted into the message box." },
+                  { "id": "d", "text": "Asking 'do you have any openings?' with no context." }
+                ],
+                "correctOptionIds": ["b"],
+                "explanation": "Same rule as cold email in the Startup School video: personal, specific, one ask. Mass templates get ignored or reported."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "module_twitter",
+      "title": "Week 2: X (Twitter) — build in public so founders find you first",
+      "summary": "A lot of early-stage founders live on X, not job boards. Post like you're building something, not applying for something.",
+      "outcome": "Public build log",
+      "lessons": [
+        {
+          "id": "tw_1",
+          "title": "The Complete Guide To Getting A Tech Job In 2024",
+          "type": "video",
+          "duration": "14 min",
+          "description": "Skip to the Open Source, Twitter, and Reach Out chapters. The core idea: ship publicly, post about it on X, and use that trail as proof when you message people — instead of a cold resume with nothing behind it.",
+          "url": "https://www.youtube.com/watch?v=8gbLg8MCWqg"
+        },
+        {
+          "id": "tw_assign",
+          "title": "Outcome 2: A build-in-public thread plus five founder replies",
+          "type": "assignment",
+          "duration": "75 min",
+          "description": "X is where a lot of early-stage founders actually hang out and hire. Post like you are building something, not applying for something.",
+          "assignment": {
+            "brief": "Set up or clean up an X profile: bio says what you build, pinned post links your best shipped work. Post one build-in-public thread this week — what you shipped, what broke, what you learned. Reply to or quote five founders/engineers at startups you want to join, adding something real to the conversation, not just 'great post!'",
+            "deliverable": "A public X profile, one build-in-public thread, and five real replies to founders.",
+            "fields": [
+              {
+                "id": "x_profile",
+                "label": "X (Twitter) profile URL + bio",
+                "placeholder": "https://x.com/… — bio: I build … with …",
+                "hint": "Bio should say what you build. Pin your strongest shipped artifact.",
+                "rows": 3
+              },
+              {
+                "id": "thread_url",
+                "label": "Your build-in-public thread URL",
+                "placeholder": "https://x.com/…/status/…",
+                "hint": "Include one specific detail that broke or surprised you — generic 'excited to share' posts get ignored.",
+                "rows": 2
+              },
+              {
+                "id": "replies",
+                "label": "Five founders/engineers you engaged with: handle, company, what you said",
+                "placeholder": "1. @founder · [Company] · Replied with a specific bug I hit building something similar\n2. …",
+                "hint": "Add value to their post — a bug you found, a question, a related thing you shipped. Not just praise.",
+                "minWords": 50,
+                "rows": 10
+              }
+            ],
+            "checklist": [
+              "The bio and pinned post show proof, not job-seeking language.",
+              "The thread names a specific thing built, broken, or learned this week.",
+              "All five replies add something — a question, a bug, a related build — not just praise.",
+              "You followed at least five founders/engineers at companies on your shortlist."
+            ]
+          }
+        },
+        {
+          "id": "tw_quiz",
+          "title": "Week 2 Assessment: Getting noticed on X",
+          "type": "quiz",
+          "duration": "8 min",
+          "description": "What makes a public build log actually work as outreach.",
+          "quiz": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "tw_q1",
+                "prompt": "The 'Reach Out' chapter argues that outreach works best when it points at:",
+                "type": "single",
+                "options": [
+                  { "id": "a", "text": "A generic CV attachment." },
+                  { "id": "b", "text": "Something you have already shipped and posted about publicly." },
+                  { "id": "c", "text": "Your GPA and college name." },
+                  { "id": "d", "text": "How many followers you have." }
+                ],
+                "correctOptionIds": ["b"],
+                "explanation": "A public build trail gives a founder something concrete to click on before they ever reply to you."
+              },
+              {
+                "id": "tw_q2",
+                "prompt": "A build-in-public post that gets a founder's attention usually:",
+                "type": "single",
+                "options": [
+                  { "id": "a", "text": "Says 'excited to share my journey!' with no specifics." },
+                  { "id": "b", "text": "Names what broke, what shipped, or what was learned, with a link." },
+                  { "id": "c", "text": "Only reposts other people's content." },
+                  { "id": "d", "text": "Is private/protected so only friends see it." }
+                ],
+                "correctOptionIds": ["b"],
+                "explanation": "Specific beats vague. 'Excited to share' with no detail gets scrolled past."
+              },
+              {
+                "id": "tw_q3",
+                "prompt": "The strongest way to reply to a founder's post is:",
+                "type": "single",
+                "options": [
+                  { "id": "a", "text": "'Great post!' with nothing else." },
+                  { "id": "b", "text": "A specific comment, question, or related thing you built — adding to the conversation." },
+                  { "id": "c", "text": "A DM asking for a job immediately after." },
+                  { "id": "d", "text": "Tagging five friends to get more likes." }
+                ],
+                "correctOptionIds": ["b"],
+                "explanation": "Same principle as cold outreach: be specific and add value before you ask for anything."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "module_communities",
+      "title": "Week 3: Reddit, Hacker News & niche communities — where startups actually hire",
+      "summary": "Startups post in subreddits, HN threads, Indie Hackers, and Discords before or instead of LinkedIn. Go find them.",
+      "outcome": "Community leads",
+      "lessons": [
+        {
+          "id": "rd_1",
+          "title": "Let's talk about r/cscareerquestions...",
+          "type": "video",
+          "duration": "15 min",
+          "description": "A former Google/Meta engineer reviews what the biggest tech career subreddit actually says about job searches, interviews, and red flags. Use it to calibrate — then go post and read in the communities relevant to you, not just this one.",
+          "url": "https://www.youtube.com/watch?v=fBOgxIxv2ic"
+        },
+        {
+          "id": "rd_2",
+          "title": "5 Websites That Help You Get a Remote Job",
+          "type": "video",
+          "duration": "16 min",
+          "description": "Beyond LinkedIn: a walkthrough of niche and remote-specific job boards and communities — startup-focused boards, remote-only boards, and referral platforms — that founders post on before a role ever reaches a mainstream job board.",
+          "url": "https://www.youtube.com/watch?v=BKzrwxqHTnQ"
+        },
+        {
+          "id": "rd_assign",
+          "title": "Outcome 3: Five leads sourced from communities, not job boards",
+          "type": "assignment",
+          "duration": "90 min",
+          "description": "Startups post in Hacker News 'Who is Hiring' threads, niche subreddits, Indie Hackers, and Discords before or instead of LinkedIn. Go find them.",
+          "assignment": {
+            "brief": "Pick at least three communities (examples: r/cscareerquestions, r/ExperiencedDevs, r/startups, r/forhire, the Hacker News monthly 'Who is Hiring' thread, Indie Hackers, a startup's own Discord). Search or post to surface five real leads — an open role, a founder asking for help, or a company you had not heard of. For each, note where you found it and your next action.",
+            "deliverable": "Five sourced leads with a next action for each, pulled from outside LinkedIn/job boards.",
+            "fields": [
+              {
+                "id": "communities",
+                "label": "The three-plus communities you actually searched or posted in",
+                "placeholder": "1. r/cscareerquestions — searched 'startup hiring'\n2. HN Who is Hiring (this month's thread) — ctrl-F'd my stack\n3. …",
+                "hint": "Reading is not participating. At least one lead should come from a post or comment you made, not just lurking.",
+                "minWords": 30,
+                "rows": 6
+              },
+              {
+                "id": "leads",
+                "label": "Five leads: source, company/person, what they need, your next action",
+                "placeholder": "1. [HN thread] · [Company] · hiring backend eng, remote · replied with my stack + GitHub\n2. …",
+                "hint": "A 'lead' is specific enough to act on this week — a name, a thread, a company. Not 'lots of startups hire on Reddit.'",
+                "minWords": 60,
+                "rows": 12
+              },
+              {
+                "id": "one_pursued",
+                "label": "The one lead you actually pursued this week, and what happened",
+                "placeholder": "I replied to [thread] / messaged [person] with [what]. Response so far: …",
+                "hint": "If nothing happened yet, say what you sent and when you expect to hear back.",
+                "minWords": 25,
+                "rows": 5
+              }
+            ],
+            "checklist": [
+              "At least three different communities were actually searched or posted in.",
+              "Five leads are specific — a name, thread, or company, not a vague platform mention.",
+              "At least one lead came from something you posted or commented, not just searching.",
+              "You pursued at least one lead this week."
+            ]
+          }
+        },
+        {
+          "id": "rd_quiz",
+          "title": "Week 3 Assessment: Sourcing from communities",
+          "type": "quiz",
+          "duration": "8 min",
+          "description": "The difference between lurking and actually sourcing a lead.",
+          "quiz": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "rd_q1",
+                "prompt": "Compared to LinkedIn, niche communities (subreddits, HN threads, Indie Hackers, Discords) are often better for finding startup roles because:",
+                "type": "single",
+                "options": [
+                  { "id": "a", "text": "They are always more monitored by big-company recruiters." },
+                  { "id": "b", "text": "Founders post there directly, sometimes before a role goes anywhere else." },
+                  { "id": "c", "text": "You do not need any proof of work to get a reply." },
+                  { "id": "d", "text": "They require a paid subscription so competition is lower." }
+                ],
+                "correctOptionIds": ["b"],
+                "explanation": "Early roles often surface first where the founder already hangs out — a subreddit, an HN thread, a Discord — before a formal job listing exists."
+              },
+              {
+                "id": "rd_q2",
+                "prompt": "Reading a subreddit like r/cscareerquestions without ever commenting or posting counts as:",
+                "type": "single",
+                "options": [
+                  { "id": "a", "text": "Full participation — the same as being an active community member." },
+                  { "id": "b", "text": "Research, not sourcing — you still need to engage to surface direct leads." },
+                  { "id": "c", "text": "Enough to guarantee a referral." },
+                  { "id": "d", "text": "A replacement for LinkedIn outreach entirely." }
+                ],
+                "correctOptionIds": ["b"],
+                "explanation": "Lurking calibrates your expectations. It does not put your name in front of anyone. You still have to post, comment, or DM."
+              },
+              {
+                "id": "rd_q3",
+                "prompt": "A specific, actionable lead from a community looks like:",
+                "type": "single",
+                "options": [
+                  { "id": "a", "text": "'I heard startups hire on Reddit sometimes.'" },
+                  { "id": "b", "text": "A named company or person, a stated need, and a next action you can take this week." },
+                  { "id": "c", "text": "A saved post with no notes on why it matters." },
+                  { "id": "d", "text": "A general vibe that the job market is tough right now." }
+                ],
+                "correctOptionIds": ["b"],
+                "explanation": "Vague impressions do not move a job search forward. A lead needs a name, a need, and your next move."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "module_flow",
+      "title": "Week 4: The flow — from first reply to a signed offer",
+      "summary": "Three weeks of leads across LinkedIn, X, and communities are worthless if you lose track of them. Build the tracker, then run the call.",
+      "outcome": "Reply-to-offer flow",
+      "lessons": [
+        {
+          "id": "fl_1",
+          "title": "Everyone asks me how to get a remote job.",
+          "type": "video",
+          "duration": "11 min",
+          "description": "Where to actually find openings, using AI to speed up the search without sounding like AI, getting your resume shortlisted, and getting direct referrals instead of joining a queue of hundreds of applicants.",
+          "url": "https://www.youtube.com/watch?v=RN8R4KJJtFc"
+        },
+        {
+          "id": "fl_2",
+          "title": "How to ACE Your Recruiter Phone Screen Interview",
+          "type": "video",
+          "duration": "15 min",
+          "description": "What happens right after someone replies to your LinkedIn/X/Reddit outreach: the screening call. Mindset, prep, how to answer, and the logistics questions that trip people up.",
+          "url": "https://www.youtube.com/watch?v=_zkmdg5iWKE"
+        },
+        {
+          "id": "fl_assign",
+          "title": "Outcome 4: A tracked pipeline and a phone-screen script",
+          "type": "assignment",
+          "duration": "90 min",
+          "description": "Three weeks of leads across LinkedIn, X, and communities are worthless if you lose track of them. Build the tracker, then write the script for the call you have not gotten yet.",
+          "assignment": {
+            "brief": "Build a simple tracker (spreadsheet, Notion, whatever) with one row per lead from weeks 1-3: company, source (LinkedIn/X/Reddit/HN/other), status (messaged/replied/screening/interview/offer), last touch date, next action date. Then write a phone-screen script: your 60-second pitch, three shipped-work stories, and answers to 'why this company' and 'what are you looking for.'",
+            "deliverable": "A pipeline tracker with real rows from weeks 1-3, plus a phone-screen script you could use tomorrow.",
+            "fields": [
+              {
+                "id": "tracker_link",
+                "label": "Tracker link or pasted table (company, source, status, next action)",
+                "placeholder": "Company | Source | Status | Next action + date\n[Co1] | LinkedIn | Replied | Send take-home Fri",
+                "hint": "Every lead from weeks 1-3 should have a row, even the ones that went quiet.",
+                "minWords": 20,
+                "rows": 10
+              },
+              {
+                "id": "pitch",
+                "label": "Your 60-second pitch (paste it, then time yourself saying it)",
+                "placeholder": "I'm a [role] who has shipped [X, Y]. Right now I'm looking for a startup where I can…",
+                "hint": "60 seconds spoken is roughly 130-150 words. Cut it until it fits.",
+                "minWords": 60,
+                "rows": 6
+              },
+              {
+                "id": "stories",
+                "label": "Three shipped-work stories for the screening call",
+                "placeholder": "1. [Project] — problem, what I built, what broke, result.\n2. …\n3. …",
+                "hint": "Same bar as a real interview: specific, with a result or a lesson, not a resume bullet read aloud.",
+                "minWords": 60,
+                "rows": 10
+              },
+              {
+                "id": "followup_cadence",
+                "label": "Your follow-up cadence for leads that go quiet",
+                "placeholder": "Day 5: one new fact + same ask. Day 12: final follow-up. After that: move on.",
+                "hint": "Have a rule so you are not guessing whether to follow up or how many times.",
+                "minWords": 20,
+                "rows": 4
+              }
+            ],
+            "checklist": [
+              "The tracker has a row for every real lead from weeks 1-3, not just the promising ones.",
+              "The 60-second pitch is actually close to 60 seconds spoken aloud.",
+              "Each story has a result or a lesson, not just a description of the tech used.",
+              "There is a stated, specific follow-up cadence."
+            ]
+          }
+        },
+        {
+          "id": "fl_quiz",
+          "title": "Week 4 Assessment: Running the flow",
+          "type": "quiz",
+          "duration": "8 min",
+          "description": "What keeps a multi-channel job search from falling apart.",
+          "quiz": {
+            "passingScore": 70,
+            "questions": [
+              {
+                "id": "fl_q1",
+                "prompt": "Losing track of leads across LinkedIn, X, and Reddit usually happens because:",
+                "type": "single",
+                "options": [
+                  { "id": "a", "text": "There are too few leads to track." },
+                  { "id": "b", "text": "There is no single tracker, so follow-ups get missed." },
+                  { "id": "c", "text": "Founders never reply anyway." },
+                  { "id": "d", "text": "Trackers only matter for job-board applications, not outreach." }
+                ],
+                "correctOptionIds": ["b"],
+                "explanation": "Three channels means leads arrive in different inboxes at different times. Without one tracker, follow-ups fall through."
+              },
+              {
+                "id": "fl_q2",
+                "prompt": "A good answer to 'why this company' in a phone screen:",
+                "type": "single",
+                "options": [
+                  { "id": "a", "text": "'I need a job and this was open.'" },
+                  { "id": "b", "text": "References something specific about their product, market, or stage." },
+                  { "id": "c", "text": "Focuses entirely on salary and benefits." },
+                  { "id": "d", "text": "Is identical to what you'd say to any company." }
+                ],
+                "correctOptionIds": ["b"],
+                "explanation": "The same specificity that got a founder to reply to your DM is what a recruiter listens for on the call."
+              },
+              {
+                "id": "fl_q3",
+                "prompt": "If a promising lead goes quiet after your first message, the right move is:",
+                "type": "single",
+                "options": [
+                  { "id": "a", "text": "Message them every day until they respond." },
+                  { "id": "b", "text": "Follow up once or twice with a new fact, on a set cadence, then move on." },
+                  { "id": "c", "text": "Never follow up — one message is enough." },
+                  { "id": "d", "text": "Publicly call them out for not replying." }
+                ],
+                "correctOptionIds": ["b"],
+                "explanation": "A set cadence — one or two follow-ups, each with something new — keeps you visible without becoming spam."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
