@@ -15,6 +15,13 @@ export async function updateSession(request: NextRequest) {
     return { supabaseResponse, user: null };
   }
 
+  const hasAuthCookie = request.cookies
+    .getAll()
+    .some((c) => c.name.startsWith("sb-") && c.name.endsWith("-auth-token"));
+  if (!hasAuthCookie) {
+    return { supabaseResponse, user: null };
+  }
+
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,

@@ -1,25 +1,12 @@
-import { redirect } from "next/navigation";
 import { BrandMark } from "@/components/BrandMark";
 import { LoginForm } from "@/components/LoginForm";
-import { createClient } from "@/lib/supabase/server";
-import { isSupabaseConfigured } from "@/lib/supabase/middleware";
 import { site } from "@/lib/config";
 
 export const metadata = {
   title: "Sign in",
 };
 
-export default async function LoginPage() {
-  if (isSupabaseConfigured()) {
-    const supabase = await createClient();
-    const {
-      data: { user },
-    } = await supabase.auth.getUser();
-    if (user) {
-      redirect("/");
-    }
-  }
-
+export default function LoginPage() {
   return (
     <div className="paper-grid flex min-h-screen items-center justify-center px-5">
       <div className="rise w-full max-w-sm rounded-2xl border border-white/10 bg-[#080a18]/80 p-8 shadow-[var(--shadow)] backdrop-blur">
