@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { isSupabaseConfigured, updateSession } from "@/lib/supabase/middleware";
 
-const PUBLIC_ROUTES = ["/login"];
+const PUBLIC_ROUTES = ["/login", "/auth/callback"];
 
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;

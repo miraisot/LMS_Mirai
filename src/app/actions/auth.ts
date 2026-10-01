@@ -1,5 +1,6 @@
 "use server";
 
+import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 
@@ -20,6 +21,29 @@ export async function login(
   }
 
   redirect("/");
+}
+
+export async function loginWithGoogle() {
+  const supabase = await createClient();
+  const headerStore = await headers();
+  const origin =
+    headerStore.get("origin") ??
+    (headerStore.get("host")
+      ? `${headerStore.get("x-forwarded-proto") ?? "https"}://${headerStore.get("host")}`
+      : "");
+
+  const { data, error } = await supabase.auth.signInWithOAuth({
+    provider: "google",
+    options: {
+      redirectTo: `${origin}/auth/callback`,
+    },
+  });
+
+  if (error || !data?.url) {
+    redirect("/login?error=google");
+  }
+
+  redirect(data.url);
 }
 
 export async function logout() {
