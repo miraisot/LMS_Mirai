@@ -17,7 +17,7 @@ export async function updateSession(request: NextRequest) {
 
   const hasAuthCookie = request.cookies
     .getAll()
-    .some((c) => c.name.startsWith("sb-") && c.name.endsWith("-auth-token"));
+    .some((c) => c.name.startsWith("sb-") && c.name.includes("-auth-token"));
   if (!hasAuthCookie) {
     return { supabaseResponse, user: null };
   }
